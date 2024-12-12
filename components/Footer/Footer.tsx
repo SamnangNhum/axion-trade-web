@@ -4,8 +4,8 @@ import SubTitle from "@/app/shared/sub-title";
 
 const Footer = () => {
   return (
-    <footer className="flex grid-cols-4 gap-5">
-      <div className="bg-black">
+    <footer className="w-full flex grid-cols-4 gap-52 bg-black p-20">
+      <div className="">
         <div>
         <Image
           src="/logo-axion-trade.png"
@@ -20,13 +20,13 @@ const Footer = () => {
        
       </div>
       <div>
-        <SubTitle subTitle="MARKET"/>
+        <SubTitle subTitle="MARKET" otherClass="text-white"/>
       </div>
       <div>
-      <SubTitle subTitle="COMPANY"/>
+      <SubTitle subTitle="COMPANY" otherClass="text-white"/>
       </div>
       <div>
-      <SubTitle subTitle="GET IN TOUCH"/>
+      <SubTitle subTitle="GET IN TOUCH" otherClass="text-white"/>
       </div>
     </footer>
   );
