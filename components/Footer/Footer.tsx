@@ -5,7 +5,9 @@ const Footer = () => {
   <footer>
     <div className="bg-black">
       
-      
+      hq
+  
+
     </div>
  </footer>
  );
