@@ -128,7 +128,7 @@ const Footer = () => {
         <div className="w-full max-md:my-10">
           <SubTitle subTitle="COMPANY" otherClass="mb-5 text-white" />
           <Link
-            className="my-1 text-lg text-white list-item list-none"
+            className="my-1 text-lg text-red-200 list-item list-none"
             href="/Our Edge"
           >
             Our Edge
