@@ -1,11 +1,11 @@
 export default function Title({
-  title,
-  otherClass,
+    title,
+    otherClass,
 }: {
-  title: string;
-  otherClass?: string;
+    title: string;
+    otherClass?: string;
 }) {
-  return (
-    <div className={`text-5xl font-bold text-black ${otherClass}`}>{title}</div>
-  );
+    return (
+        <div className={`text-5xl font-bold text-black ${otherClass}`}>{title}</div>
+    );
 }

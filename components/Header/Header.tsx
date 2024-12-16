@@ -6,7 +6,7 @@ import { GrLanguage } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Title from "@/app/shared/title";
 import Description from "@/app/shared/description";
-// import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import SubTitle from "@/app/shared/sub-title";
 
 
@@ -51,7 +51,7 @@ const Header = () => {
         {/* Translate */}
         <GrLanguage size={25} color="white" className="cursor-pointer" />
         {/* Menu slide */}
-        {/* <Sheet>
+        <Sheet>
           <SheetTrigger>
             <HiMenuAlt3 size={35} color="white" className="cursor-pointer" />
           </SheetTrigger>
@@ -104,7 +104,7 @@ const Header = () => {
               </nav>
             </div>
           </SheetContent>
-        </Sheet> */}
+        </Sheet>
       </div>
     </header>
   );
