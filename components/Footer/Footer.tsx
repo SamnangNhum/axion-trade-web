@@ -73,18 +73,23 @@ const Footer = () => {
         {/* Logo */}
         <div className="w-full">
           <div>
-            <Image
-              className="max-xl:w-48 max-md:w-full"
-              src="/logo-axion-trade.png"
-              width={500}
-              height={500}
-              alt="Picture of the author"
-            />
+            <a href="/">
+              <Image
+                className="max-xl:w-48 max-md:w-full"
+                src="/logo-axion-trade.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
+            </a>
           </div>
           {/* SocialLink */}
           <div className="flex mt-10">
             {SocialLink.map((items) => (
-              <div key={items.id} className="text-2xl cursor-pointer max-xl:text-sm max-md:text-xl mx-1 p-2 text-black bg-white rounded-full">
+              <div
+                key={items.id}
+                className="text-2xl cursor-pointer max-xl:text-sm max-md:text-xl mx-1 p-2 text-black bg-white rounded-full"
+              >
                 <items.icon />
               </div>
             ))}
