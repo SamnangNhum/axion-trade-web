@@ -1,7 +1,12 @@
+
+
 export default function Markets() {
   return (
-    <div>
-      <h1>market</h1>
-    </div>
+    <>
+   
+      <div className="bg-black p-10">
+        <h1>market</h1>
+      </div>
+    </>
   );
-}
+} 
