@@ -4,16 +4,42 @@ import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
 import { GrLanguage } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
-import Title from "@/app/shared/title";
-import Description from "@/app/shared/description";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import SubTitle from "@/app/shared/sub-title";
-
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import Description from "@/app/shared/description";
 
 
 const Header = () => {
+  const componentServices: { title: string; href: string; }[] = [
+    {
+      title: "Forex",
+      href: "/forex",
+
+    },
+    {
+      title: "Commodities",
+      href: "/commodities",
+
+    },
+  ];
+  const componentBlog: { title: string; href: string; }[] = [
+    {
+      title: "STP",
+      href: "/stp",
+    },
+  ];
   return (
-    <header className="absolute grid grid-cols-3 gap-4 items-center p-4 w-full">
+    <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2">
       {/* Logo */}
       <div className="flex justify-center ">
         <Link href="/">
@@ -27,29 +53,69 @@ const Header = () => {
       </div>
 
       {/* Menu */}
-      <nav className="hidden md:flex justify-center space-x-10   ">
-        <Link href="/" className="text-white hover:text-white">
-          Home
-        </Link>
-        <Link href="/markets" className="text-white hover:text-white">
-          Markets
-        </Link>
-        <Link href="/accounts" className="text-white hover:text-white">
-          Accounts
-        </Link>
-        <Link href="/platforms" className="text-white hover:text-white">
-          Platforms
-        </Link>
-      </nav>
+      <NavigationMenu className=" max-md:hidden ">
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Home
+              </NavigationMenuLink>
+            </Link>
+
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Markets </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
+                {componentServices.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Accounts </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              {/* <Description description={"Classic"} otherClass={"text-md px-6 pt-5 font-bold"}/> */}
+              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
+                {componentBlog.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link href="/pages/contact-us" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Contact Us
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+        </NavigationMenuList>
+      </NavigationMenu>
 
       {/* Other */}
       <div className="flex justify-center items-center space-x-8 ">
-        <div className="flex space-x-2 cursor-pointer">
+        <div className="flex space-x-2 cursor-pointer max-md:hidden">
           <FaUserCircle size={25} color="white" />
           <span className="text-white hover:text-white">Client Portal</span>
         </div>
         {/* Translate */}
-        <GrLanguage size={25} color="white" className="cursor-pointer" />
+        <GrLanguage size={25} color="white" className="cursor-pointer " />
         {/* Menu slide */}
         <Sheet>
           <SheetTrigger>
@@ -69,20 +135,23 @@ const Header = () => {
               </SheetTitle>
             </SheetHeader>
             <div className="my-12">
+              <div className="flex space-x-2 cursor-pointer md:hidden">
+                <FaUserCircle size={25} color="black" />
+                <span className="text-black hover:text-black">Client Portal</span>
+              </div>
 
-            <nav className="my-5 md:hidden">
-              <SubTitle subTitle={"Menu "} otherClass={"my-2"}/>
+              <nav className="my-5 md:hidden">
+                <SubTitle subTitle={"Menu "} otherClass={"my-2"} />
                 <Link href="/asset-manager" className="text-black hover:text-black text-md flex flex-wrap">
                   Home
                 </Link>
-                <Link href="/white-label-partnerships" className="text-black hover:text-black text-md flex flex-wrap">
+                <Link href="/market " className="text-black hover:text-black text-md flex flex-wrap">
                   Market
                 </Link>
-              </nav>
 
-              
+              </nav>
               <nav className="my-5">
-              <SubTitle subTitle={"Affiliates"} otherClass={"my-2"}/>
+                <SubTitle subTitle={"Affiliates"} otherClass={"my-2"} />
                 <Link href="/asset-manager" className="text-black hover:text-black text-md flex flex-wrap">
                   Asset Manager
                 </Link>
@@ -91,7 +160,7 @@ const Header = () => {
                 </Link>
               </nav>
               <nav className="my-5">
-              <SubTitle subTitle={"Company"} otherClass={"my-2"}/>
+                <SubTitle subTitle={"Company"} otherClass={"my-2"} />
                 <Link href="/our-edge" className="text-black hover:text-black text-md flex flex-wrap">
                   Our Edge
                 </Link>
@@ -102,12 +171,38 @@ const Header = () => {
                   Posts & Events
                 </Link>
               </nav>
+
             </div>
           </SheetContent>
         </Sheet>
+
       </div>
     </header>
   );
 };
-
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"
 export default Header;
