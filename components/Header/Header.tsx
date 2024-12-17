@@ -39,7 +39,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2">
+    <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2 max-xl:grid-cols-2">
       {/* Logo */}
       <div className="flex justify-center ">
         <Link href="/">
@@ -53,7 +53,7 @@ const Header = () => {
       </div>
 
       {/* Menu */}
-      <NavigationMenu className=" max-md:hidden ">
+      <NavigationMenu className=" max-md:hidden max-xl:hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
