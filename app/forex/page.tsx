@@ -8,28 +8,28 @@ export default function Forex() {
   // Forex Contract & Specifications
   const Contract = [
     {
-      id: "1",
+      id: 0,
       title: "Contract Size",
       amounts: "100,000",
       description:
         "1 standard Lot Contract Size on Axion Trade is equivalent to 100,000 units of base currency. E.g. 1 standard lot of EUR/USD is €100,000.",
     },
     {
-      id: "2",
+      id: 1,
       title: "Minimum Lot",
       amounts: "0.01",
       description:
         "The minimum lot size on Axion Trade is 0.01 which is equivalent to 1,000 units of base currency.",
     },
     {
-      id: "3",
+      id: 2,
       title: "Incremental Steps",
       amounts: "0.01",
       description:
         "The minimum incremental lot size on Axion Trade is 0.01 which is equivalent to 1,000 units of base currency.",
     },
     {
-      id: "4",
+      id: 3,
       title: "Maximum Lot",
       amounts: "100",
       description:
@@ -41,12 +41,14 @@ export default function Forex() {
   // Variable Spreads & ECN Spreads Comparison
   const STP = [
     {
+      id:0,
       VariableSpreads: "Tier One Liquidty Providers",
       ECNSpreads: "Electronic Communication Network (ECN)",
     },
   ];
   const Pricing = [
     {
+      id:0,
       VariableSpreads: "Variable Spread",
       ECNSpreads:
         "Raw ECN spread direct from market as low as 0.0 pips for EUR USD",
@@ -54,6 +56,7 @@ export default function Forex() {
   ];
   const Commission = [
     {
+      id:0,
       VariableSpreads: "No Commission Charged",
       ECNSpreads:
         "Flat fee as low as 0.50 USD per lot commission for Forex instruments",
@@ -61,12 +64,14 @@ export default function Forex() {
   ];
   const BrokerageFee = [
     {
+      id:0,
       VariableSpreads: "Fees are included in the spread",
       ECNSpreads: "No additional markups on the spread",
     },
   ];
   const Advantage = [
     {
+      id:0,
       VariableSpreads: "No Additional fees are charged",
       ECNSpreads: "Raw spreads direct from the market",
     },
@@ -171,7 +176,7 @@ export default function Forex() {
           {/* Straight Through Processing (STP)  */}
           <section>
             {STP.map((items) => (
-              <div className="grid grid-cols-3 px-7 py-10 bg-gray-100">
+              <div key={items.id} className="grid grid-cols-3 px-7 py-10 bg-gray-100">
                 <Description
                   otherClass="font-bold"
                   description="Straight Through Processing (STP)"
