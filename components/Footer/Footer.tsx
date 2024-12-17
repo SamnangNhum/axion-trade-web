@@ -11,6 +11,12 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Footer = () => {
   // SocialLink
@@ -18,22 +24,27 @@ const Footer = () => {
     {
       id: "1",
       icon: FaFacebookF,
+      title: "Facebook",
     },
     {
       id: "2",
       icon: FaInstagram,
+      title: "Instagram",
     },
     {
       id: "3",
       icon: FaTiktok,
+      title: "TikTok",
     },
     {
       id: "4",
       icon: FaYoutube,
+      title: "Youtube",
     },
     {
       id: "5",
       icon: FaLinkedinIn,
+      title: "LinkedIn",
     },
   ];
   // End SocialLink
@@ -42,10 +53,10 @@ const Footer = () => {
     <footer className="">
       {/* Banner */}
       <div
-        className="m-20 max-xl:m-10 max-md:m-5 bg-center bg-cover rounded-3xl"
+        className="mx-36 m-20 max-xl:mx-10 max-xl:my-16 max-md:mx-5 max-md:my-16 bg-center bg-cover rounded-3xl"
         style={{ backgroundImage: "url('/footer-bg.png')" }}
       >
-        <div className="py-28 max-xl:py-20 px-20 max-xl:px-10">
+        <div className="py-28 max-xl:py-16 px-20 max-xl:px-10">
           <Title
             title="Embrace a path to success with us"
             otherClass="pb-5 text-white"
@@ -90,7 +101,16 @@ const Footer = () => {
                 key={items.id}
                 className="text-2xl cursor-pointer max-xl:text-sm max-md:text-xl mx-1 p-2 text-black bg-white rounded-full"
               >
-                <items.icon />
+                <TooltipProvider delayDuration={0}  >
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <items.icon  />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p id={items.id}>{items.title}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
             ))}
           </div>
@@ -100,9 +120,9 @@ const Footer = () => {
 
         {/* Menu */}
         {/* Left Menu */}
-        <div className="w-full pl-32 max-xl:pl-5 max-md:pl-0">
+        <div className="w-full pl-32 max-xl:pl-10 max-md:pl-0">
           <div className="mb-10 max-md:mt-10">
-            <SubTitle subTitle="MARKETS" otherClass="mb-5 text-white" />
+            <SubTitle subTitle="MARKETS" otherClass="mb-5 text-xl text-white" />
             <Link
               className="my-1 text-lg text-white list-item list-none"
               href="/Forex"
@@ -114,7 +134,10 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <SubTitle subTitle="AFFILIATES" otherClass="mb-5 text-white" />
+            <SubTitle
+              subTitle="AFFILIATES"
+              otherClass="mb-5 text-xl text-white"
+            />
             <Link
               className="my-1 text-lg text-white list-item list-none"
               href="/Asset Manager"
@@ -131,7 +154,7 @@ const Footer = () => {
         </div>
         {/* Right Menu */}
         <div className="w-full max-md:my-10">
-          <SubTitle subTitle="COMPANY" otherClass="mb-5 text-white" />
+          <SubTitle subTitle="COMPANY" otherClass="mb-5 text-xl text-white" />
           <Link
             className="my-1 text-lg text-white list-item list-none"
             href="/Our Edge"
@@ -146,7 +169,10 @@ const Footer = () => {
 
         {/* Location and Contact */}
         <div className="w-full">
-          <SubTitle subTitle="GET IN TOUCH" otherClass="mb-5 text-white" />
+          <SubTitle
+            subTitle="GET IN TOUCH"
+            otherClass="mb-5 text-xl text-white"
+          />
           <Description
             description="accounts@axiontrade.com.kh"
             otherClass="text-lg text-white"
@@ -173,14 +199,8 @@ const Footer = () => {
       {/* End Footer Menu */}
 
       {/* Copyright */}
-      <div className="flex bg-black grid-cols-2 max-md:list-item pb-14 px-32 max-xl:px-10 max-md:px-10 max-md:text-center">
-        <div className="w-full pt-14 border-t-2 border-gray-600">
-          <p className="text-white">
-            Copyright © 2024 Axion Trade ALL RIGHTS RESERVED All rights
-            reserved.
-          </p>
-        </div>
-        <div className="w-full pt-14 flex justify-end border-t-2 max-md:border-none border-gray-600">
+      <div className="flex bg-black pb-14 px-32 max-md:list-item flex-row-reverse max-xl:px-10 max-md:px-10 max-md:text-center">
+        <div className="w-full pt-14 flex justify-end border-t-2 border-gray-600">
           <Link className=" text-white" href="/Terms of use">
             Terms of use
           </Link>
@@ -190,6 +210,12 @@ const Footer = () => {
           <Link className="text-white" href="/Cookies Policy">
             Cookies Policy
           </Link>
+        </div>
+        <div className="w-full pt-14 border-t-2 border-gray-600 max-md:border-none">
+          <p className="text-white">
+            Copyright © 2024 Axion Trade ALL RIGHTS RESERVED All rights
+            reserved.
+          </p>
         </div>
       </div>
       {/* End Copyright */}
