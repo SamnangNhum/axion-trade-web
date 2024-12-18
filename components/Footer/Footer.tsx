@@ -22,27 +22,27 @@ const Footer = () => {
   // SocialLink
   const SocialLink = [
     {
-      id: "1",
+      id: "0",
       icon: FaFacebookF,
       title: "Facebook",
     },
     {
-      id: "2",
+      id: "1",
       icon: FaInstagram,
       title: "Instagram",
     },
     {
-      id: "3",
+      id: "2",
       icon: FaTiktok,
       title: "TikTok",
     },
     {
-      id: "4",
+      id: "3",
       icon: FaYoutube,
       title: "Youtube",
     },
     {
-      id: "5",
+      id: "4",
       icon: FaLinkedinIn,
       title: "LinkedIn",
     },
@@ -101,10 +101,10 @@ const Footer = () => {
                 key={items.id}
                 className="text-2xl cursor-pointer max-xl:text-sm max-md:text-xl mx-1 p-2 text-black bg-white rounded-full"
               >
-                <TooltipProvider delayDuration={0}  >
+                <TooltipProvider delayDuration={0}>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <items.icon  />
+                      <items.icon />
                     </TooltipTrigger>
                     <TooltipContent>
                       <p id={items.id}>{items.title}</p>

@@ -41,14 +41,14 @@ export default function Forex() {
   // Variable Spreads & ECN Spreads Comparison
   const STP = [
     {
-      id:0,
+      id: 0,
       VariableSpreads: "Tier One Liquidty Providers",
       ECNSpreads: "Electronic Communication Network (ECN)",
     },
   ];
   const Pricing = [
     {
-      id:0,
+      id: 0,
       VariableSpreads: "Variable Spread",
       ECNSpreads:
         "Raw ECN spread direct from market as low as 0.0 pips for EUR USD",
@@ -56,7 +56,7 @@ export default function Forex() {
   ];
   const Commission = [
     {
-      id:0,
+      id: 0,
       VariableSpreads: "No Commission Charged",
       ECNSpreads:
         "Flat fee as low as 0.50 USD per lot commission for Forex instruments",
@@ -64,14 +64,14 @@ export default function Forex() {
   ];
   const BrokerageFee = [
     {
-      id:0,
+      id: 0,
       VariableSpreads: "Fees are included in the spread",
       ECNSpreads: "No additional markups on the spread",
     },
   ];
   const Advantage = [
     {
-      id:0,
+      id: 0,
       VariableSpreads: "No Additional fees are charged",
       ECNSpreads: "Raw spreads direct from the market",
     },
@@ -176,7 +176,10 @@ export default function Forex() {
           {/* Straight Through Processing (STP)  */}
           <section>
             {STP.map((items) => (
-              <div key={items.id} className="grid grid-cols-3 px-7 py-10 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-3 px-7 py-10 bg-gray-100"
+              >
                 <Description
                   otherClass="font-bold"
                   description="Straight Through Processing (STP)"
@@ -185,7 +188,10 @@ export default function Forex() {
                   otherClass=""
                   description={items.VariableSpreads}
                 />
-                <Description otherClass="flex items-center" description={items.ECNSpreads} />
+                <Description
+                  otherClass="flex items-center"
+                  description={items.ECNSpreads}
+                />
               </div>
             ))}
           </section>
@@ -194,7 +200,7 @@ export default function Forex() {
           {/* Pricing */}
           <section>
             {Pricing.map((items) => (
-              <div className="grid grid-cols-3 px-7 py-7">
+              <div key={items.id} className="grid grid-cols-3 px-7 py-7">
                 <Description
                   otherClass="font-bold flex items-center"
                   description="Pricing"
@@ -212,7 +218,10 @@ export default function Forex() {
           {/* Commission */}
           <section>
             {Commission.map((items) => (
-              <div className="grid grid-cols-3 px-7 py-7 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-3 px-7 py-7 bg-gray-100"
+              >
                 <Description
                   otherClass="font-bold flex items-center"
                   description="Commission"
@@ -230,7 +239,7 @@ export default function Forex() {
           {/* Brokerage Fee */}
           <section>
             {BrokerageFee.map((items) => (
-              <div className="grid grid-cols-3 px-7 py-10">
+              <div key={items.id} className="grid grid-cols-3 px-7 py-10">
                 <Description
                   otherClass="font-bold"
                   description="Brokerage Fee"
@@ -248,11 +257,11 @@ export default function Forex() {
           {/* Advantage */}
           <section>
             {Advantage.map((items) => (
-              <div className="grid grid-cols-3 px-7 py-10 bg-gray-100">
-                <Description
-                  otherClass="font-bold"
-                  description="Advantage"
-                />
+              <div
+                key={items.id}
+                className="grid grid-cols-3 px-7 py-10 bg-gray-100"
+              >
+                <Description otherClass="font-bold" description="Advantage" />
                 <Description
                   otherClass=""
                   description={items.VariableSpreads}
@@ -287,7 +296,10 @@ export default function Forex() {
           {/* Straight Through Processing (STP) */}
           <section>
             {STP.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-1 px-7 py-10 bg-gray-100"
+              >
                 <Description
                   otherClass="font-bold"
                   description="Straight Through Processing (STP)"
@@ -303,7 +315,7 @@ export default function Forex() {
           {/* Pricing */}
           <section>
             {Pricing.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10">
+              <div key={items.id} className="grid grid-cols-1 px-7 py-10">
                 <Description otherClass="font-bold" description="Pricing" />
                 <Description
                   otherClass=""
@@ -316,7 +328,10 @@ export default function Forex() {
           {/* Commission */}
           <section>
             {Commission.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-1 px-7 py-10 bg-gray-100"
+              >
                 <Description otherClass="font-bold" description="Commission" />
                 <Description
                   otherClass=""
@@ -329,7 +344,7 @@ export default function Forex() {
           {/* BrokerageFee */}
           <section>
             {BrokerageFee.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10">
+              <div key={items.id} className="grid grid-cols-1 px-7 py-10">
                 <Description
                   otherClass="font-bold"
                   description="Brokerage Fee"
@@ -345,7 +360,10 @@ export default function Forex() {
           {/* Advantage */}
           <section>
             {Advantage.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-1 px-7 py-10 bg-gray-100"
+              >
                 <Description otherClass="font-bold" description="Advantage" />
                 <Description
                   otherClass=""
@@ -361,7 +379,10 @@ export default function Forex() {
           {/* Straight Through Processing (STP)  */}
           <section>
             {STP.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-1 px-7 py-10 bg-gray-100"
+              >
                 <Description
                   otherClass="font-bold"
                   description="Straight Through Processing (STP)"
@@ -375,7 +396,7 @@ export default function Forex() {
           {/* Pricing */}
           <section>
             {Pricing.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10">
+              <div key={items.id} className="grid grid-cols-1 px-7 py-10">
                 <Description otherClass="font-bold" description="Pricing" />
 
                 <Description otherClass="" description={items.ECNSpreads} />
@@ -386,7 +407,10 @@ export default function Forex() {
           {/* Commission */}
           <section>
             {Commission.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-1 px-7 py-10 bg-gray-100"
+              >
                 <Description otherClass="font-bold" description="Commission" />
 
                 <Description otherClass="" description={items.ECNSpreads} />
@@ -397,7 +421,7 @@ export default function Forex() {
           {/* BrokerageFee */}
           <section>
             {BrokerageFee.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10">
+              <div key={items.id} className="grid grid-cols-1 px-7 py-10">
                 <Description
                   otherClass="font-bold"
                   description="Brokerage Fee"
@@ -410,7 +434,10 @@ export default function Forex() {
           <section>
             {/* Advantage */}
             {Advantage.map((items) => (
-              <div className="grid grid-cols-1 px-7 py-10 bg-gray-100">
+              <div
+                key={items.id}
+                className="grid grid-cols-1 px-7 py-10 bg-gray-100"
+              >
                 <Description otherClass="font-bold" description="Advantage" />
                 <Description otherClass="" description={items.ECNSpreads} />
               </div>
