@@ -70,7 +70,7 @@ export default function OurEdge() {
                                 otherClass={"text-gray-500 my-5"} />
                         </div>
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-end items-center">
                         <Image
                             src="/earth.png"
                             width={500}
@@ -104,7 +104,11 @@ export default function OurEdge() {
             <section className=" pb-16 px-36 max-md:px-10 max-xl:px-20">
                 <div className="grid grid-cols-2 gap-4  max-md:grid-cols-1">
                     <div className="max-md:order-1">
-                        <SubTitle subTitle={"Ultra-Speed Execution"} otherClass={"max-md:text-lg"} />
+                        <div className="flex">
+                        <SubTitle subTitle={"Ultra-Speed"} otherClass={"max-md:text-lg"} />
+                        <SubTitle subTitle={"Execution"} otherClass={"max-md:text-lg text-blue-500 mx-1"} />
+                        </div>
+                      
                         <Description
                             description={"Our data centres are located in prime locations all around the Europe and Asia & Pacific region to ensure a seamless trading experience. The data centres are then connected to ultra-high speed servers located in London – the world’s largest financial centre. Through our partnerships with tier-one banks and Equinix, a multibillion-dollar public company listed on NASDAQ, we have spared no expense in ensuring low latency connectivity to our dedicated servers in London. This has ensured network speeds of less than one millisecond."}
                             otherClass={"text-gray-500"}
