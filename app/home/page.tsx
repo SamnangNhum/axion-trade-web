@@ -62,6 +62,12 @@ export default function Home() {
     },
 
   ];
+  const counts = [
+    { title: "10,000+", description: "Clients" },
+    { title: "10,000,000+", description: "Trade Executed" },
+    { title: "30+", description: "Country" },
+    { title: "100+", description: "Employees Globally" },
+  ];
 
   return (
     <div>
@@ -74,16 +80,27 @@ export default function Home() {
         />
       </section>
 
+      <section className="px-36 max-sm:px-10 max-md:px-10 max-xl:px-20 -translate-y-28 max-md:-translate-y-12">
+        <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-xl:grid-cols-2">
+          {counts.map((count, index) => (
+            <div key={index} className="text-center shadow-lg py-16 px-16 rounded-xl bg-white max-md:px-0">
+              <Title title={count.title} otherClass={"font-bold max-xl:text-4xl"} />
+              <Description description={count.description} otherClass={"text-gray-500"} />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/*Be Your Preferred Brokerage */}
-      <section className="text-center py-16 px-36 max-md:px-10 max-xl:px-20">
+      <section className="text-center pb-16 px-36 max-md:px-10 max-xl:px-20">
         <SubTitle subTitle={"Why Axion Trade Should"} otherClass={"text-blue-700 max-md:text-lg"} />
         <Title title={"Be Your Preferred Brokerage"} otherClass={"max-md:text-3xl"} />
 
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
-          <div className="flex justify-center items-center pt-16 max-md:order-1">
+          <div className="flex justify-center items-center   max-md:order-1">
             <Image src="/client-focused.png" width={600} height={600} alt="Client Focused" />
           </div>
-          <div className="pt-16 max-md:pt-0 max-md:order-2">
+          <div className="max-md:order-2">
             <SubTitle subTitle={"Client Focused"} otherClass={"max-md:text-lg"} />
             <Description
               description={"Enjoy a comprehensive trading experience with us, trade anytime, anywhere"}
@@ -93,23 +110,23 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
-          <div className="pt-16 max-md:pt-0 max-md:order-2">
+          <div className=" max-md:order-2">
             <SubTitle subTitle={"Superior Trading Experience"} otherClass={"max-md:text-lg"} />
             <Description
               description={"Quality trade execution, risk management and transparent pricing"}
               otherClass={"text-gray-500"}
             />
           </div>
-          <div className="flex justify-center items-center pt-16 max-md:order-1">
+          <div className="flex justify-center items-center max-md:order-1">
             <Image src="/superior-trading-experience.png" width={600} height={600} alt="Superior Trading Experience" />
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
-          <div className="flex justify-center items-center pt-16 max-md:order-1">
+          <div className="flex justify-center items-center max-md:order-1">
             <Image src="/convenient-withdrawals.png" width={600} height={600} alt="Convenient Withdrawals" />
           </div>
-          <div className="pt-16 max-md:pt-0 max-md:order-2">
+          <div className="max-md:order-2">
             <SubTitle subTitle={"Convenient Withdrawals"} otherClass={"max-md:text-lg"} />
             <Description description={"Fast and easy, secured payments and withdrawals"} otherClass={"text-gray-500"} />
           </div>
@@ -207,7 +224,7 @@ export default function Home() {
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex aspect-square items-center justify-center">
-                      <Image src={award.image} width={300} height={300} alt={`Award ${index + 1}`} />
+                      <Image src={award.image} width={600} height={600} alt={`Award ${index + 1}`} />
                     </CardContent>
                   </Card>
                 </div>

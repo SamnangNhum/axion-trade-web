@@ -35,7 +35,7 @@ const Header = () => {
   const componentBlog: { title: string; href: string; }[] = [
     {
       title: "STP",
-      href: "/stp",
+      href: "/stp-account",
     },
   ];
   return (
@@ -98,9 +98,9 @@ const Header = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/pages/contact-us" legacyBehavior passHref>
+            <Link href="/platforms " legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contact Us
+                Platforms 
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -142,7 +142,7 @@ const Header = () => {
 
               <nav className="my-5 md:hidden">
                 <SubTitle subTitle={"Menu "} otherClass={"my-2"} />
-                <Link href="/asset-manager" className="text-black hover:text-black text-md flex flex-wrap">
+                <Link href="/" className="text-black hover:text-black text-md flex flex-wrap">
                   Home
                 </Link>
                 <Link href="/market " className="text-black hover:text-black text-md flex flex-wrap">
