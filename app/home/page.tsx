@@ -99,7 +99,7 @@ export default function Home() {
         </div>
         
 
-        <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
+        <div className="grid grid-cols-2 gap-4 pb-10 items-center justify-center max-md:grid-cols-1">
           <div className="flex justify-center items-center   max-md:order-1">
             <Image src="/client-focused.png" width={750} height={750} alt="Client Focused" />
           </div>
@@ -112,7 +112,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
+        <div className="grid grid-cols-2 gap-4 pb-10 items-center justify-center max-md:grid-cols-1">
           <div className=" max-md:order-2">
             <SubTitle subTitle={"Superior Trading Experience"} otherClass={"max-md:text-lg"} />
             <Description
@@ -127,7 +127,7 @@ export default function Home() {
 
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
           <div className="flex justify-center items-center max-md:order-1">
-            <Image src="/convenient-withdrawals.png" width={750} height={750} alt="Convenient Withdrawals" />
+            <Image src="/convenient-withdrawals.png" width={500} height={500} alt="Convenient Withdrawals" />
           </div>
           <div className="max-md:order-2">
             <SubTitle subTitle={"Convenient Withdrawals"} otherClass={"max-md:text-lg"} />

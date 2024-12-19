@@ -92,7 +92,7 @@ export default function OurEdge() {
                 <div>
                     {layers.map((layer, index) => (
                         <div key={index} className="mt-5">
-                            <SubTitle subTitle={layer.title} otherClass="font-bold" />
+                            <SubTitle subTitle={layer.title} otherClass="font-bold mb-3 max-md:text-2xl" />
                             {layer.descriptions.map((desc, descIndex) => (
                                 <Description key={descIndex} description={desc} otherClass="text-gray-500" />
                             ))}
@@ -102,11 +102,11 @@ export default function OurEdge() {
             </section>
 
             <section className=" pb-16 px-36 max-md:px-10 max-xl:px-20">
-                <div className="grid grid-cols-2 gap-4  max-md:grid-cols-1">
+                <div className="grid grid-cols-2 gap-4 pb-10 max-md:grid-cols-1">
                     <div className="max-md:order-1">
-                        <div className="flex">
-                            <SubTitle subTitle={"Ultra-Speed"} otherClass={"max-md:text-lg"} />
-                            <SubTitle subTitle={"Execution"} otherClass={"max-md:text-lg text-blue-500 mx-1"} />
+                        <div className="flex mb-3">
+                            <SubTitle subTitle={"Ultra-Speed"} otherClass={"max-md:text-2xl"} />
+                            <SubTitle subTitle={"Execution"} otherClass={"max-md:text-2xl text-blue-500 mx-1"} />
                         </div>
 
                         <Description
@@ -122,14 +122,14 @@ export default function OurEdge() {
                         <Image src="/ultra-speed-execution.png" width={400} height={400} alt="Client Focused" />
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4  max-md:grid-cols-1 mb-5 ">
+                <div className="grid grid-cols-2 gap-4 pb-10 max-md:grid-cols-1 mb-5 ">
                     <div className="flex items-center justify-center  max-md:order-2">
                         <Image src="/24-hour-dedicated-support.png" width={400} height={400} alt="Client Focused" />
                     </div>
                     <div className="max-md:order-1">
-                        <div className="flex">
-                            <SubTitle subTitle={"24-Hour "} otherClass={"max-md:text-lg"} />
-                            <SubTitle subTitle={"Dedicated Support"} otherClass={"max-md:text-lg text-blue-500 mx-1"} />
+                        <div className="flex mb-3">
+                            <SubTitle subTitle={"24-Hour "} otherClass={"max-md:text-2xl"} />
+                            <SubTitle subTitle={"Dedicated Support"} otherClass={"max-md:text-2xl text-blue-500 mx-1"} />
                         </div>
 
                         <Description
@@ -140,9 +140,9 @@ export default function OurEdge() {
                 </div>
                 <div className="grid grid-cols-2 gap-4  max-md:grid-cols-1">
                     <div className="max-md:order-1">
-                        <div className="flex">
-                            <SubTitle subTitle={"Negative Balance"} otherClass={"max-md:text-lg"} />
-                            <SubTitle subTitle={"Protection"} otherClass={"max-md:text-lg text-blue-500 mx-1"} />
+                        <div className="flex mb-3">
+                            <SubTitle subTitle={"Negative Balance"} otherClass={"max-md:text-2xl"} />
+                            <SubTitle subTitle={"Protection"} otherClass={"max-md:text-2xl text-blue-500 mx-1"} />
                         </div>
 
                         <Description

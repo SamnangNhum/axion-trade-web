@@ -108,7 +108,7 @@ const Header = () => {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* Other */}
+      {/* Other*/}
       <div className="flex justify-center items-center space-x-8 ">
         <div className="flex space-x-2 cursor-pointer max-md:hidden">
           <FaUserCircle size={25} color="white" />
@@ -149,7 +149,7 @@ const Header = () => {
                     Home
                   </SheetPrimitive.Close>
                 </Link>
-                <SubTitle subTitle={" Market "} otherClass={"my-2"} />
+                <SubTitle subTitle={" Market "} otherClass={"my-2 max-md:text-2xl"} />
                 <Link href="/forex" className="text-black hover:text-black text-md flex flex-wrap">
                   <SheetPrimitive.Close >
                     Forex
@@ -163,7 +163,7 @@ const Header = () => {
                 </Link>
               </nav>
               <nav className="my-5 md:hidden">
-                <SubTitle subTitle={" Account "} otherClass={"my-2"} />
+                <SubTitle subTitle={" Account "} otherClass={"my-2 max-md:text-2xl"} />
                 <Description description={"Classic"} otherClass={"text-black"} />
                 <Link href="/stp-account" className="text-black hover:text-black text-md flex flex-wrap">
                   <SheetPrimitive.Close >
@@ -173,7 +173,7 @@ const Header = () => {
               </nav>
 
               <nav className="my-5">
-                <SubTitle subTitle={"Affiliates"} otherClass={"my-2"} />
+                <SubTitle subTitle={"Affiliates"} otherClass={"my-2 max-md:text-2xl"} />
                 <Link href="/asset-manager" className="text-black hover:text-black text-md flex flex-wrap">
                   <SheetPrimitive.Close >
                     Asset Manager
@@ -187,7 +187,7 @@ const Header = () => {
               </nav>
 
               <nav className="my-5">
-                <SubTitle subTitle={"Company"} otherClass={"my-2"} />
+                <SubTitle subTitle={"Company"} otherClass={"my-2 max-md:text-2xl"} />
                 <Link href="/our-edge" className="text-black hover:text-black text-md flex flex-wrap">
                   <SheetPrimitive.Close >
                     Our Edge
