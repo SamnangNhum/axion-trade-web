@@ -51,7 +51,7 @@ export default function OurEdge() {
             <section className="px-36 max-sm:px-10 max-md:px-10 max-xl:px-20 -translate-y-20 max-md:-translate-y-20">
                 <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-xl:grid-cols-2">
                     {counts.map((count, index) => (
-                        <div key={index} className="text-center shadow-lg py-16 px-10 rounded-xl bg-white max-md:px-0">
+                        <div key={index} className="text-center shadow-lg py-16 px-5 rounded-xl bg-white max-md:px-0">
                             <Title title={count.title} otherClass={"font-bold max-xl:text-4xl"} />
                             <Description description={count.description} otherClass={"text-gray-500"} />
                         </div>
