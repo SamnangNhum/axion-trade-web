@@ -156,7 +156,7 @@ export default function Forex() {
       {/* End Axion Trade offers two types of spread to our clients: */}
 
       {/* Variable Spreads & ECN Spreads Comparison: */}
-      <div className="pt-16 px-36 max-md:px-10 max-xl:px-10 max-md:hidden max-xl:hidden">
+      <div className="py-16 px-36 max-md:px-10 max-xl:px-10 max-md:hidden max-xl:hidden">
         <section>
           <SubTitle
             otherClass="pb-10"
@@ -292,7 +292,7 @@ export default function Forex() {
         </TabsList>
 
         {/* Variable Spreads */}
-        <TabsContent className="mt-10" value="Variable Spreads">
+        <TabsContent className="mt-10 max-md:mb-16" value="Variable Spreads">
           {/* Straight Through Processing (STP) */}
           <section>
             {STP.map((items) => (
@@ -375,7 +375,7 @@ export default function Forex() {
         </TabsContent>
 
         {/* ECN Spreads */}
-        <TabsContent className="mt-10" value="ECN Spreads">
+        <TabsContent className="mt-10 max-md:mb-16" value="ECN Spreads">
           {/* Straight Through Processing (STP)  */}
           <section>
             {STP.map((items) => (

@@ -53,7 +53,7 @@ const Footer = () => {
     <footer className="">
       {/* Banner */}
       <div
-        className="mx-36 m-20 max-xl:mx-10 max-xl:my-16 max-md:mx-5 max-md:my-16 bg-center bg-cover rounded-3xl"
+        className="mx-36 mb-20 max-xl:mx-10 max-xl:mb-16 max-md:mx-5 max-md:mb-16 bg-center bg-cover rounded-3xl"
         style={{ backgroundImage: "url('/footer-bg.png')" }}
       >
         <div className="py-28 max-xl:py-16 px-20 max-xl:px-10">
@@ -123,13 +123,10 @@ const Footer = () => {
         <div className="w-full pl-32 max-xl:pl-10 max-md:pl-0">
           <div className="mb-10 max-md:mt-10">
             <SubTitle subTitle="MARKETS" otherClass="mb-5 text-xl text-white" />
-            <Link
-              className="my-1 text-lg text-white list-item list-none"
-              href="/Forex"
-            >
+            <Link className="my-1 text-white list-item list-none" href="/Forex">
               Forex
             </Link>
-            <Link className="text-lg text-white" href="/Commodities">
+            <Link className=" text-white" href="/commodities">
               Commodities
             </Link>
           </div>
@@ -139,15 +136,12 @@ const Footer = () => {
               otherClass="mb-5 text-xl text-white"
             />
             <Link
-              className="my-1 text-lg text-white list-item list-none"
+              className="my-1 text-white list-item list-none"
               href="/Asset Manager"
             >
               Asset Manager
             </Link>
-            <Link
-              className="text-lg text-white"
-              href="/White Label Partnerships"
-            >
+            <Link className="text-white" href="/White Label Partnerships">
               White Label Partnerships
             </Link>
           </div>
@@ -156,12 +150,12 @@ const Footer = () => {
         <div className="w-full max-md:my-10">
           <SubTitle subTitle="COMPANY" otherClass="mb-5 text-xl text-white" />
           <Link
-            className="my-1 text-lg text-white list-item list-none"
-            href="/Our Edge"
+            className="my-1 text-white list-item list-none"
+            href="/our-edge"
           >
             Our Edge
           </Link>
-          <Link className="text-lg text-white" href="/About Us">
+          <Link className=" text-white" href="/about-Us">
             About Us
           </Link>
         </div>
@@ -175,24 +169,21 @@ const Footer = () => {
           />
           <Description
             description="accounts@axiontrade.com.kh"
-            otherClass="text-lg text-white"
+            otherClass="text-white"
           />
           <Description
             description="Ler, 899-901, St 93, Preah"
-            otherClass="my-1 text-lg text-white"
+            otherClass="my-1 text-white"
           />
           <Description
             description="Monivong Blvd (93), Phnom Penh"
-            otherClass="text-lg text-white"
+            otherClass=" text-white"
           />
           <Description
             description="+855 098750005"
-            otherClass="my-1 text-lg text-white"
+            otherClass="my-1 text-white"
           />
-          <Description
-            description="+855 023238024"
-            otherClass="text-lg text-white"
-          />
+          <Description description="+855 023238024" otherClass=" text-white" />
         </div>
         {/* End Location and Contact */}
       </div>
@@ -212,10 +203,10 @@ const Footer = () => {
           </Link>
         </div>
         <div className="w-full pt-14 border-t-2 border-gray-600 max-md:border-none">
-          <p className="text-white">
-            Copyright © 2024 Axion Trade ALL RIGHTS RESERVED All rights
-            reserved.
-          </p>
+          <Description
+            otherClass="text-white"
+            description="Copyright © 2024 Axion Trade ALL RIGHTS RESERVED All rights reserved."
+          />
         </div>
       </div>
       {/* End Copyright */}

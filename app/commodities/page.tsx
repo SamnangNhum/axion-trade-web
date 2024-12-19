@@ -207,14 +207,14 @@ export default function Commodities() {
                 />
               </section>
               <SubTitle otherClass="mb-3" subTitle={items.title} />
-              <p className="text-gray-500">{items.description}</p>
+              <Description otherClass="text-gray-500" description={items.description}/>
             </div>
           ))}
         </section>
       </div>
 
       {/* Commodities available on Axion Trade */}
-      <section className="max-md:mt-0">
+      <section className="max-md:mt-0 pb-16 max-md:pb-6">
         <Tabs defaultValue="Gold" className="w-full">
           <section className="">
             <SubTitle
