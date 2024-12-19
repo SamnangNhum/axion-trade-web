@@ -1,18 +1,10 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
 import { GrLanguage } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import SubTitle from "@/app/shared/sub-title";
 import {
   NavigationMenu,
@@ -24,72 +16,32 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import * as SheetPrimitive from "@radix-ui/react-dialog"
 import Description from "@/app/shared/description";
 
-const NAVIGATION_DATA = [
-  {
-    title: "Home",
-    href: "/",
-    type: "link",
-  },
-  {
-    title: "Markets",
-    type: "submenu",
-    items: [
-      { title: "Forex", href: "/forex" },
-      { title: "Commodities", href: "/commodities" },
-    ],
-  },
-  {
-    title: "Accounts",
-    type: "submenu",
-    items: [
-      { title: "STP", href: "/stp-account" },
-    ],
-    description: "Classic",
-  },
-  {
-    title: "Platforms",
-    href: "/platforms",
-    type: "link",
-  },
-];
-
-const SHEET_NAVIGATION = [
-  {
-    title: "Market",
-    items: [
-      { title: "Forex", href: "/forex" },
-      { title: "Commodities", href: "/commodities" },
-    ],
-  },
-  {
-    title: "Account",
-    description: "Classic",
-    items: [{ title: "STP", href: "/stp-account" }],
-  },
-  {
-    title: "Affiliates",
-    items: [
-      { title: "Asset Manager", href: "/asset-manager" },
-      { title: "White Label Partnerships", href: "/white-label-partnerships" },
-    ],
-  },
-  {
-    title: "Company",
-    items: [
-      { title: "Our Edge", href: "/our-edge" },
-      { title: "About Us", href: "/about-us" },
-      { title: "Posts & Events", href: "/posts&events" },
-    ],
-  },
-];
-
 const Header = () => {
+  const componentServices: { title: string; href: string; }[] = [
+    {
+      title: "Forex",
+      href: "/forex",
+
+    },
+    {
+      title: "Commodities",
+      href: "/commodities",
+
+    },
+  ];
+  const componentBlog: { title: string; href: string; }[] = [
+    {
+      title: "STP",
+      href: "/stp-account",
+    },
+  ];
   return (
     <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2 max-xl:grid-cols-2">
       {/* Logo */}
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <Link href="/">
           <Image
             src="/logo-axion-trade.png"
@@ -101,113 +53,189 @@ const Header = () => {
       </div>
 
       {/* Menu */}
-      <NavigationMenu className="max-md:hidden max-xl:hidden">
+      <NavigationMenu className=" max-md:hidden max-xl:hidden">
         <NavigationMenuList>
-          {NAVIGATION_DATA.map((item, index) => {
-            if (item.type === "link") {
-              return (
-                <NavigationMenuItem key={index}>
-                  <Link ref={item.href} legacyBehavior passHref href={""}>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      {item.title}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              );
-            }
-            if (item.type === "submenu") {
-              return (
-                <NavigationMenuItem key={index}>
-                  <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    {item.description && (
-                      <Description
-                        description={item.description}
-                        otherClass={"text-md px-7 pt-5"}
-                      />
-                    )}
-                    <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
-                      {item.items?.map((subItem) => (
-                        <ListItem
-                          key={subItem.title}
-                          title={subItem.title}
-                          href={subItem.href}
-                        />
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              );
-            }
-            return null;
-          })}
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Home
+              </NavigationMenuLink>
+            </Link>
+
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Markets </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
+                {componentServices.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Accounts </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <Description description={"Classic"} otherClass={"text-md px-6 pt-5"}/>
+              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
+                {componentBlog.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link href="/platforms " legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Platforms
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
         </NavigationMenuList>
       </NavigationMenu>
 
       {/* Other */}
-      <div className="flex justify-center items-center space-x-8">
+      <div className="flex justify-center items-center space-x-8 ">
         <div className="flex space-x-2 cursor-pointer max-md:hidden">
           <FaUserCircle size={25} color="white" />
           <span className="text-white hover:text-white">Client Portal</span>
         </div>
-        <GrLanguage size={25} color="white" className="cursor-pointer" />
+        {/* Translate */}
+        <GrLanguage size={25} color="white" className="cursor-pointer " />
+        {/* Menu slide */}
         <Sheet>
           <SheetTrigger>
             <HiMenuAlt3 size={35} color="white" className="cursor-pointer" />
+
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
               <SheetTitle>
                 <Link href="/">
-                  <Image
-                    src="/logo-axion-trades.png"
-                    width={150}
-                    height={150}
-                    alt="Axion Trade Logo"
-                  />
+                  <SheetPrimitive.Close >
+                    <Image
+                      src="/logo-axion-trades.png"
+                      width={150}
+                      height={150}
+                      alt="Axion Trade Logo"
+                    />
+                  </SheetPrimitive.Close>
                 </Link>
               </SheetTitle>
             </SheetHeader>
             <div className="my-12">
-              {SHEET_NAVIGATION.map((section, index) => (
-                <nav className="my-5" key={index}>
-                  <SubTitle subTitle={section.title} otherClass={"my-2"} />
-                  {section.description && (
-                    <Description
-                      description={section.description}
-                      otherClass={"text-black"}
-                    />
-                  )}
-                  {section.items.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      className="text-black hover:text-black text-md flex flex-wrap"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </nav>
-              ))}
+              <div className="flex space-x-2 cursor-pointer md:hidden">
+                <FaUserCircle size={25} color="black" />
+                <span className="text-black hover:text-black">Client Portal</span>
+              </div>
+
+              <nav className="my-5 md:hidden">
+              <Link href="/" className="text-black hover:text-black text-md flex flex-wrap">
+                  <SheetPrimitive.Close >
+                    Home
+                  </SheetPrimitive.Close>
+                </Link>
+                <SubTitle subTitle={" Market "} otherClass={"my-2"} />
+                <Link href="/forex" className="text-black hover:text-black text-md flex flex-wrap">
+                  <SheetPrimitive.Close >
+                    Forex
+                  </SheetPrimitive.Close>
+                </Link>
+                <Link href="/commodities " className="text-black hover:text-black text-md flex flex-wrap">
+
+                  <SheetPrimitive.Close >
+                    Commodities
+                  </SheetPrimitive.Close>
+                </Link>
+              </nav>
+              <nav className="my-5 md:hidden">
+                <SubTitle subTitle={" Account "} otherClass={"my-2"} />
+                <Description description={"Classic"} otherClass={"text-black"} />
+                <Link href="/stp-account" className="text-black hover:text-black text-md flex flex-wrap">
+                  <SheetPrimitive.Close >
+                    STP
+                  </SheetPrimitive.Close>
+                </Link>
+              </nav>
+
+              <nav className="my-5">
+                <SubTitle subTitle={"Affiliates"} otherClass={"my-2"} />
+                <Link href="/asset-manager" className="text-black hover:text-black text-md flex flex-wrap">
+                  <SheetPrimitive.Close >
+                    Asset Manager
+                  </SheetPrimitive.Close>
+                </Link>
+                <Link href="/white-label-partnerships" className="text-black hover:text-black text-md flex flex-wrap">
+                  <SheetPrimitive.Close >
+                    White Label Partnerships
+                  </SheetPrimitive.Close>
+                </Link>
+              </nav>
+
+              <nav className="my-5">
+                <SubTitle subTitle={"Company"} otherClass={"my-2"} />
+                <Link href="/our-edge" className="text-black hover:text-black text-md flex flex-wrap">
+                  <SheetPrimitive.Close >
+                    Our Edge
+                  </SheetPrimitive.Close>
+                </Link>
+                <Link href="/about-us" className="text-black hover:text-black text-md flex flex-wrap ">
+                  <SheetPrimitive.Close >
+                    About Us
+                  </SheetPrimitive.Close>
+                </Link>
+                <Link href="/posts&events" className="text-black hover:text-black text-md flex flex-wrap">
+                  <SheetPrimitive.Close >
+                    Posts & Events
+                  </SheetPrimitive.Close>
+                </Link>
+              </nav>
+
             </div>
           </SheetContent>
         </Sheet>
+
       </div>
     </header>
   );
 };
-
-const ListItem = ({ title, href }: { title: string; href: string }) => (
-  <li>
-    <Link
-      href={href}
-      className={cn(
-        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-      )}
-    >
-      <div className="text-sm font-medium leading-none">{title}</div>
-    </Link>
-  </li>
-);
-
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"
 export default Header;
