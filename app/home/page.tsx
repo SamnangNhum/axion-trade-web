@@ -83,7 +83,7 @@ export default function Home() {
       <section className="px-36 max-sm:px-10 max-md:px-10 max-xl:px-20 -translate-y-28 max-md:-translate-y-12">
         <div className="grid grid-cols-4 gap-4 max-md:grid-cols-1 max-xl:grid-cols-2">
           {counts.map((count, index) => (
-            <div key={index} className="text-center shadow-lg py-16 px-16 rounded-xl bg-white max-md:px-0">
+            <div key={index} className="text-center shadow-lg py-10 px-16 rounded-xl bg-white max-md:px-0">
               <Title title={count.title} otherClass={"font-bold max-xl:text-4xl"} />
               <Description description={count.description} otherClass={"text-gray-500"} />
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/*Be Your Preferred Brokerage */}
+      {/*Be Your Preferred Brokerage Section*/}
       <section className="text-center pb-16 px-36 max-md:px-10 max-xl:px-20">
         <SubTitle subTitle={"Why Axion Trade Should"} otherClass={"text-blue-700 max-md:text-lg"} />
         <Title title={"Be Your Preferred Brokerage"} otherClass={"max-md:text-3xl"} />
@@ -133,7 +133,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trade Instruments */}
+      {/* Trade Instruments Section*/}
       <section className="text-center bg-[url('../assets/images/bg-axion-trade.png')] bg-cover bg-center w-full p-28 max-md:p-10 max-xl:p-20">
         <Title
           title={"Trade Your Favourite Instruments From Around The World"}
@@ -161,7 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Logo-Partner */}
+      {/* Logo-Partner Section*/}
       <section className="bg-gray-200">
         <div className="grid grid-cols-6 gap-4 items-center justify-center max-md:grid-cols-1">
           {[
@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
 
-      {/* News & Events */}
+      {/* News & Events Section*/}
       <section className="px-36 pt-16 max-sm:p-16 max-md:px-10 max-xl:px-20">
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 my-2">
           <div>
@@ -201,7 +201,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 my-2">
                 <Description description={item.date} otherClass={""} />
                 <div className="flex justify-end">
-                  <Link href={item.link}>{item.linkText}</Link>
+                  <Link className="text-blue-500" href={item.link}>{item.linkText}</Link>
                 </div>
               </div>
               <Description description={item.despcription} otherClass={""} />
@@ -210,7 +210,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Awards */}
+      {/* Awards Section*/}
       <section className="text-center py-16 px-36 max-md:px-10 max-xl:px-20">
         <Title title={"Our Awards"} otherClass={"max-md:text-3xl"} />
         <Description
