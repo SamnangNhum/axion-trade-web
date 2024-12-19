@@ -93,12 +93,15 @@ export default function Home() {
 
       {/*Be Your Preferred Brokerage Section*/}
       <section className="text-center pb-16 px-36 max-md:px-10 max-xl:px-20">
+        <div className="pb-16">
         <SubTitle subTitle={"Why Axion Trade Should"} otherClass={"text-blue-700 max-md:text-lg"} />
         <Title title={"Be Your Preferred Brokerage"} otherClass={"max-md:text-3xl"} />
+        </div>
+        
 
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
           <div className="flex justify-center items-center   max-md:order-1">
-            <Image src="/client-focused.png" width={600} height={600} alt="Client Focused" />
+            <Image src="/client-focused.png" width={750} height={750} alt="Client Focused" />
           </div>
           <div className="max-md:order-2">
             <SubTitle subTitle={"Client Focused"} otherClass={"max-md:text-lg"} />
@@ -118,13 +121,13 @@ export default function Home() {
             />
           </div>
           <div className="flex justify-center items-center max-md:order-1">
-            <Image src="/superior-trading-experience.png" width={600} height={600} alt="Superior Trading Experience" />
+            <Image src="/superior-trading-experience.png" width={750} height={750} alt="Superior Trading Experience" />
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
           <div className="flex justify-center items-center max-md:order-1">
-            <Image src="/convenient-withdrawals.png" width={600} height={600} alt="Convenient Withdrawals" />
+            <Image src="/convenient-withdrawals.png" width={750} height={750} alt="Convenient Withdrawals" />
           </div>
           <div className="max-md:order-2">
             <SubTitle subTitle={"Convenient Withdrawals"} otherClass={"max-md:text-lg"} />
