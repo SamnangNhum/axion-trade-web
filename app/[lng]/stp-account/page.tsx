@@ -1,8 +1,8 @@
 import { MdArrowForwardIos } from "react-icons/md";
-import Button from "../shared/button";
-import Description from "../shared/description";
-import PageTitle from "../shared/pages-title";
-import SubTitle from "../shared/sub-title";
+import Button from "../../shared/button";
+import Description from "../../shared/description";
+import PageTitle from "../../shared/pages-title";
+import SubTitle from "../../shared/sub-title";
 
 export default function STP() {
   const AccountSettings = [
@@ -16,13 +16,15 @@ export default function STP() {
       id: 1,
       title: "Commissions",
       amounts: "None",
-      description: "Commission-free trading applies for all Forex and Commodity.",
+      description:
+        "Commission-free trading applies for all Forex and Commodity.",
     },
     {
       id: 2,
       title: "Spreads",
       amounts: "Fixed Spread",
-      description: "Get direct access to our top-tier liquidity providers with a brokerage fee collected from the spread, with spreads fixed at 1.9 pips for EURUSD and 2.7 pips for Gold for normal market hours (0100 – 2300 Server Time).",
+      description:
+        "Get direct access to our top-tier liquidity providers with a brokerage fee collected from the spread, with spreads fixed at 1.9 pips for EURUSD and 2.7 pips for Gold for normal market hours (0100 – 2300 Server Time).",
     },
     {
       id: 3,
@@ -34,19 +36,22 @@ export default function STP() {
       id: 4,
       title: "Minimum Deposit",
       amounts: "USD 10",
-      description: "The minimum deposit required to open a STP Account at Axion Trade is USD 10.",
+      description:
+        "The minimum deposit required to open a STP Account at Axion Trade is USD 10.",
     },
     {
       id: 5,
       title: "Slippage Insurance",
       amounts: "Guaranteed Price Requote",
-      description: "Axion Trade guarantees a better price requote if the slippage experienced due to a stop-loss order being hit is more than 2.0 pips.",
+      description:
+        "Axion Trade guarantees a better price requote if the slippage experienced due to a stop-loss order being hit is more than 2.0 pips.",
     },
     {
       id: 6,
       title: "Negative Balance Protection",
       amounts: "Yes",
-      description: "Trade without worry about losses exceeding deposits as all negative balances are covered by Axion Trade.",
+      description:
+        "Trade without worry about losses exceeding deposits as all negative balances are covered by Axion Trade.",
     },
   ];
   return (

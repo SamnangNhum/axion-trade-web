@@ -1,6 +1,6 @@
-import Description from "../shared/description";
-import PageTitle from "../shared/pages-title";
-import SubTitle from "../shared/sub-title";
+import Description from "../../shared/description";
+import PageTitle from "../../shared/pages-title";
+import SubTitle from "../../shared/sub-title";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 

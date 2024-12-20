@@ -1,7 +1,7 @@
-import PageTitle from "../shared/pages-title";
+import PageTitle from "../../shared/pages-title";
 import Image from "next/image";
-import SubTitle from "../shared/sub-title";
-import Description from "../shared/description";
+import SubTitle from "../../shared/sub-title";
+import Description from "../../shared/description";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MdArrowForwardIos } from "react-icons/md";
 
@@ -207,7 +207,10 @@ export default function Commodities() {
                 />
               </section>
               <SubTitle otherClass="mb-3" subTitle={items.title} />
-              <Description otherClass="text-gray-500" description={items.description}/>
+              <Description
+                otherClass="text-gray-500"
+                description={items.description}
+              />
             </div>
           ))}
         </section>
