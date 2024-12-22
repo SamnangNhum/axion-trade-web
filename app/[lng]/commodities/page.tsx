@@ -9,42 +9,42 @@ export default function Commodities() {
   const Commodities = [
     {
       id: 0,
-      icon: "/23-hour-trading-icon.png",
+      icon: "/assets/images/23-hour-trading-icon.png",
       title: "23-Hour Trading",
       description:
         "Many Commodities are open 23 hours a day and do not have restricted trading hours.",
     },
     {
       id: 1,
-      icon: "/trading-opportunities-icon.png",
+      icon: "/assets/images/trading-opportunities-icon.png",
       title: "Trading Opportunities",
       description:
         "Media and analysts present regular trading opportunities on Commodities.",
     },
     {
       id: 2,
-      icon: "/trade-on-diverse-sectors-icon.png",
+      icon: "/assets/images/trade-on-diverse-sectors-icon.png",
       title: "Trade on Diverse Sectors",
       description:
         "Commodities benefit from market movement across a greater variety of sectors.",
     },
     {
       id: 3,
-      icon: "/global-opportunities-icon.png",
+      icon: "/assets/images/global-opportunities-icon.png",
       title: "Global Opportunities",
       description:
         "Trade on price movement of major Commodities from the Europe and Asia.",
     },
     {
       id: 4,
-      icon: "/short-the-markets-icon.png",
+      icon: "/assets/images/short-the-markets-icon.png",
       title: "Short the Markets",
       description:
         "Trade on falling markets (going short) as well as rising markets.",
     },
     {
       id: 5,
-      icon: "/trade-anytime-anywhere-icon.png",
+      icon: "/assets/images/trade-anytime-anywhere-icon.png",
       title: "Trade Anytime, Anywhere",
       description:
         "Trade on desktop, close on mobile, our accounts work on multiple devices.",

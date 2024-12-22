@@ -54,7 +54,7 @@ const Footer = () => {
       {/* Banner */}
       <div
         className="mx-36 mb-20 max-xl:mx-10 max-xl:mb-16 max-md:mx-5 max-md:mb-16 bg-center bg-cover rounded-3xl"
-        style={{ backgroundImage: "url('/footer-bg.png')" }}
+        style={{ backgroundImage: "url('/assets/images/footer-bg.png')" }}
       >
         <div className="py-28 max-xl:py-16 px-20 max-xl:px-10">
           <Title
@@ -87,7 +87,7 @@ const Footer = () => {
             <a href="/">
               <Image
                 className="max-xl:w-48 max-md:w-full"
-                src="/logo-axion-trade.png"
+                src="/assets/images/logo-axion-trade.png"
                 width={500}
                 height={500}
                 alt="Picture of the author"

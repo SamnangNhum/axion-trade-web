@@ -44,31 +44,31 @@ export default function Home() {
 
   const awards = [
     {
-      image: "/awards-2015.png",
+      image: "/assets/images/awards-2015.png",
     },
     {
-      image: "/awards-2016.png",
+      image: "/assets/images//awards-2016.png",
     },
     {
-      image: "/awards-fx-2016.png",
+      image: "/assets/images/awards-fx-2016.png",
     },
     {
-      image: "/awards-2017.png",
+      image: "/assets/images/awards-2017.png",
     },
     {
-      image: "/awards-2018.png",
+      image: "/assets/images/awards-2018.png",
     },
     {
-      image: "/awards-broker-2018.png",
+      image: "/assets/images/awards-broker-2018.png",
     },
     {
-      image: "/awards-broker-fx.png",
+      image: "/assets/images/awards-broker-fx.png",
     },
     {
-      image: "/awards-2019.png",
+      image: "/assets/images/awards-2019.png",
     },
     {
-      image: "/awards-broker-2019.png",
+      image: "/assets/images/awards-broker-2019.png",
     },
   ];
   const counts = [
@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <div>
       {/* Page title */}
-      <section className="text-center bg-[url(`../assets/images/bg-axion-trade.png`)] bg-cover bg-center w-full p-80 max-sm:p-16 max-md:p-32 max-xl:p-48">
+      <section className="text-center bg-[url(`/assets/images/bg-axion-trade.png`)] bg-cover bg-center w-full p-80 max-sm:p-16 max-md:p-32 max-xl:p-48">
         <Title
           title="Simple. Reliable. Innovative."
           otherClass="text-white max-md:mt-20"
@@ -128,7 +128,7 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-4 pb-10 items-center justify-center max-md:grid-cols-1">
           <div className="flex justify-center items-center   max-md:order-1">
             <Image
-              src="/client-focused.png"
+              src="/assets/images/client-focused.png"
               width={750}
               height={750}
               alt="Client Focused"
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center max-md:order-1">
             <Image
-              src="/superior-trading-experience.png"
+              src="/assets/images/superior-trading-experience.png"
               width={750}
               height={750}
               alt="Superior Trading Experience"
@@ -174,7 +174,7 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
           <div className="flex justify-center items-center max-md:order-1">
             <Image
-              src="/convenient-withdrawals.png"
+              src="/assets/images/convenient-withdrawals.png"
               width={500}
               height={500}
               alt="Convenient Withdrawals"
@@ -194,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* Trade Instruments Section*/}
-      <section className="text-center bg-[url('../assets/images/bg-axion-trade.png')] bg-cover bg-center w-full p-28 max-md:p-10 max-xl:p-20">
+      <section className="text-center bg-[url('/assets/images/bg-axion-trade.png')] bg-cover bg-center w-full p-28 max-md:p-10 max-xl:p-20">
         <Title
           title={"Trade Your Favourite Instruments From Around The World"}
           otherClass={
@@ -204,7 +204,7 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
           <div className="flex flex-col justify-center items-center">
             <Image
-              src="/forex-pairs.png"
+              src="/assets/images/forex-pairs.png"
               width={200}
               height={200}
               alt="Forex Pairs"
@@ -223,7 +223,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image
-              src="/commodities.png"
+              src="/assets/images/commodities.png"
               width={200}
               height={200}
               alt="Commodities"

@@ -44,7 +44,7 @@ const Header = () => {
       <div className="flex justify-center ">
         <Link href="/">
           <Image
-            src="/logo-axion-trade.png"
+            src="/assets/images/logo-axion-trade.png"
             width={150}
             height={150}
             alt="Axion Trade Logo"
@@ -128,7 +128,7 @@ const Header = () => {
                 <Link href="/">
                   <SheetPrimitive.Close >
                     <Image
-                      src="/logo-axion-trades.png"
+                      src="/assets/images/logo-axion-trades.png"
                       width={150}
                       height={150}
                       alt="Axion Trade Logo"

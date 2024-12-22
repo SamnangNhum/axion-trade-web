@@ -86,7 +86,7 @@ export default function OurEdge() {
             </div>
           </div>
           <div className="flex justify-end items-center">
-            <Image src="/earth.png" width={500} height={500} alt="earth" />
+            <Image src="/assets/images/earth.png" width={500} height={500} alt="earth" />
           </div>
         </div>
       </section>
@@ -147,7 +147,7 @@ export default function OurEdge() {
           </div>
           <div className="flex items-center justify-center  max-md:order-2">
             <Image
-              src="/ultra-speed-execution.png"
+              src="/assets/images/ultra-speed-execution.png"
               width={400}
               height={400}
               alt="Client Focused"
@@ -157,7 +157,7 @@ export default function OurEdge() {
         <div className="grid grid-cols-2 gap-4 pb-10 max-md:grid-cols-1 mb-5 ">
           <div className="flex items-center justify-center  max-md:order-2">
             <Image
-              src="/24-hour-dedicated-support.png"
+              src="/assets/images/24-hour-dedicated-support.png"
               width={400}
               height={400}
               alt="Client Focused"
@@ -202,7 +202,7 @@ export default function OurEdge() {
           </div>
           <div className="flex items-center justify-center  max-md:order-2">
             <Image
-              src="/negative-balance-protection.png"
+              src="/assets/images/negative-balance-protection.png"
               width={400}
               height={400}
               alt="Client Focused"

@@ -9,7 +9,7 @@ export default function PostAndEvent() {
       date: "September 27, 2024",
       link: "/",
       linkText: "Press Release",
-      imageSrc: "/nothing-image.jpg",
+      imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
     },
@@ -27,7 +27,7 @@ export default function PostAndEvent() {
       date: "September 27, 2024",
       link: "/",
       linkText: "Press Release",
-      imageSrc: "/nothing-image.jpg",
+      imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
     },
@@ -35,7 +35,7 @@ export default function PostAndEvent() {
       date: "September 27, 2024",
       link: "/",
       linkText: "Press Release",
-      imageSrc: "/nothing-image.jpg",
+      imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
     },
@@ -43,7 +43,7 @@ export default function PostAndEvent() {
       date: "September 27, 2024",
       link: "/",
       linkText: "Press Release",
-      imageSrc: "/nothing-image.jpg",
+      imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
     },

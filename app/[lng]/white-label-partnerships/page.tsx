@@ -56,7 +56,7 @@ export default function WhiteLabelPartnerships() {
           </div>
           <div className="flex justify-center items-center">
             <Image
-              src="/white-label-partnership.png"
+              src="/assets/images/white-label-partnership.png"
               width={400}
               height={400}
               alt="White Label Partnerships"
