@@ -47,7 +47,7 @@ export default function Home() {
       image: "/assets/images/awards-2015.png",
     },
     {
-      image: "/assets/images//awards-2016.png",
+      image: "/assets/images/awards-2016.png",
     },
     {
       image: "/assets/images/awards-fx-2016.png",
