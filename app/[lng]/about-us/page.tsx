@@ -3,7 +3,7 @@ import Description from "../../shared/description";
 import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import Image from "next/image";
-import aboutUs from "@assets/images/about-us.png";
+
 export default function AboutUs() {
   return (
     <div>
@@ -23,7 +23,12 @@ export default function AboutUs() {
             <Button button={"Contact Us"} />
           </div>
           <div className="flex justify-center items-center">
-            <Image src={aboutUs} width={500} height={500} alt="About Us" />
+            <Image
+              src={"/assets/images/about-us.png"}
+              width={500}
+              height={500}
+              alt="About Us"
+            />
           </div>
         </div>
       </section>
