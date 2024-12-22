@@ -11,11 +11,12 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-  params: { lng },
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: { lng: string };
 }>) {
+  const { lng } = params;
   return (
     <html lang={lng} dir={dir(lng)}>
       <body
@@ -28,9 +29,9 @@ export default function RootLayout({
         }
         style={lng == "km" ? { fontSize: "16px" } : { fontSize: "16px" }}
       >
-        <Header />
+        {/* <Header /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

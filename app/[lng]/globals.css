@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   font-family: "Kumbh Sans", sans-serif;
-}
+} */
 
-@layer base {
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -80,4 +80,4 @@ body {
   .border-border {
     border-color: hsl(var(--border));
   }
-}
+} */
