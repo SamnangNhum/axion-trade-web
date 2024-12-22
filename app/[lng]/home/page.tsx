@@ -81,7 +81,10 @@ export default function Home() {
   return (
     <div>
       {/* Page title */}
-      <section className="text-center bg-[url(`/assets/images/bg-axion-trade.png`)] bg-cover bg-center w-full p-80 max-sm:p-16 max-md:p-32 max-xl:p-48">
+      <section
+        className="text-center bg-[url('/assets/images/bg-axion-trade.png')]
+ bg-cover bg-center w-full p-80 max-sm:p-16 max-md:p-32 max-xl:p-48"
+      >
         <Title
           title="Simple. Reliable. Innovative."
           otherClass="text-white max-md:mt-20"
@@ -113,7 +116,10 @@ export default function Home() {
       </section>
 
       {/*Be Your Preferred Brokerage Section*/}
-      <section className="text-center pb-16 px-36 max-md:px-10 max-xl:px-20">
+      <section
+        className="text-center pb-16 px-36 max-md:px-10 max-xl:px-20 
+"
+      >
         <div className="pb-16">
           <SubTitle
             subTitle={"Why Axion Trade Should"}
