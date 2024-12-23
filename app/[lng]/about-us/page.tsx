@@ -5,13 +5,16 @@ import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import Image from "next/image";
 
-const AboutUs = async (params: Promise<{ lng: string }>) => {
+const AboutUs = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
   return (
     <div>
       {/* PageTitle */}
-      <PageTitle title="About Us" description="Simple. Reliable. Innovative." />
+      <PageTitle
+        title={t("about-us")}
+        description="Simple. Reliable. Innovative."
+      />
       {/* AboutUs */}
       <section className="px-36 py-16 max-sm:p-16 max-md:px-10 max-xl:px-20">
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">

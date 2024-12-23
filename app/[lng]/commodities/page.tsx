@@ -6,7 +6,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MdArrowForwardIos } from "react-icons/md";
 import { useTranslation } from "@/app/i18n";
 
-const Commodities = async ({ params: { lng } }: any) => {
+const Commodities = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
+  const { lng } = await params;
   const { t } = await useTranslation(lng);
   const Commodities = [
     {

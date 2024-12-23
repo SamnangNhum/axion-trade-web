@@ -5,7 +5,7 @@ import SubTitle from "../../shared/sub-title";
 import Title from "../../shared/title";
 import Image from "next/image";
 
-const OurEdge = async (params: Promise<{ lng: string }>) => {
+const OurEdge = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
   const counts = [

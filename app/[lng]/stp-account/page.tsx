@@ -5,7 +5,7 @@ import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import { useTranslation } from "@/app/i18n";
 
-const STP = async (params: Promise<{ lng: string }>) => {
+const STP = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
   const AccountSettings = [

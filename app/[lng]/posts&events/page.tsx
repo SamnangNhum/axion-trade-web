@@ -4,7 +4,11 @@ import Description from "../../shared/description";
 import PageTitle from "../../shared/pages-title";
 import { useTranslation } from "@/app/i18n";
 
-const PostAndEvent = async (params: Promise<{ lng: string }>) => {
+const PostAndEvent = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
   const postItems = [
@@ -110,3 +114,4 @@ const PostAndEvent = async (params: Promise<{ lng: string }>) => {
     </div>
   );
 };
+export default PostAndEvent;

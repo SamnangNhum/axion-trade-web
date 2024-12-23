@@ -4,7 +4,11 @@ import SubTitle from "../../shared/sub-title";
 import Description from "../../shared/description";
 import { useTranslation } from "@/app/i18n";
 
-const AssetManager = async (params: Promise<{ lng: string }>) => {
+const AssetManager = async ({
+  params,
+}: {
+  params: Promise<{ lng: string }>;
+}) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
 
