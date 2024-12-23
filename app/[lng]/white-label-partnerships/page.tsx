@@ -15,49 +15,82 @@ const WhiteLabelPartnerships = async ({
   const { lng } = await params;
   const { t } = await useTranslation(lng);
   const firstKeyFeatures = [
-    "Access to deep liquidity and market leading spreads from 0.0 pips.",
-    "Multi bank aggregated price feed.",
-    "Super fast execution of large orders.",
-    "Flexible connectivity options.",
-    "Margin rates from 1% calculated on a portfolio basis.",
-    "Competitive commissions ratesz.",
+    [
+      t('access-to-deep-liquidity')
+    ],
+    [ t('co-branded-MT4/MT5')
+
+    ],
+    [
+      t('super-fast-execution-of-large-orders')
+    ],
+    [
+      t('flexible-connectivity-options')
+    ],
+    [
+      t('margin-rates-from-1%-calculated-on-a-portfolio-basis')
+    ],
+    [
+      t('competitive-commissions-rates')
+    ]
   ];
 
   const secondKeyFeatures = [
-    "Access to deep liquidity and market leading spreads from 0.0 pips.",
-    "Multi bank aggregated price feed",
-    "Super fast execution of large orders",
-    "Flexible connectivity options",
-    "Margin rates from 1% calculated on a portfolio basis",
-    "Competitive commissions rates.",
+    [
+      t('access-to-deep-liquidity')
+    ],
+    [ t('multi-bank-aggregated-price-feed')
+
+    ],
+    [
+      t('super-fast-execution-of-large-orders')
+    ],
+    [
+      t('flexible-connectivity-options')
+    ],
+    [
+      t('margin-rates-from-1%-calculated-on-a-portfolio-basis')
+    ],
+    [
+      t('competitive-commissions-rates')
+    ]
   ];
 
   const requirements = [
-    "Minimum monthly volume of $200 million (2,000 standard lots)",
-    "Established client base.",
+    [
+      t('minimum-monthly-volume-of-$200-million')
+    ],
+    [
+      t('established-client-base')
+    ]
+    
   ];
   const secondRequirements = [
-    "Minimum monthly volume of $500 million (5,000 standard lots)",
+    [
+      t('minimum-monthly-volume-of-$500-million')
+    ]
   ];
   return (
     <div>
       {/* PageTitle */}
       <PageTitle
-        title="White Label Partnerships"
-        description="The AxionTrade white label partnership program."
+        title={t('white-label-partnerships')}
+        description={
+          t('the-axionTrade-white-label-partnership-program')
+        }
       />
 
       <section className="px-36 pt-16 max-sm:p-16 max-md:px-10 max-xl:px-20">
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
           <div className="">
             <SubTitle
-              subTitle={"The AxionTrade white label partnership program "}
+              subTitle={t('the-axionTrade-white-label-partnership-program')}
               otherClass={"font-bold"}
             />
             <Description
               description={
-                "is a turnkey solution giving clients access to our market-leading liquidity and technology. ​The AxionTrade white label program has a variety of different levels designed to complement start-up​or established hedge funds or brokerages and help them take their business to the next level. ​You can also choose to take our liquidity only using one of our many flexible connectivity options."
-              }
+                t('the-axiontrade-white-label-partnership-program-is-a-turnkey-solution-giving-clients')
+               }
               otherClass={"text-gray-500 my-5"}
             />
           </div>
@@ -75,11 +108,13 @@ const WhiteLabelPartnerships = async ({
       <section>
         <section className="pt-8 px-36 max-md:px-10 max-xl:px-20">
           <SubTitle
-            subTitle="Fully Branded White Label Solution"
+            subTitle={
+              t('fully-branded-white-label-solution')
+            }
             otherClass="font-bold"
           />
           <Description
-            description="Our white label program has been designed for start-up businesses with a detailed business plan and existing brokerages that have an existing client base and monthly foreign exchange volume of greater than $1 billion. As a full white label partner you will have complete control and transparency over the infrastructure through which you manage your clients."
+            description={t('our-white-label-program-has been-designed')}
             otherClass="text-gray-500 mt-2"
           />
         </section>
@@ -88,7 +123,9 @@ const WhiteLabelPartnerships = async ({
             <span className="text-blue-500 text-2xl mr-4">
               <IoKeyOutline />
             </span>
-            <SubTitle subTitle="Key Features" otherClass="font-bold" />
+            <SubTitle subTitle={
+              t('key-features')
+            } otherClass="font-bold" />
           </div>
 
           <div className="mt-8">
@@ -109,7 +146,10 @@ const WhiteLabelPartnerships = async ({
             <span className="text-blue-500 text-2xl mr-4">
               <LuNotebookPen />
             </span>
-            <SubTitle subTitle="Requirements" otherClass="font-bold" />
+            <SubTitle subTitle={
+              t('requirements') 
+            }  
+            otherClass="font-bold" />
           </div>
           <div className="mt-8">
             <ul className="border p-5 rounded-xl w-full max-md:w-full max-lg:w-3/4 lg:w-1/2">
@@ -128,7 +168,10 @@ const WhiteLabelPartnerships = async ({
       {/* Strategic Partnerships Section */}
       <section>
         <section className="pt-16 px-36 max-md:px-10 max-xl:px-20">
-          <SubTitle subTitle="Strategic Partnerships" otherClass="font-bold" />
+          <SubTitle subTitle={
+            t('strategics-partnerships') 
+          }
+          otherClass="font-bold" />
           <Description
             description="The AxionTrade liquidity solution is ideal for institutional and high volume clients looking to access market leading spread at affordable prices. Clients leverage off AxionTrade’ existing liquidity, technology and banking relationships with the benefit of dealing with one counterparty and receiving market leading pricing at a competitive volume based fee."
             otherClass="text-gray-500 mt-2"
@@ -139,7 +182,8 @@ const WhiteLabelPartnerships = async ({
             <span className="text-blue-500 text-2xl mr-4">
               <IoKeyOutline />
             </span>
-            <SubTitle subTitle="Key Features" otherClass="font-bold" />
+            <SubTitle subTitle={ t('key-features')}
+            otherClass="font-bold" />
           </div>
 
           <div className="mt-8">
@@ -160,7 +204,11 @@ const WhiteLabelPartnerships = async ({
             <span className="text-blue-500 text-2xl mr-4">
               <LuNotebookPen />
             </span>
-            <SubTitle subTitle="Requirements" otherClass="font-bold" />
+            <SubTitle subTitle={
+              
+              t('requirements') 
+            }  
+             otherClass="font-bold" />
           </div>
           <div className="mt-8">
             <ul className="border p-5 rounded-xl w-full max-md:w-full max-lg:w-3/4 lg:w-1/2">
