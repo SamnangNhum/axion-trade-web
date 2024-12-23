@@ -192,13 +192,13 @@ const Footer = () => {
       {/* Copyright */}
       <div className="flex bg-black pb-14 px-32 max-md:list-item flex-row-reverse max-xl:px-10 max-md:px-10 max-md:text-center">
         <div className="w-full pt-14 flex justify-end border-t-2 border-gray-600">
-          <Link className=" text-white" href="/Terms of use">
+          <Link className=" text-white" href="/terms-of-use">
             Terms of use
           </Link>
-          <Link className="mx-5 text-white" href="/Privacy Policy">
+          <Link className="mx-5 text-white" href="/privacy-policy">
             Privacy Policy
           </Link>
-          <Link className="text-white" href="/Cookies Policy">
+          <Link className="text-white" href="/cookies-policy">
             Cookies Policy
           </Link>
         </div>
