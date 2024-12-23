@@ -5,8 +5,11 @@ import SubTitle from "../../shared/sub-title";
 import Image from "next/image";
 import { IoKeyOutline } from "react-icons/io5";
 import { LuNotebookPen } from "react-icons/lu";
+import { useTranslation } from "@/app/i18n";
 
-export default function WhiteLabelPartnerships() {
+const WhiteLabelPartnerships = async (params: Promise<{ lng: string }>) => {
+  const { lng } = await params;
+  const { t } = await useTranslation(lng);
   const firstKeyFeatures = [
     "Access to deep liquidity and market leading spreads from 0.0 pips.",
     "Multi bank aggregated price feed.",
@@ -56,7 +59,7 @@ export default function WhiteLabelPartnerships() {
           </div>
           <div className="flex justify-center items-center">
             <Image
-              src="/white-label-partnership.png"
+              src="/assets/images/white-label-partnership.png"
               width={400}
               height={400}
               alt="White Label Partnerships"
@@ -171,4 +174,5 @@ export default function WhiteLabelPartnerships() {
       </section>
     </div>
   );
-}
+};
+export default WhiteLabelPartnerships;
