@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,24 +26,21 @@ import {
 import { cn } from "@/lib/utils";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import Description from "@/app/shared/description";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { useTranslation } from "@/app/i18n";
 
-const Header = () => {
+const Header = async ({ lng }: { lng: string }) => {
+  const { t } = await useTranslation(lng);
+
   const componentServices: { title: string; href: string }[] = [
-    {
-      title: "Forex",
-      href: "/forex",
-    },
-    {
-      title: "Commodities",
-      href: "/commodities",
-    },
+    { title: t("forex"), href: "/forex" },
+    { title: t("commodities"), href: "/commodities" },
   ];
+
   const componentBlog: { title: string; href: string }[] = [
-    {
-      title: "STP",
-      href: "/stp-account",
-    },
+    { title: t("stp"), href: "/stp-account" },
   ];
+
   return (
     <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2 max-xl:grid-cols-2">
       {/* Logo */}
@@ -58,45 +56,45 @@ const Header = () => {
       </div>
 
       {/* Menu */}
-      <NavigationMenu className=" max-md:hidden max-xl:hidden">
+      <NavigationMenu className="max-md:hidden max-xl:hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
+                {t("home")}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Markets </NavigationMenuTrigger>
+            <NavigationMenuTrigger>{t("markets")}</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
+              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
                 {componentServices.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
                     href={component.href}
-                  ></ListItem>
+                  />
                 ))}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Accounts </NavigationMenuTrigger>
+            <NavigationMenuTrigger>{t("accounts")}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <Description
-                description={"Classic"}
+                description={t("classic")}
                 otherClass={"text-md px-6 pt-5"}
               />
-              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
+              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
                 {componentBlog.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
                     href={component.href}
-                  ></ListItem>
+                  />
                 ))}
               </ul>
             </NavigationMenuContent>
@@ -105,21 +103,24 @@ const Header = () => {
           <NavigationMenuItem>
             <Link href="/platforms" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Platforms
+                {t("platforms")}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* Other*/}
+      {/* Other */}
       <div className="flex justify-center items-center space-x-8 ">
         <div className="flex space-x-2 cursor-pointer max-md:hidden">
           <FaUserCircle size={25} color="white" />
-          <span className="text-white hover:text-white">Client Portal</span>
+          <span className="text-white hover:text-white">
+            {t("client_portal")}
+          </span>
         </div>
-        {/* Translate */}
+        {/* Language Switcher */}
         <GrLanguage size={25} color="white" className="cursor-pointer " />
+        <LanguageSwitcher />
         {/* Menu slide */}
         <Sheet>
           <SheetTrigger>
@@ -141,99 +142,29 @@ const Header = () => {
               </SheetTitle>
             </SheetHeader>
             <div className="my-12">
-              <div className="flex space-x-2 cursor-pointer md:hidden">
-                <FaUserCircle size={25} color="black" />
-                <span className="text-black hover:text-black">
-                  Client Portal
-                </span>
-              </div>
-
-              <nav className="my-5 md:hidden">
-                <Link
-                  href="/"
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>Home</SheetPrimitive.Close>
-                </Link>
-                <SubTitle
-                  subTitle={" Market "}
-                  otherClass={"my-2 max-md:text-2xl"}
-                />
-                <Link
-                  href="/forex"
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>Forex</SheetPrimitive.Close>
-                </Link>
-                <Link
-                  href="/commodities "
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>Commodities</SheetPrimitive.Close>
-                </Link>
-              </nav>
-              <nav className="my-5 md:hidden">
-                <SubTitle
-                  subTitle={" Account "}
-                  otherClass={"my-2 max-md:text-2xl"}
-                />
-                <Description
-                  description={"Classic"}
-                  otherClass={"text-black"}
-                />
-                <Link
-                  href="/stp-account"
-                  passHref
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>STP</SheetPrimitive.Close>
-                </Link>
-              </nav>
-
               <nav className="my-5">
-                <SubTitle
-                  subTitle={"Affiliates"}
-                  otherClass={"my-2 max-md:text-2xl"}
-                />
-                <Link
-                  href="/asset-manager"
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>Asset Manager</SheetPrimitive.Close>
-                </Link>
-                <Link
-                  href="/white-label-partnerships"
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>
-                    White Label Partnerships
-                  </SheetPrimitive.Close>
-                </Link>
+                <SubTitle subTitle={t("markets")} otherClass={"my-2"} />
+                {componentServices.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-black hover:text-black"
+                  >
+                    <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
+                  </Link>
+                ))}
               </nav>
-
               <nav className="my-5">
-                <SubTitle
-                  subTitle={"Company"}
-                  otherClass={"my-2 max-md:text-2xl"}
-                />
-                <Link
-                  href="/our-edge"
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>Our Edge</SheetPrimitive.Close>
-                </Link>
-                <Link
-                  href="/about-us"
-                  className="text-black hover:text-black text-md flex flex-wrap "
-                >
-                  <SheetPrimitive.Close>About Us</SheetPrimitive.Close>
-                </Link>
-                <Link
-                  href="/posts&events"
-                  className="text-black hover:text-black text-md flex flex-wrap"
-                >
-                  <SheetPrimitive.Close>Posts & Events</SheetPrimitive.Close>
-                </Link>
+                <SubTitle subTitle={t("accounts")} otherClass={"my-2"} />
+                {componentBlog.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-black hover:text-black"
+                  >
+                    <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
+                  </Link>
+                ))}
               </nav>
             </div>
           </SheetContent>
@@ -242,6 +173,7 @@ const Header = () => {
     </header>
   );
 };
+
 const ListItem = React.forwardRef<
   React.ElementRef<typeof Link>,
   React.ComponentPropsWithoutRef<typeof Link> & {

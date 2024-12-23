@@ -4,8 +4,10 @@ import SubTitle from "../../shared/sub-title";
 import Description from "../../shared/description";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MdArrowForwardIos } from "react-icons/md";
+import { useTranslation } from "@/app/i18n";
 
-export default function Commodities() {
+const Commodities = async ({ params: { lng } }: any) => {
+  const { t } = await useTranslation(lng);
   const Commodities = [
     {
       id: 0,
@@ -381,4 +383,5 @@ export default function Commodities() {
       </section>
     </div>
   );
-}
+};
+export default Commodities;

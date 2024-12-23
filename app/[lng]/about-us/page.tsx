@@ -1,10 +1,12 @@
+import { useTranslation } from "@/app/i18n";
 import Button from "../../shared/button";
 import Description from "../../shared/description";
 import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import Image from "next/image";
 
-export default function AboutUs() {
+const AboutUs = async ({ params: { lng } }: any) => {
+  const { t } = await useTranslation(lng);
   return (
     <div>
       {/* PageTitle */}
@@ -34,4 +36,5 @@ export default function AboutUs() {
       </section>
     </div>
   );
-}
+};
+export default AboutUs;

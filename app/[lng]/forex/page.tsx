@@ -3,9 +3,10 @@ import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useTranslation } from "@/app/i18n";
 
-export default function Forex() {
-  // Forex Contract & Specifications
+const Forex = async ({ params: { lng } }: any) => {
+  const { t } = await useTranslation(lng);
   const Contract = [
     {
       id: 0,
@@ -449,4 +450,5 @@ export default function Forex() {
       {/* End Mobile Variable Spreads & ECN Spreads Comparison: */}
     </div>
   );
-}
+};
+export default Forex;

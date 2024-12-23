@@ -3,8 +3,10 @@ import Button from "../../shared/button";
 import Description from "../../shared/description";
 import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
+import { useTranslation } from "@/app/i18n";
 
-export default function STP() {
+const STP = async ({ params: { lng } }: any) => {
+  const { t } = await useTranslation(lng);
   const AccountSettings = [
     {
       id: 0,
@@ -105,4 +107,5 @@ export default function STP() {
       </section>
     </div>
   );
-}
+};
+export default STP;

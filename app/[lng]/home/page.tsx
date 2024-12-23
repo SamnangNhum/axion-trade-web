@@ -4,7 +4,7 @@ import Description from "../../shared/description";
 import SubTitle from "../../shared/sub-title";
 import Title from "../../shared/title";
 import Image from "next/image";
-import axionTradeBg from "@assets/images/bg-axion-trade.png";
+
 import {
   Carousel,
   CarouselContent,
@@ -13,8 +13,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "@/app/i18n";
 
-export default function Home() {
+const Home = async ({ params: { lng } }: any) => {
+  const { t } = await useTranslation(lng);
   const items = [
     {
       date: "September 27, 2024",
@@ -346,4 +348,5 @@ export default function Home() {
       </section>
     </div>
   );
-}
+};
+export default Home;

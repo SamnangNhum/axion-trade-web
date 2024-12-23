@@ -1,10 +1,12 @@
+import { useTranslation } from "@/app/i18n";
 import Description from "../../shared/description";
 import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import Title from "../../shared/title";
 import Image from "next/image";
 
-export default function OurEdge() {
+const OurEdge = async ({ params: { lng } }: any) => {
+  const { t } = await useTranslation(lng);
   const counts = [
     { title: "10,000+", description: "Clients" },
     { title: "10,000,000+", description: "Trade Executed" },
@@ -86,7 +88,12 @@ export default function OurEdge() {
             </div>
           </div>
           <div className="flex justify-end items-center">
-            <Image src="/assets/images/earth.png" width={500} height={500} alt="earth" />
+            <Image
+              src="/assets/images/earth.png"
+              width={500}
+              height={500}
+              alt="earth"
+            />
           </div>
         </div>
       </section>
@@ -212,4 +219,5 @@ export default function OurEdge() {
       </section>
     </div>
   );
-}
+};
+export default OurEdge;

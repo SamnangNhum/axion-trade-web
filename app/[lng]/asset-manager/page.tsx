@@ -2,8 +2,11 @@ import { TbPointFilled } from "react-icons/tb";
 import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import Description from "../../shared/description";
+import { useTranslation } from "@/app/i18n";
 
-export default function AssetManager() {
+const AssetManager = async ({ params: { lng } }: any) => {
+  const { t } = await useTranslation(lng);
+
   const managerFeatures = [
     "Customisable trading conditions including spreads, commissions, performance fees, etc.",
     "Automatic calculation of commissions and performance fees with easy withdrawal options.",
@@ -143,4 +146,5 @@ export default function AssetManager() {
       </section>
     </div>
   );
-}
+};
+export default AssetManager;

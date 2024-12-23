@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import { dir } from "i18next";
 import { siemreap, openSans, notoSans } from "@/assets/Fonts";
 import { languages } from "../i18n/settings";
+import { useTranslation } from "../i18n";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,24 +15,28 @@ export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params = { lng: "en" }, // Default fallback for lng
+  params,
 }: {
   children: React.ReactNode;
   params: { lng: string };
 }) {
-  const languageClass =
-    params.lng === "km"
-      ? siemreap.className
-      : params.lng === "en"
-      ? openSans.className
-      : notoSans.className;
+  const { lng } = params;
 
   return (
-    <html lang={params.lng} dir={dir(params.lng)}>
-      <body className={languageClass} style={{ fontSize: "16px" }}>
-        <Header />
+    <html lang={lng} dir={dir(lng)}>
+      <body
+        className={
+          lng === "km"
+            ? siemreap.className
+            : lng === "en"
+            ? openSans.className
+            : notoSans.className
+        }
+        style={lng === "km" ? { fontSize: "16px" } : { fontSize: "16px" }}
+      >
+        <Header lng={lng} />
         {children}
         <Footer />
       </body>
