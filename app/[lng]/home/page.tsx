@@ -20,7 +20,7 @@ export default function Home() {
       date: "September 27, 2024",
       link: "/",
       linkText: "Press Release",
-      imageSrc: "/nothing-image.jpg",
+      imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
     },
@@ -28,7 +28,7 @@ export default function Home() {
       date: "September 27, 2024",
       link: "/",
       linkText: "Press Release",
-      imageSrc: "/nothing-image.jpg",
+      imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
     },
@@ -36,7 +36,7 @@ export default function Home() {
       date: "September 27, 2024",
       link: "/",
       linkText: "Press Release",
-      imageSrc: "/nothing-image.jpg",
+      imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
     },
@@ -254,14 +254,14 @@ export default function Home() {
         <div className="grid grid-cols-6 gap-4 items-center justify-center max-md:grid-cols-1">
           {[
             {
-              src: "/bussiness-insider-logo.png",
-              alt: "Business Insider Logo",
+              src: "/assets/images/bussiness-insider-logo.png",
+              alt: "/assets/images/Business Insider Logo",
             },
-            { src: "/forbes-logo.png", alt: "Forbes Logo" },
-            { src: "/benzinga-logo.png", alt: "Benzinga Logo" },
-            { src: "/smile-logo.png", alt: "Smile Logo" },
-            { src: "/sahu-logo.png", alt: "Sahu Logo" },
-            { src: "/bloomberg-logo.png", alt: "Bloomberg Logo" },
+            { src: "/assets/images/forbes-logo.png", alt: "Forbes Logo" },
+            { src: "/assets/images/benzinga-logo.png", alt: "Benzinga Logo" },
+            { src: "/assets/images/smile-logo.png", alt: "Smile Logo" },
+            { src: "/assets/images/sahu-logo.png", alt: "Sahu Logo" },
+            { src: "/assets/images/bloomberg-logo.png", alt: "Bloomberg Logo" },
           ].map((logo, index) => (
             <div key={index} className="flex items-center justify-center">
               <Image src={logo.src} width={200} height={200} alt={logo.alt} />
