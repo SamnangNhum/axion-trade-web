@@ -84,7 +84,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="w-full">
           <div>
-            <a href="/">
+            <Link href="/">
               <Image
                 className="max-xl:w-48 max-md:w-full"
                 src="/assets/images/logo-axion-trade.png"
@@ -92,7 +92,7 @@ const Footer = () => {
                 height={500}
                 alt="Picture of the author"
               />
-            </a>
+            </Link>
           </div>
           {/* SocialLink */}
           <div className="flex mt-10">
@@ -123,7 +123,7 @@ const Footer = () => {
         <div className="w-full pl-32 max-xl:pl-10 max-md:pl-0">
           <div className="mb-10 max-md:mt-10">
             <SubTitle subTitle="MARKETS" otherClass="mb-5 text-xl text-white" />
-            <Link className="my-1 text-white list-item list-none" href="/Forex">
+            <Link className="my-1 text-white list-item list-none" href="/forex">
               Forex
             </Link>
             <Link className=" text-white" href="/commodities">
@@ -137,11 +137,11 @@ const Footer = () => {
             />
             <Link
               className="my-1 text-white list-item list-none"
-              href="/Asset Manager"
+              href="/asset-manager"
             >
               Asset Manager
             </Link>
-            <Link className="text-white" href="/White Label Partnerships">
+            <Link className="text-white" href="/white-label-partnerships">
               White Label Partnerships
             </Link>
           </div>
@@ -155,7 +155,7 @@ const Footer = () => {
           >
             Our Edge
           </Link>
-          <Link className=" text-white" href="/about-Us">
+          <Link className=" text-white" href="/about-us">
             About Us
           </Link>
         </div>

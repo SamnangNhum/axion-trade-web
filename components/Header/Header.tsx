@@ -4,7 +4,14 @@ import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
 import { GrLanguage } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import SubTitle from "@/app/shared/sub-title";
 import {
   NavigationMenu,
@@ -16,23 +23,21 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import * as SheetPrimitive from "@radix-ui/react-dialog"
+import * as SheetPrimitive from "@radix-ui/react-dialog";
 import Description from "@/app/shared/description";
 
 const Header = () => {
-  const componentServices: { title: string; href: string; }[] = [
+  const componentServices: { title: string; href: string }[] = [
     {
       title: "Forex",
       href: "/forex",
-
     },
     {
       title: "Commodities",
       href: "/commodities",
-
     },
   ];
-  const componentBlog: { title: string; href: string; }[] = [
+  const componentBlog: { title: string; href: string }[] = [
     {
       title: "STP",
       href: "/stp-account",
@@ -56,12 +61,11 @@ const Header = () => {
       <NavigationMenu className=" max-md:hidden max-xl:hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
+            <Link href="/" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Home
               </NavigationMenuLink>
             </Link>
-
           </NavigationMenuItem>
 
           <NavigationMenuItem>
@@ -73,8 +77,7 @@ const Header = () => {
                     key={component.title}
                     title={component.title}
                     href={component.href}
-                  >
-                  </ListItem>
+                  ></ListItem>
                 ))}
               </ul>
             </NavigationMenuContent>
@@ -83,28 +86,29 @@ const Header = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Accounts </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <Description description={"Classic"} otherClass={"text-md px-6 pt-5"}/>
+              <Description
+                description={"Classic"}
+                otherClass={"text-md px-6 pt-5"}
+              />
               <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px] ">
                 {componentBlog.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
                     href={component.href}
-                  >
-                  </ListItem>
+                  ></ListItem>
                 ))}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/platforms " legacyBehavior passHref>
+            <Link href="/platforms" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Platforms
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-
         </NavigationMenuList>
       </NavigationMenu>
 
@@ -120,13 +124,12 @@ const Header = () => {
         <Sheet>
           <SheetTrigger>
             <HiMenuAlt3 size={35} color="white" className="cursor-pointer" />
-
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
               <SheetTitle>
                 <Link href="/">
-                  <SheetPrimitive.Close >
+                  <SheetPrimitive.Close>
                     <Image
                       src="/assets/images/logo-axion-trades.png"
                       width={150}
@@ -140,87 +143,117 @@ const Header = () => {
             <div className="my-12">
               <div className="flex space-x-2 cursor-pointer md:hidden">
                 <FaUserCircle size={25} color="black" />
-                <span className="text-black hover:text-black">Client Portal</span>
+                <span className="text-black hover:text-black">
+                  Client Portal
+                </span>
               </div>
 
               <nav className="my-5 md:hidden">
-              <Link href="/" className="text-black hover:text-black text-md flex flex-wrap">
-                  <SheetPrimitive.Close >
-                    Home
-                  </SheetPrimitive.Close>
+                <Link
+                  href="/"
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>Home</SheetPrimitive.Close>
                 </Link>
-                <SubTitle subTitle={" Market "} otherClass={"my-2 max-md:text-2xl"} />
-                <Link href="/forex" className="text-black hover:text-black text-md flex flex-wrap">
-                  <SheetPrimitive.Close >
-                    Forex
-                  </SheetPrimitive.Close>
+                <SubTitle
+                  subTitle={" Market "}
+                  otherClass={"my-2 max-md:text-2xl"}
+                />
+                <Link
+                  href="/forex"
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>Forex</SheetPrimitive.Close>
                 </Link>
-                <Link href="/commodities " className="text-black hover:text-black text-md flex flex-wrap">
-
-                  <SheetPrimitive.Close >
-                    Commodities
-                  </SheetPrimitive.Close>
+                <Link
+                  href="/commodities "
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>Commodities</SheetPrimitive.Close>
                 </Link>
               </nav>
               <nav className="my-5 md:hidden">
-                <SubTitle subTitle={" Account "} otherClass={"my-2 max-md:text-2xl"} />
-                <Description description={"Classic"} otherClass={"text-black"} />
-                <Link href="/stp-account" className="text-black hover:text-black text-md flex flex-wrap">
-                  <SheetPrimitive.Close >
-                    STP
-                  </SheetPrimitive.Close>
+                <SubTitle
+                  subTitle={" Account "}
+                  otherClass={"my-2 max-md:text-2xl"}
+                />
+                <Description
+                  description={"Classic"}
+                  otherClass={"text-black"}
+                />
+                <Link
+                  href="/stp-account"
+                  passHref
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>STP</SheetPrimitive.Close>
                 </Link>
               </nav>
 
               <nav className="my-5">
-                <SubTitle subTitle={"Affiliates"} otherClass={"my-2 max-md:text-2xl"} />
-                <Link href="/asset-manager" className="text-black hover:text-black text-md flex flex-wrap">
-                  <SheetPrimitive.Close >
-                    Asset Manager
-                  </SheetPrimitive.Close>
+                <SubTitle
+                  subTitle={"Affiliates"}
+                  otherClass={"my-2 max-md:text-2xl"}
+                />
+                <Link
+                  href="/asset-manager"
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>Asset Manager</SheetPrimitive.Close>
                 </Link>
-                <Link href="/white-label-partnerships" className="text-black hover:text-black text-md flex flex-wrap">
-                  <SheetPrimitive.Close >
+                <Link
+                  href="/white-label-partnerships"
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>
                     White Label Partnerships
                   </SheetPrimitive.Close>
                 </Link>
               </nav>
 
               <nav className="my-5">
-                <SubTitle subTitle={"Company"} otherClass={"my-2 max-md:text-2xl"} />
-                <Link href="/our-edge" className="text-black hover:text-black text-md flex flex-wrap">
-                  <SheetPrimitive.Close >
-                    Our Edge
-                  </SheetPrimitive.Close>
+                <SubTitle
+                  subTitle={"Company"}
+                  otherClass={"my-2 max-md:text-2xl"}
+                />
+                <Link
+                  href="/our-edge"
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>Our Edge</SheetPrimitive.Close>
                 </Link>
-                <Link href="/about-us" className="text-black hover:text-black text-md flex flex-wrap ">
-                  <SheetPrimitive.Close >
-                    About Us
-                  </SheetPrimitive.Close>
+                <Link
+                  href="/about-us"
+                  className="text-black hover:text-black text-md flex flex-wrap "
+                >
+                  <SheetPrimitive.Close>About Us</SheetPrimitive.Close>
                 </Link>
-                <Link href="/posts&events" className="text-black hover:text-black text-md flex flex-wrap">
-                  <SheetPrimitive.Close >
-                    Posts & Events
-                  </SheetPrimitive.Close>
+                <Link
+                  href="/posts&events"
+                  className="text-black hover:text-black text-md flex flex-wrap"
+                >
+                  <SheetPrimitive.Close>Posts & Events</SheetPrimitive.Close>
                 </Link>
               </nav>
-
             </div>
           </SheetContent>
         </Sheet>
-
       </div>
     </header>
   );
 };
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ElementRef<typeof Link>,
+  React.ComponentPropsWithoutRef<typeof Link> & {
+    title: string;
+    children?: React.ReactNode;
+    className?: string;
+  }
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -232,10 +265,11 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+
+ListItem.displayName = "ListItem";
 export default Header;
