@@ -15,8 +15,10 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "@/app/i18n";
 
-const Home = async ({ params: { lng } }: any) => {
+const Home = async (params: Promise<{ lng: string }>) => {
+  const { lng } = await params;
   const { t } = await useTranslation(lng);
+  // const { t } = await useTranslation(lng);
   const items = [
     {
       date: "September 27, 2024",

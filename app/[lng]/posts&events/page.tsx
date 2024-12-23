@@ -2,8 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import Description from "../../shared/description";
 import PageTitle from "../../shared/pages-title";
+import { useTranslation } from "@/app/i18n";
 
-export default function PostAndEvent() {
+const PostAndEvent = async (params: Promise<{ lng: string }>) => {
+  const { lng } = await params;
+  const { t } = await useTranslation(lng);
   const postItems = [
     {
       date: "September 27, 2024",
@@ -106,4 +109,4 @@ export default function PostAndEvent() {
       </section>
     </div>
   );
-}
+};

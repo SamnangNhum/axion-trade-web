@@ -7,7 +7,6 @@ import { GrLanguage } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -44,7 +43,7 @@ const Header = async ({ lng }: { lng: string }) => {
   return (
     <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2 max-xl:grid-cols-2">
       {/* Logo */}
-      <div className="flex justify-center ">
+      <div className="flex justify-center">
         <Link href="/">
           <Image
             src="/assets/images/logo-axion-trade.png"
@@ -59,11 +58,11 @@ const Header = async ({ lng }: { lng: string }) => {
       <NavigationMenu className="max-md:hidden max-xl:hidden">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink asChild>
+              <Link href="/" className={navigationMenuTriggerStyle()}>
                 {t("home")}
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
@@ -86,7 +85,7 @@ const Header = async ({ lng }: { lng: string }) => {
             <NavigationMenuContent>
               <Description
                 description={t("classic")}
-                otherClass={"text-md px-6 pt-5"}
+                otherClass="text-md px-6 pt-5"
               />
               <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
                 {componentBlog.map((component) => (
@@ -101,27 +100,25 @@ const Header = async ({ lng }: { lng: string }) => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/platforms" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink asChild>
+              <Link href="/platforms" className={navigationMenuTriggerStyle()}>
                 {t("platforms")}
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
       {/* Other */}
-      <div className="flex justify-center items-center space-x-8 ">
+      <div className="flex justify-center items-center space-x-8">
         <div className="flex space-x-2 cursor-pointer max-md:hidden">
           <FaUserCircle size={25} color="white" />
-          <span className="text-white hover:text-white">
-            {t("client_portal")}
-          </span>
+          <span className="text-white">{t("client_portal")}</span>
         </div>
         {/* Language Switcher */}
-        <GrLanguage size={25} color="white" className="cursor-pointer " />
+        <GrLanguage size={25} color="white" className="cursor-pointer" />
         <LanguageSwitcher />
-        {/* Menu slide */}
+        {/* Mobile Menu */}
         <Sheet>
           <SheetTrigger>
             <HiMenuAlt3 size={35} color="white" className="cursor-pointer" />
@@ -143,7 +140,7 @@ const Header = async ({ lng }: { lng: string }) => {
             </SheetHeader>
             <div className="my-12">
               <nav className="my-5">
-                <SubTitle subTitle={t("markets")} otherClass={"my-2"} />
+                <SubTitle subTitle={t("markets")} otherClass="my-2" />
                 {componentServices.map((item) => (
                   <Link
                     key={item.href}
@@ -155,7 +152,7 @@ const Header = async ({ lng }: { lng: string }) => {
                 ))}
               </nav>
               <nav className="my-5">
-                <SubTitle subTitle={t("accounts")} otherClass={"my-2"} />
+                <SubTitle subTitle={t("accounts")} otherClass="my-2" />
                 {componentBlog.map((item) => (
                   <Link
                     key={item.href}

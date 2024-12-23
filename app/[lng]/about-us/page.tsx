@@ -5,7 +5,8 @@ import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import Image from "next/image";
 
-const AboutUs = async ({ params: { lng } }: any) => {
+const AboutUs = async (params: Promise<{ lng: string }>) => {
+  const { lng } = await params;
   const { t } = await useTranslation(lng);
   return (
     <div>

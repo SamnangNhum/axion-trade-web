@@ -1,36 +1,34 @@
 import { createInstance } from "i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
 import { initReactI18next } from "react-i18next/initReactI18next";
-import { getOptions } from "./settings";
+import { defaultNS, getOptions } from "./settings";
 
-const initI18next = async (lng: any, ns: any) => {
+const initI18next = async (lng: string, ns: string | string[] = defaultNS) => {
     const i18nInstance = createInstance();
     await i18nInstance
         .use(initReactI18next)
         .use(
             resourcesToBackend(
-                (language: any, namespace: any) =>
+                (language: string, namespace: string) =>
                     import(`./locales/${language}/${namespace}.json`)
             )
         )
-        .init(getOptions(lng, ns));
+        .init(getOptions(lng, ns)); // Pass `ns` directly (it will now always be processed correctly)
     return i18nInstance;
 };
 
 export async function useTranslation(
-    lng: any,
-    ns?: any,
-    options: { keyPrefix: string } = {
-        keyPrefix: "",
-    }
+    lng: string,
+    ns?: string | string[],
+    options: { keyPrefix?: string } = {}
 ) {
-    const i18nextInstance = await initI18next(lng, ns);
+    const i18nInstance = await initI18next(lng, ns);
     return {
-        t: i18nextInstance.getFixedT(
+        t: i18nInstance.getFixedT(
             lng,
-            Array.isArray(ns) ? ns[0] : ns,
-            options.keyPrefix
+            Array.isArray(ns) ? ns[0] : ns || undefined, // Use default namespace if ns is not passed
+            options.keyPrefix || ""
         ),
-        i18n: i18nextInstance,
+        i18n: i18nInstance,
     };
 }

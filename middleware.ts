@@ -21,7 +21,7 @@ export function middleware(request: any) {
 
   // Redirect if lng in path is not supported
   if (
-    !languages.some((loc) => request.nextUrl.pathname.startsWith(`/${loc}`)) &&
+    !languages.some((loc: any) => request.nextUrl.pathname.startsWith(`/${loc}`)) &&
     !request.nextUrl.pathname.startsWith("/_next")
   ) {
     return NextResponse.redirect(
@@ -31,7 +31,7 @@ export function middleware(request: any) {
 
   if (request.headers.has("referer")) {
     const refererUrl = new URL(request.headers.get("referer"));
-    const lngInReferer = languages.find((l) =>
+    const lngInReferer = languages.find((l: any) =>
       refererUrl.pathname.startsWith(`/${l}`)
     );
     const response = NextResponse.next();

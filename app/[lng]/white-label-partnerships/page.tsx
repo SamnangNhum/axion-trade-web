@@ -7,7 +7,8 @@ import { IoKeyOutline } from "react-icons/io5";
 import { LuNotebookPen } from "react-icons/lu";
 import { useTranslation } from "@/app/i18n";
 
-const WhiteLabelPartnerships = async ({ params: { lng } }: any) => {
+const WhiteLabelPartnerships = async (params: Promise<{ lng: string }>) => {
+  const { lng } = await params;
   const { t } = await useTranslation(lng);
   const firstKeyFeatures = [
     "Access to deep liquidity and market leading spreads from 0.0 pips.",

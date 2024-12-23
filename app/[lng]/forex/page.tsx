@@ -5,7 +5,8 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslation } from "@/app/i18n";
 
-const Forex = async ({ params: { lng } }: any) => {
+const Forex = async (params: Promise<{ lng: string }>) => {
+  const { lng } = await params;
   const { t } = await useTranslation(lng);
   const Contract = [
     {
