@@ -30,8 +30,8 @@ const PostAndEvent = async ({
     <div>
       {/* PageTitle */}
       <PageTitle
-        title="Posts & Events"
-        description="Get updated on our latest activities and events."
+        title={t("posts-&-events")}
+        description={t("get-updated-to")}
       />
 
       {/* Latest Posts Section */}
@@ -62,7 +62,7 @@ const PostAndEvent = async ({
                     className="text-blue-500"
                     href={`/posts-events/${post.Slug || post.id}`}
                   >
-                    {t("Read More")}
+                    {t("read-more")}
                   </Link>
                 </div>
               </div>
@@ -103,7 +103,7 @@ const PostAndEvent = async ({
                     className="text-blue-500"
                     href={`/posts-events/${post.Slug || post.id}`}
                   >
-                    {t("Read More")}
+                    {t("read-more")}
                   </Link>
                 </div>
               </div>
