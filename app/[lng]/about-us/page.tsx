@@ -13,20 +13,20 @@ const AboutUs = async ({ params }: { params: Promise<{ lng: string }> }) => {
       {/* PageTitle */}
       <PageTitle
         title={t("about-us")}
-        description="Simple. Reliable. Innovative."
+        description={t('simple')  + '.' + t('reliable') + '.' +  t('innovative') }
       />
       {/* AboutUs */}
       <section className="px-36 py-16 max-sm:p-16 max-md:px-10 max-xl:px-20">
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
           <div className="">
-            <SubTitle subTitle={"The Axion Trade"} otherClass={"font-bold"} />
+            <SubTitle subTitle={t('the-axion-trade')} otherClass={"font-bold"} />
             <Description
               description={
-                "Axion Trade was incorporated in 2022 in Cambodia under the name Axiontrade (Cambodia) Co., Ltd., with Company Registration Number 1000179787, and is approved by the Securities and Exchange Regulator (SERC) of Cambodia to operate under a Derivative Broker License No. 037"
+                t('axion-trade-was-incorporated')
               }
               otherClass={"text-gray-500 my-5"}
             />
-            <Button button={"Contact Us"} />
+            <Button button={t('contact-us')} />
           </div>
           <div className="flex justify-center items-center">
             <Image

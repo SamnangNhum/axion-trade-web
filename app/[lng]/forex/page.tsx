@@ -11,31 +11,31 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const Contract = [
     {
       id: 0,
-      title: "Contract Size",
+      title:t('contract-size'),
       amounts: "100,000",
       description:
-        "1 standard Lot Contract Size on Axion Trade is equivalent to 100,000 units of base currency. E.g. 1 standard lot of EUR/USD is €100,000.",
+        t('1-standard-lot-contract'),
     },
     {
       id: 1,
-      title: "Minimum Lot",
+      title:t('minimum-lot'),
       amounts: "0.01",
       description:
-        "The minimum lot size on Axion Trade is 0.01 which is equivalent to 1,000 units of base currency.",
+        t('the-minimum-lot-size'),
     },
     {
       id: 2,
-      title: "Incremental Steps",
+      title: t('incremental-steps'),
       amounts: "0.01",
       description:
-        "The minimum incremental lot size on Axion Trade is 0.01 which is equivalent to 1,000 units of base currency.",
+        t('the-minimum-incremental'),
     },
     {
       id: 3,
-      title: "Maximum Lot",
+      title: t('maximum-lot'),
       amounts: "100",
       description:
-        "The minimum lot size on Axion Trade is 0.01 which is equivalent to 1,000 units of base currency.",
+        t('the-maximum-lot-size-per'),
     },
   ];
   // End Forex Contract & Specifications
@@ -44,38 +44,38 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const STP = [
     {
       id: 0,
-      VariableSpreads: "Tier One Liquidty Providers",
-      ECNSpreads: "Electronic Communication Network (ECN)",
+      VariableSpreads:t('tier-one-liquidty-providers'),
+      ECNSpreads: t('electronic-communication-network-(ECN)'),
     },
   ];
   const Pricing = [
     {
       id: 0,
-      VariableSpreads: "Variable Spread",
+      VariableSpreads:t('variable-spreads'),
       ECNSpreads:
-        "Raw ECN spread direct from market as low as 0.0 pips for EUR USD",
+        t('raw-ecn-spread-direct-from-market-as-low-as-0.0-pips-for-eur-usd'),
     },
   ];
   const Commission = [
     {
       id: 0,
-      VariableSpreads: "No Commission Charged",
+      VariableSpreads: t('no-commission-charged'),
       ECNSpreads:
-        "Flat fee as low as 0.50 USD per lot commission for Forex instruments",
+        t('flat-fee-as-low-as-0.50-usd-per-lot-commission-for-forex-instruments'),
     },
   ];
   const BrokerageFee = [
     {
       id: 0,
-      VariableSpreads: "Fees are included in the spread",
-      ECNSpreads: "No additional markups on the spread",
+      VariableSpreads: t('fees-are-included-in-the-spread'),
+      ECNSpreads: t('no-additional-markups-on-the-spread'),
     },
   ];
   const Advantage = [
     {
       id: 0,
-      VariableSpreads: "No Additional fees are charged",
-      ECNSpreads: "Raw spreads direct from the market",
+      VariableSpreads: t('no-additional-fees-are-charged'),
+      ECNSpreads: t('raw-spreads-direct-from-the-market'),
     },
   ];
   // End Variable Spreads & ECN Spreads Comparison
@@ -85,7 +85,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
       {/* page-title */}
       <PageTitle
         title="Forex"
-        description="Trade popular forex pairs like EUR/USD and GBP/USD! Come and trade over 50+ forex pairs with Axion Trade."
+        description={t('trade-popular-forex-pairs-like-eur/usd-and-gbp/usd!')}
       />
       {/* End page-title */}
 
@@ -94,7 +94,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
         <section className="pt-16">
           <SubTitle
             otherClass="mb-7"
-            subTitle="Forex Contract & Specifications"
+            subTitle={t('forex-contract-&-specifications')}
           />
         </section>
         <section className="grid grid-cols-2 gap-5 list-none max-md:list-item">
@@ -130,27 +130,27 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
       <div className="pt-16 max-md:pt-6">
         <SubTitle
           otherClass="text-center mx-96 px-40 max-md:px-10 max-md:mx-0 max-xl:px-48 max-xl:mx-0"
-          subTitle="Axion Trade offers two types of spread to our clients:"
+          subTitle={t('axion-trade-offers-two-types-of-spread-to-our-clients')}
         />
         <div className="grid grid-cols-2 max-md:grid-cols-1 gap-5 pt-10 px-36 max-md:px-10 max-xl:px-10">
           <section className="px-10 max-md:px-0 max-md:mb-5 max-xl:px-5">
             <SubTitle
               otherClass="text-blue-700 font-normal text-center mb-5"
-              subTitle="Variable Spreads"
+              subTitle={t('variable-spreads')}
             />
             <Description
               otherClass="text-center text-gray-500"
-              description="Variable Spreads on the Axion Trade MT4 platform are derived from our Tier-1 Liquidity Providers in Equinix LD4 (a FX-specific data center in London). There are no commissions charged for trade execution, but a brokerage fee is collected from the spreads."
+              description={t('variable-spreads-on-the-axion-trade')}
             />
           </section>
           <section className="px-10 max-md:px-0 max-xl:px-5">
             <SubTitle
               otherClass="text-blue-700 font-normal text-center mb-5"
-              subTitle="ECN Spreads"
+              subTitle={t('ecn-spreads')}
             />
             <Description
               otherClass="text-center text-gray-500"
-              description="ECN Spreads are derived from an Electronic Communication Network (ECN) that is set up with multiple Liquidity Providers, including banks and hedge funds in Equinix LD4 (a FX-specific data center in London). Traders get to enjoy raw spreads for as low as 0.0 pips for EURUSD direct from the market participants at a flat fee of as low as 0.50 USD per lot in commission charged for Forex instruments."
+              description={t('ecn-spreads-are-derived')}
             />
           </section>
         </div>
@@ -162,16 +162,16 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
         <section>
           <SubTitle
             otherClass="pb-10"
-            subTitle="Variable Spreads & ECN Spreads Comparison:"
+            subTitle={t('variable-spreads-&-ecn-spreads-comparison')}
           />
         </section>
         <div className="grid grid-cols-3 max-md:grid-cols-2 border-t-8 border-blue-700 py-10 px-7">
           <section className="max-md:hidden max-xl:hidden"></section>
           <section className="">
-            <SubTitle otherClass="font-normal" subTitle="Variable Spreads" />
+            <SubTitle otherClass="font-normal" subTitle={t('variable-spreads')}/>
           </section>
           <section className="">
-            <SubTitle otherClass="font-normal" subTitle="ECN Spreads" />
+            <SubTitle otherClass="font-normal" subTitle={t('ecn-spreads')} />
           </section>
         </div>
         <div className="">
@@ -184,7 +184,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               >
                 <Description
                   otherClass="font-bold"
-                  description="Straight Through Processing (STP)"
+                  description={t('straight-through-processing')}
                 />
                 <Description
                   otherClass=""
@@ -205,7 +205,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               <div key={items.id} className="grid grid-cols-3 px-7 py-7">
                 <Description
                   otherClass="font-bold flex items-center"
-                  description="Pricing"
+                  description={t('pricing')}
                 />
                 <Description
                   otherClass="flex items-center"
@@ -226,7 +226,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               >
                 <Description
                   otherClass="font-bold flex items-center"
-                  description="Commission"
+                  description={t('commission')}
                 />
                 <Description
                   otherClass="flex items-center"
@@ -244,7 +244,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               <div key={items.id} className="grid grid-cols-3 px-7 py-10">
                 <Description
                   otherClass="font-bold"
-                  description="Brokerage Fee"
+                  description={t('brokerage-fee')}
                 />
                 <Description
                   otherClass=""
@@ -263,7 +263,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 key={items.id}
                 className="grid grid-cols-3 px-7 py-10 bg-gray-100"
               >
-                <Description otherClass="font-bold" description="Advantage" />
+                <Description otherClass="font-bold" description={t('advantage')}/>
                 <Description
                   otherClass=""
                   description={items.VariableSpreads}

@@ -17,44 +17,44 @@ const Commodities = async ({
     {
       id: 0,
       icon: "/assets/images/23-hour-trading-icon.png",
-      title: "23-Hour Trading",
+      title:t('23-hour-trading'),
       description:
-        "Many Commodities are open 23 hours a day and do not have restricted trading hours.",
+        t('many-commodities-are-open-23-hours'),
     },
     {
       id: 1,
       icon: "/assets/images/trading-opportunities-icon.png",
-      title: "Trading Opportunities",
+      title: t('trading-opportunities'),
       description:
-        "Media and analysts present regular trading opportunities on Commodities.",
+        t('media-and-analysts-present-regular'),
     },
     {
       id: 2,
       icon: "/assets/images/trade-on-diverse-sectors-icon.png",
-      title: "Trade on Diverse Sectors",
+      title: t('trade-on-diverse-sectors'),
       description:
-        "Commodities benefit from market movement across a greater variety of sectors.",
+        t('commodities-benefit-from-market-movement'),
     },
     {
       id: 3,
       icon: "/assets/images/global-opportunities-icon.png",
-      title: "Global Opportunities",
+      title: t('global-pportunities'),
       description:
-        "Trade on price movement of major Commodities from the Europe and Asia.",
+        t('trade-on-price-movement-of-major'),
     },
     {
       id: 4,
       icon: "/assets/images/short-the-markets-icon.png",
-      title: "Short the Markets",
+      title: t('short-the-markets'),
       description:
-        "Trade on falling markets (going short) as well as rising markets.",
+        t('trade-on-falling-markets'),
     },
     {
       id: 5,
       icon: "/assets/images/trade-anytime-anywhere-icon.png",
-      title: "Trade Anytime, Anywhere",
+      title: t('trade-anytime-anywhere'),
       description:
-        "Trade on desktop, close on mobile, our accounts work on multiple devices.",
+       t('trade-on-desktop'),
     },
   ];
 
@@ -63,31 +63,31 @@ const Commodities = async ({
   const Gold = [
     {
       id: 0,
-      title: "Contract Size",
+      title: t('contract-size'),
       amounts: "100",
       description:
-        "1 Standard Lot Contract Size on Axion Trade is equivalent to 100 ounces (oz) of Gold.",
+        t('1-standard-Lot-contract-size-on-axion-trade-is-equivalent-to-100-ounces-(oz)-of-gold.'),
     },
     {
       id: 1,
-      title: "Minimum Lot",
+      title: t('minimum-lot'),
       amounts: "0.01",
       description:
-        "The minimum lot size on Axion Trade is 0.01 which is equivalent to 1 ounce (oz) of Gold.",
+        t('the-minimum-lot-size-on-Axion-Trade-is-0.01-which-is-equivalent-to-1-ounce-(oz) of-gold.'),
     },
     {
       id: 2,
-      title: "Incremental Steps",
+      title: t('incremental-steps'),
       amounts: "0.01",
       description:
-        "The minimum incremental lot size on Axion Trade is 0.01 which is equivalent to 1 ounce (oz) of Gold.",
+        t('the-minimum-incremental-lot-size-on-axion-trade-is-0.01-which-is-equivalent-to 1-ounce-(oz)-of-gold.'),
     },
     {
       id: 3,
-      title: "Maximum Lot",
+      title: t('maximum-lot'),
       amounts: "100",
       description:
-        "The maximum lot size per trade on Axion Trade is 100 by default which is equivalent to 10,000 ounces (oz) of Gold.",
+        t('the-maximum-lot-size-per-trade-on-axion-trade-is-100-by-default-which-is-equivalent-to-10,000-ounces-(oz)-of-gold.'),
     },
   ];
 
@@ -95,31 +95,31 @@ const Commodities = async ({
   const Silver = [
     {
       id: 0,
-      title: "Contract Size",
+      title: t('contract-size'),
       amounts: "5,000",
       description:
-        "1 Standard Lot Contract Size on Axion Trade is equivalent to 5,000 ounces (oz) of Silver.",
+        t('1-standard-lot-ontract-size-on-axion-trade-is-equivalent-to-5,000-ounces-(oz)-of-silver.'),
     },
     {
       id: 1,
-      title: "Minimum Lot",
+      title: t('minimum-lot'),
       amounts: "0.01",
       description:
-        "The minimum lot size on Axion Trade is 0.01 which is equivalent to 50 ounces (oz) of Silver.",
+        t('the-minimum-lot-size-on-axion-trade-is-0.01-which-is-equivalent-to-50-ounces-(oz)-of-Silver.'),
     },
     {
       id: 2,
-      title: "Incremental Steps",
+      title: t('incremental-steps'),
       amounts: "0.01",
       description:
-        "The minimum incremental lot size on Axion Trade is 0.01 which is equivalent to 50 ounce (oz) of Silver.",
+       t('the-minimum-incremental-lot-size-on-axion-trade-is-0.01-which-is-equivalent-to-50-ounce-(oz)-of-silver.'),
     },
     {
       id: 3,
-      title: "Maximum Lot",
+      title: t('maximum-lot'),
       amounts: "100",
       description:
-        "The maximum lot size per trade on Axion Trade is 100 by default which is equivalent to 500,000 ounces (oz) of Silver.",
+        t('the-maximum-lot-size-per-trade-on-axion-trade-is-100-by-default-which-is-equivalent-to-500,000-ounces-(oz)-of-silver.'),
     },
   ];
 
@@ -127,31 +127,31 @@ const Commodities = async ({
   const BrentCrudeOil = [
     {
       id: 0,
-      title: "Contract Size",
+      title: t('contract-size'),
       amounts: "1,000",
       description:
-        "1 Standard Lot Contract Size on Axion Trade is equivalent to 1,000 barrels of crude oil",
+        t('1-standard-lot-contract-size-on-axion-trade-is-equivalent-to-1,000-barrels-of-crude-oil.'),
     },
     {
       id: 1,
-      title: "Minimum Lot",
+      title: t('minimum-lot'),
       amounts: "0.01",
       description:
-        "The minimum lot size on Axion Trade is 0.01 which is equivalent to 10 barrels of crude oil.",
+        t('the-minimum-lot-size-on-axion-trade-is-0.01-which-is-equivalent-to-10-barrels-of-crude-oil.'),
     },
     {
       id: 2,
-      title: "Incremental Steps",
+      title: t('incremental-steps'),
       amounts: "0.01",
       description:
-        "The minimum incremental lot size on Axion Trade is 0.01 which is equivalent to 10 barrels of crude oil.",
+        t('the-minimum-incremental-lot-size-on-axion-trade-is-0.01-which-is-equivalent-to-10-barrels-of-crude-oil.'),
     },
     {
       id: 3,
-      title: "Maximum Lot",
+      title: t('maximum-lot'),
       amounts: "100",
       description:
-        "The maximum lot size per trade on Axion Trade is 100 by default which is equivalent to 100,000 barrels of crude oil.",
+        t('the-maximum-lot-size-per-trade-on-axion-trade-is-100-by-default-which-is-equivalent-to-100,000-barrels-of-crude-oil.'),
     },
   ];
 
@@ -159,31 +159,31 @@ const Commodities = async ({
   const WTICrudeOil = [
     {
       id: 0,
-      title: "Contract Size",
+      title: t('contract-size'),
       amounts: "1,000",
       description:
-        "1 Standard Lot Contract Size on Axion Trade is equivalent to 1,000 barrels of crude oil.",
+        t('1-standard-lot-contract-size-on-axion-trade-is-equivalent-to-1,000-barrels-of-crude-oil.'),
     },
     {
       id: 1,
-      title: "Minimum Lot",
+      title: t('minimum-lot'),
       amounts: "0.01",
       description:
-        "The minimum lot size on Axion Trade is 0.01 which is equivalent to 10 barrels of crude oil.",
+        t('the-minimum-lot-size-on-axion-trade-is-0.01-which-is-equivalent-to-10-barrels-of-crude-oil.'),
     },
     {
       id: 2,
-      title: "Incremental Steps",
+      title: t('incremental-steps'),
       amounts: "0.01",
       description:
-        "The minimum incremental lot size on Axion Trade is 0.01 which is equivalent to 10 barrels of crude oil.",
+       t('the-minimum-incremental-lot-size-on-axion-trade-is-0.01-which-is-equivalent-to-10-barrels-of-crude-oil.'),
     },
     {
       id: 3,
-      title: "Maximum Lot",
+      title: t('maximum-lot'),
       amounts: "100",
       description:
-        "The maximum lot size per trade on Axion Trade is 100 by default which is equivalent to 100,000 barrels of crude oil.",
+      t('the-maximum-lot-size-per-trade-on-axion-trade-is-100-by-default-which-is-equivalent-to-100,000-barrels-of-crude-oil.'),
     },
   ];
   // End Commodities available on Axion Trade
@@ -193,8 +193,8 @@ const Commodities = async ({
       <section className="">
         <PageTitle
           otherClass=""
-          title="Commodities"
-          description="Trade popular commodities from around the world such as gold, oil and silver!"
+          title={t('commodities')}
+          description={t('trade-popular-commodities-from-around-the-world')}
         />
       </section>
       <div className="-translate-y-20">
@@ -229,25 +229,26 @@ const Commodities = async ({
           <section className="">
             <SubTitle
               otherClass="pb-10 max-md:px-10 text-center"
-              subTitle="Commodities available on Axion Trade"
+              subTitle={t('commodities-available-on-axion-trade')}
             />
           </section>
           <section className="mx-36 max-md:mx-10 max-xl:mx-10">
             <TabsList className="grid grid-cols-4 max-md:grid-cols-1 pb-16 bg-gray-100 max-md:bg-transparent">
-              <TabsTrigger value="Gold">Gold</TabsTrigger>
-              <TabsTrigger value="Silver">Silver</TabsTrigger>
-              <TabsTrigger value="Brent Crude Oil">Brent Crude Oil</TabsTrigger>
-              <TabsTrigger value="WTI Crude Oil">WTI Crude Oil</TabsTrigger>
+              <TabsTrigger value="Gold">{t('gold')}</TabsTrigger>
+              <TabsTrigger value="Silver">{t('silver')}</TabsTrigger>
+              <TabsTrigger value="Brent Crude Oil">{t('brent-crude-oil')}</TabsTrigger>
+              <TabsTrigger value="WTI Crude Oil">{t('wti-crude-oil')}</TabsTrigger>
             </TabsList>
           </section>
 
+          {/* gold */}
           <TabsContent
             className="mt-10 max-md:mt-48 px-36 max-md:px-10 max-xl:px-10"
             value="Gold"
           >
             <SubTitle
               otherClass="font-normal text-center mb-10 max-md:pt-5"
-              subTitle="Spot Gold (XAUUSD) Contract & Specifications"
+              subTitle={t('spot-gold-(xauusd)-contract-&-specifications')}
             />
             <section className="grid grid-cols-2 gap-5 list-none max-md:list-item">
               {Gold.map((items) => (
@@ -277,13 +278,14 @@ const Commodities = async ({
             </section>
           </TabsContent>
 
+              {/* silver */}
           <TabsContent
             className="mt-10 max-md:mt-48 px-36 max-md:px-10 max-xl:px-10"
             value="Silver"
           >
             <SubTitle
               otherClass="font-normal text-center mb-10 max-md:pt-5"
-              subTitle="Spot Silver (XAGUSD) Contract & Specifications"
+              subTitle={t('Spot-Silver-(xagusd)-Contract-&-Specifications')}
             />
             <section className="grid grid-cols-2 gap-5 list-none max-md:list-item">
               {Silver.map((items) => (
@@ -313,13 +315,14 @@ const Commodities = async ({
             </section>
           </TabsContent>
 
+              {/* brent crude oil */}
           <TabsContent
             className="mt-10 max-md:mt-48 px-36 max-md:px-10 max-xl:px-10"
             value="Brent Crude Oil"
           >
             <SubTitle
               otherClass="font-normal text-center mb-10"
-              subTitle="Brent (UK) Crude Oil (UKOIL) Contract & Specifications"
+              subTitle={t('brent-(UK)-Crude-Oil-(ukoil)-contract-&-specifications')}
             />
             <section className="grid grid-cols-2 gap-5 list-none max-md:list-item">
               {BrentCrudeOil.map((items) => (
@@ -349,13 +352,14 @@ const Commodities = async ({
             </section>
           </TabsContent>
 
+              {/* WTI crude oil */}
           <TabsContent
             className="mt-10 max-md:mt-48 px-36 max-md:px-10 max-xl:px-10"
             value="WTI Crude Oil"
           >
             <SubTitle
               otherClass="font-normal text-center mb-10"
-              subTitle="West Texas Intermediate (US) Crude Oil (XTIUSD) Contract & Specifications"
+              subTitle={t('west-texas-intermediate-(us)-Crude-Oil-(xtiusd)-contract-&-specifications')}
             />
             <section className="grid grid-cols-2 gap-5 list-none max-md:list-item">
               {WTICrudeOil.map((items) => (
