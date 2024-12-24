@@ -145,7 +145,7 @@ const Footer = async ({ lng }: { lng: string }) => {
               {t('asset-manager')}
             </Link>
             <Link className="text-white" href="/white-label-partnerships">
-              t{t('white-label-partnerships')}
+              {t('white-label-partnerships')}
             </Link>
           </div>
         </div>
