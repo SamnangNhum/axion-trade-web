@@ -39,17 +39,20 @@ const PostAndEvent = async ({
         <div className="grid grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-5">
           {latestPosts.map((post: any) => (
             <div key={post.id}>
-              <Image
-                src={
-                  post.Cover?.formats?.large?.url
-                    ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.large.url}`
-                    : "/assets/images/nothing-image.jpg"
-                }
-                width={1000}
-                height={700}
-                className="object-cover h-96 w-full cursor-pointer"
-                alt={post.Cover?.name || "Post image"}
-              />
+              <Link href={`/posts-events/${post.Slug || post.id}`}>
+                <Image
+                  src={
+                    post.Cover?.formats?.large?.url
+                      ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.large.url}`
+                      : "/assets/images/nothing-image.jpg"
+                  }
+                  width={1000}
+                  height={700}
+                  className="object-cover h-96 w-full cursor-pointer"
+                  alt={post.Cover?.name || "Post image"}
+                />
+              </Link>
+
               <div className="grid grid-cols-2 gap-4 my-2">
                 <Description
                   description={new Date(
@@ -80,17 +83,19 @@ const PostAndEvent = async ({
         <div className="grid grid-cols-3 gap-20 max-md:grid-cols-1 max-md:gap-5">
           {remainingPosts.map((post: any) => (
             <div key={post.id}>
-              <Image
-                src={
-                  post.Cover?.formats?.small?.url
-                    ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.small.url}`
-                    : "/assets/images/nothing-image.jpg"
-                }
-                width={500}
-                height={500}
-                className="object-cover h-64 w-full cursor-pointer"
-                alt={post.Cover?.name || "Event image"}
-              />
+              <Link href={`/posts-events/${post.Slug || post.id}`}>
+                <Image
+                  src={
+                    post.Cover?.formats?.small?.url
+                      ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.small.url}`
+                      : "/assets/images/nothing-image.jpg"
+                  }
+                  width={500}
+                  height={500}
+                  className="object-cover h-64 w-full cursor-pointer"
+                  alt={post.Cover?.name || "Event image"}
+                />
+              </Link>
               <div className="grid grid-cols-2 gap-4 my-2">
                 <Description
                   description={new Date(
