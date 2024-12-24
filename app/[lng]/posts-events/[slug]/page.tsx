@@ -28,38 +28,41 @@ const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
     : "/assets/images/nothing-image.jpg";
 
   return (
-    <div className="px-36 py-16 max-sm:px-16 max-md:px-10 max-xl:px-20">
-      {/* Title Section */}
+    <div>
+      <PageTitle title="" description="" />
+      <div className="px-36 py-16 max-sm:px-16 max-md:px-10 max-xl:px-20">
+        {/* Title Section */}
 
-      <Title
-        title={post.Title || "Blog Post"}
-        otherClass={"text-4xl font-bold text-center mb-6"}
-      />
+        <Title
+          title={post.Title || "Blog Post"}
+          otherClass={"text-2xl font-bold text-center mb-12"}
+        />
 
-      {/* Cover Image */}
-      <Image
-        src={coverImage}
-        width={1000}
-        height={700}
-        alt={post.Cover?.name || "Blog Cover"}
-        className="object-cover w-full h-[700px] rounded-md mb-8"
-      />
+        {/* Cover Image */}
+        <Image
+          src={coverImage}
+          width={1000}
+          height={700}
+          alt={post.Cover?.name || "Blog Cover"}
+          className="object-cover w-full h-[700px] rounded-md mb-8"
+        />
 
-      {/* Published Date */}
-      <Description
-        description={`Published on: ${new Date(
-          post.PublishedDate
-        ).toLocaleDateString()}`}
-        otherClass={"text-gray-500 text-center mb-8"}
-      />
+        {/* Published Date */}
+        <Description
+          description={`Published on: ${new Date(
+            post.PublishedDate
+          ).toLocaleDateString()}`}
+          otherClass={"text-gray-500 text-center mb-8"}
+        />
 
-      {/* Blog Content */}
-      <div className="prose max-w-none mx-auto">
-        {post.Description.map((block: any, index: number) => (
-          <p key={index} className="mb-4">
-            {block.children.map((child: any) => child.text).join(" ")}
-          </p>
-        ))}
+        {/* Blog Content */}
+        <div className="prose max-w-none mx-auto">
+          {post.Description.map((block: any, index: number) => (
+            <p key={index} className="mb-4">
+              {block.children.map((child: any) => child.text).join(" ")}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
