@@ -65,16 +65,18 @@ const Footer = async ({ lng }: { lng: string }) => {
             otherClass="pb-5 text-white"
           />
           <Description
-            description={t('become-a-collaborator-in-asia-economic-future.Invest-in-the-Axion-Trade')}
+            description={t(
+              "become-a-collaborator-in-asia-economic-future.Invest-in-the-Axion-Trade"
+            )}
             otherClass="text-white pb-8"
           />
           <div className="flex max-md:list-item">
             <Button
-              button={t('call-us-now')}
+              button={t("call-us-now")}
               otherClass="mr-3 max-sm:text-sm max-md:mb-3"
             />
             <Button
-              button={t('Let’s-talk-about-everything')}
+              button={t("Let’s-talk-about-everything")}
               otherClass="bg-transparent border-2 border-blue-600 max-sm:text-sm"
             />
           </div>
@@ -125,41 +127,53 @@ const Footer = async ({ lng }: { lng: string }) => {
         {/* Left Menu */}
         <div className="w-full pl-32 max-xl:pl-10 max-md:pl-0">
           <div className="mb-10 max-md:mt-10">
-            <SubTitle subTitle={t('markets')} otherClass="mb-5 text-xl text-white" />
-            <Link className="my-1 text-white list-item list-none" href="/forex">
-              Forex
-            </Link>
-            <Link className=" text-white" href="/commodities">
-              {t('commodities')}
-            </Link>
-          </div>
-          <div>
             <SubTitle
-              subTitle={t('affiliates')}
+              subTitle={t("markets")}
               otherClass="mb-5 text-xl text-white"
             />
             <Link
               className="my-1 text-white list-item list-none"
-              href="/asset-manager"
+              href={`/${lng}/forex`}
             >
-              {t('asset-manager')}
+              Forex
             </Link>
-            <Link className="text-white" href="/white-label-partnerships">
-              {t('white-label-partnerships')}
+            <Link className=" text-white" href={`/${lng}/commodities`}>
+              {t("commodities")}
+            </Link>
+          </div>
+          <div>
+            <SubTitle
+              subTitle={t("affiliates")}
+              otherClass="mb-5 text-xl text-white"
+            />
+            <Link
+              className="my-1 text-white list-item list-none"
+              href={`/${lng}/asset-manager`}
+            >
+              {t("asset-manager")}
+            </Link>
+            <Link
+              className="text-white"
+              href={`/${lng}/white-label-partnerships`}
+            >
+              {t("white-label-partnerships")}
             </Link>
           </div>
         </div>
         {/* Right Menu */}
         <div className="w-full max-md:my-10">
-          <SubTitle subTitle={t('company')} otherClass="mb-5 text-xl text-white" />
+          <SubTitle
+            subTitle={t("company")}
+            otherClass="mb-5 text-xl text-white"
+          />
           <Link
             className="my-1 text-white list-item list-none"
-            href="/our-edge"
+            href={`/${lng}/forex/our-edge`}
           >
-            {t('our-edge')}
+            {t("our-edge")}
           </Link>
-          <Link className=" text-white" href="/about-us">
-            {t('about-us')}
+          <Link className=" text-white" href={`/${lng}/about-us`}>
+            {t("about-us")}
           </Link>
         </div>
         {/* End Menu */}
@@ -167,7 +181,7 @@ const Footer = async ({ lng }: { lng: string }) => {
         {/* Location and Contact */}
         <div className="w-full">
           <SubTitle
-            subTitle={t('get-in-touch')}
+            subTitle={t("get-in-touch")}
             otherClass="mb-5 text-xl text-white"
           />
           <Description
@@ -179,7 +193,7 @@ const Footer = async ({ lng }: { lng: string }) => {
             otherClass="my-1 text-white"
           />
           <Description
-            description={t('monivong-blvd-(93)-phnom-penh')}
+            description={t("monivong-blvd-(93)-phnom-penh")}
             otherClass=" text-white"
           />
           <Description
@@ -195,20 +209,22 @@ const Footer = async ({ lng }: { lng: string }) => {
       {/* Copyright */}
       <div className="flex bg-black pb-14 px-32 max-md:list-item flex-row-reverse max-xl:px-10 max-md:px-10 max-md:text-center">
         <div className="w-full pt-14 flex justify-end border-t-2 border-gray-600">
-          <Link className=" text-white" href="/terms-of-use">
-            {t('terms-of-use')}
-          </Link>
-          <Link className="mx-5 text-white" href="/privacy-policy">
-            {t('privacy-policy')}
-          </Link>
-          <Link className="text-white" href="/cookies-policy">
-            {t('cookies-policy')}
-          </Link>
+          <div>
+            <Link className="text-white" href={`/${lng}/terms-of-use`}>
+              {t("terms-of-use")}
+            </Link>
+            <Link className="mx-5 text-white" href={`/${lng}/privacy-policy`}>
+              {t("privacy-policy")}
+            </Link>
+            <Link className="text-white" href={`/${lng}/cookies-policy`}>
+              {t("cookies-policy")}
+            </Link>
+          </div>
         </div>
         <div className="w-full pt-14 border-t-2 border-gray-600 max-md:border-none">
           <Description
             otherClass="text-white"
-            description={t('copyright-©-2024')}
+            description={t("copyright-©-2024")}
           />
         </div>
       </div>

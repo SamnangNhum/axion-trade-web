@@ -32,23 +32,23 @@ const Header = async ({ lng }: { lng: string }) => {
   const { t } = await useTranslation(lng);
 
   const componentAffiliates: { title: string; href: string }[] = [
-    { title: t("asset-manager"), href: "/asset-manager" },
-    { title: t("commodities"), href: "/commodities" },
+    { title: t("asset-manager"), href: `/${lng}/asset-manager` },
+    { title: t("commodities"), href: `/${lng}/commodities` },
   ];
 
   const componentCompany: { title: string; href: string }[] = [
-    { title: t("our-edge"), href: "/our-edger" },
-    { title: t("about-us"), href: "/about-us" },
-    { title: t("posts-&-events"), href: "/posts&events" },
+    { title: t("our-edge"), href: `/${lng}/our-edger` },
+    { title: t("about-us"), href: `/${lng}/about-us` },
+    { title: t("posts-&-events"), href: `/${lng}/posts-events` },
   ];
 
   const componentMarket: { title: string; href: string }[] = [
-    { title: t("forex"), href: "/forex" },
-    { title: t("commodities"), href: "/commodities" },
+    { title: t("forex"), href: `/${lng}/forex` },
+    { title: t("commodities"), href: `/${lng}/commodities` },
   ];
 
   const componentAccount: { title: string; href: string }[] = [
-    { title: t("stp"), href: "/stp-account" },
+    { title: t("stp"), href: `/${lng}/stp-account` },
   ];
 
   return (
