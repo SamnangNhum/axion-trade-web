@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
       {
         protocol: "http",
         hostname: "109.123.235.57",
+        port: "1337", // Ensure the port is specified
+        pathname: "/uploads/**", // Match the image path
       },
     ],
   },
