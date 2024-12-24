@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { dir } from "i18next";
-import { siemreap, openSans, notoSans } from "@/assets/Fonts";
+import { siemreap,  notoSans, KumbhSans } from "@/assets/Fonts";
 
 import TawkMessenger from "@/components/TawkMessenger/TawkMessenger";
 
@@ -24,7 +24,7 @@ export default async function RootLayout({ children, params }: RootLayoutProp) {
           lng === "km"
             ? notoSans.className
             : lng === "en"
-            ? openSans.className
+            ? KumbhSans.className
             : notoSans.className
         }
         style={lng === "km" ? { fontSize: "16px" } : { fontSize: "16px" }}

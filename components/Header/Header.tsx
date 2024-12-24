@@ -31,12 +31,23 @@ import { useTranslation } from "@/app/i18n";
 const Header = async ({ lng }: { lng: string }) => {
   const { t } = await useTranslation(lng);
 
-  const componentServices: { title: string; href: string }[] = [
+  const componentAffiliates: { title: string; href: string }[] = [
+    { title: t("asset-manager"), href: "/asset-manager" },
+    { title: t("commodities"), href: "/commodities" },
+  ];
+
+  const componentCompany: { title: string; href: string }[] = [
+    { title: t("our-edge"), href: "/our-edger" },
+    { title: t("about-us"), href: "/about-us" },
+    { title: t("posts-&-events"), href: "/posts&events" },
+  ];
+
+  const componentMarket: { title: string; href: string }[] = [
     { title: t("forex"), href: "/forex" },
     { title: t("commodities"), href: "/commodities" },
   ];
 
-  const componentBlog: { title: string; href: string }[] = [
+  const componentAccount: { title: string; href: string }[] = [
     { title: t("stp"), href: "/stp-account" },
   ];
 
@@ -69,7 +80,7 @@ const Header = async ({ lng }: { lng: string }) => {
             <NavigationMenuTrigger>{t("markets")}</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
-                {componentServices.map((component) => (
+                {componentAffiliates.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
@@ -88,7 +99,7 @@ const Header = async ({ lng }: { lng: string }) => {
                 otherClass="text-md px-6 pt-5"
               />
               <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
-                {componentBlog.map((component) => (
+                {componentAccount.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
@@ -139,21 +150,50 @@ const Header = async ({ lng }: { lng: string }) => {
               </SheetTitle>
             </SheetHeader>
             <div className="my-12">
+              <div className="flex space-x-2 cursor-pointer 2xl:hidden">
+                <FaUserCircle size={25} color="black" />
+                <span className="text-black">{t("client-portal")}</span>
+              </div>
               <nav className="my-5">
-                <SubTitle subTitle={t("markets")} otherClass="my-2" />
-                {componentServices.map((item) => (
+                <SubTitle subTitle={t("affiliates")} otherClass="my-2" />
+                {componentAffiliates.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-black hover:text-black"
+                    className="text-black hover:text-black flex"
                   >
                     <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
                   </Link>
                 ))}
               </nav>
               <nav className="my-5">
+                <SubTitle subTitle={t("company")} otherClass="my-2" />
+                {componentCompany.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-black hover:text-black flex"
+                  >
+                    <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
+                  </Link>
+                ))}
+              </nav>
+              <nav className="my-5 2xl:hidden">
+                <SubTitle subTitle={t("markets")} otherClass="my-2" />
+                {componentMarket.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-black hover:text-black flex"
+                  >
+                    <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
+                  </Link>
+                ))}
+              </nav>
+              <nav className="my-5 2xl:hidden">
                 <SubTitle subTitle={t("accounts")} otherClass="my-2" />
-                {componentBlog.map((item) => (
+                <Description description={t("classic")} otherClass="text-md" />
+                {componentAccount.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}

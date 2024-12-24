@@ -1,4 +1,4 @@
-import { Hanuman, Noto_Sans_SC, Open_Sans } from "next/font/google";
+import { Hanuman, Noto_Sans_SC, Kumbh_Sans } from "next/font/google";
 
 export const siemreap = Hanuman({
   subsets: ["khmer"],
@@ -10,7 +10,7 @@ export const siemreap = Hanuman({
 
 });
 
-export const openSans = Open_Sans({
+export const KumbhSans = Kumbh_Sans({
   subsets: ["latin"],
   adjustFontFallback: false,
   variable: "--font-open-sans",
