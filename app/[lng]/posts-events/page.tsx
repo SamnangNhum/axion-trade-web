@@ -67,7 +67,7 @@ const PostAndEvent = async ({
                 </div>
               </div>
               <Description
-                description={post.Description[0]?.children[0]?.text || ""}
+                description={post.Title || ""}
                 otherClass={"line-clamp-3"}
               />
             </div>

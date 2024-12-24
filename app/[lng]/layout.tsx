@@ -22,7 +22,7 @@ export default async function RootLayout({ children, params }: RootLayoutProp) {
       <body
         className={
           lng === "km"
-            ? siemreap.className
+            ? notoSans.className
             : lng === "en"
             ? openSans.className
             : notoSans.className
@@ -31,7 +31,7 @@ export default async function RootLayout({ children, params }: RootLayoutProp) {
       >
         <Header lng={lng} />
         {children}
-        <Footer  lng={lng}  />
+        <Footer lng={lng} />
         <TawkMessenger />
       </body>
     </html>

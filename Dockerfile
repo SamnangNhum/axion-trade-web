@@ -3,24 +3,26 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy package.json and package-lock.json, then install dependencies
+# Install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy the rest of the application files and build the app
+# Copy application code and build
 COPY . .
 RUN npm run build
 
-# Stage 2: Production image with Nginx
-FROM nginx:stable-alpine
+# Stage 2: Serve the built application with a lightweight server
+FROM node:18-alpine
 
-# Copy built Next.js static files to Nginx HTML directory
-COPY --from=builder /app/.next /usr/share/nginx/html
+WORKDIR /app
 
-# Copy Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy the built application from the builder stage
+COPY --from=builder /app/.next /app/.next
+COPY --from=builder /app/node_modules /app/node_modules
+COPY --from=builder /app/package.json /app/package.json
 
-# Expose Nginx port
-EXPOSE 80
+# Expose the port Next.js runs on
+EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"]
+# Start the application
+CMD ["npm", "start"]

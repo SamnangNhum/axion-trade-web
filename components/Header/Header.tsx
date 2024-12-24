@@ -113,7 +113,7 @@ const Header = async ({ lng }: { lng: string }) => {
       <div className="flex justify-center items-center space-x-8">
         <div className="flex space-x-2 cursor-pointer max-md:hidden">
           <FaUserCircle size={25} color="white" />
-          <span className="text-white">{t("client_portal")}</span>
+          <span className="text-white">{t("client-portal")}</span>
         </div>
         {/* Language Switcher */}
 

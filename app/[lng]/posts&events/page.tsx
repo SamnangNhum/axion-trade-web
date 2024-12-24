@@ -15,7 +15,7 @@ const PostAndEvent = async ({
     {
       date: "September 27, 2024",
       link: "/",
-      linkText: t('press-release'),
+      linkText: t("press-release"),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
@@ -23,7 +23,7 @@ const PostAndEvent = async ({
     {
       date: "September 27, 2024",
       link: "/",
-      linkText: t('press-release'),
+      linkText: t("press-release"),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
@@ -33,21 +33,23 @@ const PostAndEvent = async ({
     {
       date: "September 27, 2024",
       link: "/",
-      linkText: t('press-release'),
+      linkText: t("press-release"),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
-    },   {
+    },
+    {
       date: "September 27, 2024",
       link: "/",
-      linkText: t('press-release'),
+      linkText: t("press-release"),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
-    },   {
+    },
+    {
       date: "September 27, 2024",
       link: "/",
-      linkText: t('press-release'),
+      linkText: t("press-release"),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
@@ -57,8 +59,8 @@ const PostAndEvent = async ({
     <div>
       {/* PageTitle */}
       <PageTitle
-        title={t('posts-&-events')}
-        description={t('get-updated-to')}
+        title={t("posts-&-events")}
+        description={t("get-updated-to")}
       />
       {/* Post  & Events Section*/}
 
