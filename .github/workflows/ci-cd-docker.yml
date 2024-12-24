@@ -4,7 +4,7 @@ name: CI/CD - Build and Push Next.js to GHCR
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   build-and-push:
