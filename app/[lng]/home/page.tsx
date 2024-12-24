@@ -22,7 +22,7 @@ const Home = async ({ lng }: { lng: string }) => {
     {
       date: "September 27, 2024",
       link: "/",
-      linkText: "Press Release",
+      linkText: t('press-release'),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
@@ -30,7 +30,7 @@ const Home = async ({ lng }: { lng: string }) => {
     {
       date: "September 27, 2024",
       link: "/",
-      linkText: "Press Release",
+      linkText: t('press-release'),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
@@ -38,7 +38,7 @@ const Home = async ({ lng }: { lng: string }) => {
     {
       date: "September 27, 2024",
       link: "/",
-      linkText: "Press Release",
+      linkText: t('press-release'),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
@@ -75,10 +75,10 @@ const Home = async ({ lng }: { lng: string }) => {
     },
   ];
   const counts = [
-    { title: "10,000+", description: "Clients" },
-    { title: "10,000,000+", description: "Trade Executed" },
-    { title: "30+", description: "Country" },
-    { title: "100+", description: "Employees Globally" },
+    { title: "10,000+", description: t('clients') },
+    { title: "10,000,000+", description: t('trade-executed') },
+    { title: "30+", description: t('country')},
+    { title: "100+", description: t('employees-globally') },
   ];
 
   return (
@@ -89,11 +89,11 @@ const Home = async ({ lng }: { lng: string }) => {
  bg-cover bg-center w-full p-80 max-sm:p-16 max-md:p-32 max-xl:p-48"
       >
         <Title
-          title="Simple. Reliable. Innovative."
+          title={t('simple') +". " + t('reliable')+". "+t('innovative')+"." }
           otherClass="text-white max-md:mt-20"
         />
         <Description
-          description="Get access to 100+ different markets with over 1,000+ market instruments when you trade with Axion Trade."
+          description={t('get-access-to')}
           otherClass="text-white p-3"
         />
       </section>
@@ -125,11 +125,11 @@ const Home = async ({ lng }: { lng: string }) => {
       >
         <div className="pb-16">
           <SubTitle
-            subTitle={"Why Axion Trade Should"}
+            subTitle={t('why-axion-trade')}
             otherClass={"text-blue-700 max-md:text-lg"}
           />
           <Title
-            title={"Be Your Preferred Brokerage"}
+            title={t('should-be-your-preferred-brokerage')}
             otherClass={"max-md:text-3xl"}
           />
         </div>
@@ -145,12 +145,12 @@ const Home = async ({ lng }: { lng: string }) => {
           </div>
           <div className="max-md:order-2">
             <SubTitle
-              subTitle={"Client Focused"}
+              subTitle={t('client-focused')}
               otherClass={"max-md:text-lg"}
             />
             <Description
               description={
-                "Enjoy a comprehensive trading experience with us, trade anytime, anywhere"
+                t('enjoy-a-comprehensive')
               }
               otherClass={"text-gray-500"}
             />
@@ -160,12 +160,12 @@ const Home = async ({ lng }: { lng: string }) => {
         <div className="grid grid-cols-2 gap-4 pb-10 items-center justify-center max-md:grid-cols-1">
           <div className=" max-md:order-2">
             <SubTitle
-              subTitle={"Superior Trading Experience"}
+              subTitle={t('superior-trading-experience')}
               otherClass={"max-md:text-lg"}
             />
             <Description
               description={
-                "Quality trade execution, risk management and transparent pricing"
+                t('quality-trade-execution')
               }
               otherClass={"text-gray-500"}
             />
@@ -191,11 +191,11 @@ const Home = async ({ lng }: { lng: string }) => {
           </div>
           <div className="max-md:order-2">
             <SubTitle
-              subTitle={"Convenient Withdrawals"}
+              subTitle={t('convenient-withdrawals')}
               otherClass={"max-md:text-lg"}
             />
             <Description
-              description={"Fast and easy, secured payments and withdrawals"}
+              description={t('fast-and-easy')}
               otherClass={"text-gray-500"}
             />
           </div>
@@ -205,7 +205,7 @@ const Home = async ({ lng }: { lng: string }) => {
       {/* Trade Instruments Section*/}
       <section className="text-center bg-[url('/assets/images/bg-axion-trade.png')] bg-cover bg-center w-full p-28 max-md:p-10 max-xl:p-20">
         <Title
-          title={"Trade Your Favourite Instruments From Around The World"}
+          title={t('trade-your-favourite-instruments-from-around-the-world')}
           otherClass={
             "text-white max-md:text-3xl px-96 max-md:px-0 max-xl:px-0"
           }
@@ -219,16 +219,16 @@ const Home = async ({ lng }: { lng: string }) => {
               alt="Forex Pairs"
             />
             <SubTitle
-              subTitle={"Forex Pairs"}
+              subTitle={t('forex-pairs')}
               otherClass={"text-white max-md:text-lg"}
             />
             <Description
               description={
-                "Trade on the strength of one currency versus another on the largest and most liquid market in the world."
+                t('trade-on-the-strength')
               }
               otherClass={"text-white px-40 my-2 max-md:px-10 max-xl:px-10"}
             />
-            <Button button={"Learn More"} />
+            <Button button={ t('learn-more')} />
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image
@@ -238,16 +238,16 @@ const Home = async ({ lng }: { lng: string }) => {
               alt="Commodities"
             />
             <SubTitle
-              subTitle={"Commodities"}
+              subTitle={t('commodities')}
               otherClass={"text-white max-md:text-lg"}
             />
             <Description
               description={
-                "Speculate on the price of all the most popular commodities, including gold, silver, oil, and natural gas."
+                t('spectate-on-the-price')
               }
               otherClass={"text-white px-40 my-2 max-md:px-10 max-xl:px-10"}
             />
-            <Button button={"Learn More"} />
+            <Button button={ t('learn-more')} />
           </div>
         </div>
       </section>
@@ -278,18 +278,18 @@ const Home = async ({ lng }: { lng: string }) => {
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 my-2">
           <div>
             <Title
-              title={"News & Events"}
+              title={t('news') +" & " + t('events')}
               otherClass={"max-md:text-3xl max-md:text-center"}
             />
             <Description
-              description={"Get updated on our latest activities and events."}
+              description={t('get-updated-to')}
               otherClass={
                 "text-gray-500 my-2 max-md:px-0 max-md:text-center max-xl:px-0"
               }
             />
           </div>
           <div className="flex justify-end max-md:justify-center">
-            <Button button={"View All"} />
+            <Button button={t('view-all')} />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-20 max-md:grid-cols-1 max-md:gap-5">
@@ -317,10 +317,10 @@ const Home = async ({ lng }: { lng: string }) => {
 
       {/* Awards Section*/}
       <section className="text-center py-16 px-36 max-md:px-10 max-xl:px-20">
-        <Title title={"Our Awards"} otherClass={"max-md:text-3xl"} />
+        <Title title={t('our-awards')} otherClass={"max-md:text-3xl"} />
         <Description
           description={
-            "The achievements we've earned throughout the journey with Axion Trade."
+            t('the-achivements-we-earnt')
           }
           otherClass={"text-gray-500 my-2 max-md:px-0 max-xl:px-10"}
         />
