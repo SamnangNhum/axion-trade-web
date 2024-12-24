@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   env: {
-    NEXT_APP_API_URL: "http://109.123.235.57:1337",
+    NEXT_APP_API_URL: "https://axiontrade.aeks.one",
     // REACT_APP_API_URL: "http://13.228.102.184",
 
   },
@@ -10,8 +10,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "109.123.235.57",
+        protocol: "https",
+        hostname: "axiontrade.aeks.one",
         port: "1337", // Ensure the port is specified
         pathname: "/uploads/**", // Match the image path
       },
