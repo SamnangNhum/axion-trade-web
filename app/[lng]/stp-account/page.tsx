@@ -68,7 +68,7 @@ const STP = async ({ params }: { params: Promise<{ lng: string }> }) => {
       />
       {/* End page-title */}
       <section className="pt-16 text-center max-md:px-10 max-xl:px-10">
-        <SubTitle otherClass="font-normal mb-3" subTitle="About STP Account" />
+        <SubTitle otherClass="font-normal mb-3" subTitle={t('about-stp-account')} />
         <Description
           otherClass="mb-5 text-gray-500"
           description={

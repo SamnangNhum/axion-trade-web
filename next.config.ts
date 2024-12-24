@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
         pathname: "/uploads/**", // Match the image path
       },
     ],
+    unoptimized: true,
   },
 };
 

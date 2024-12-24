@@ -1,4 +1,4 @@
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 export default function Button({
   button,
@@ -13,7 +13,10 @@ export default function Button({
         className={`flex bg-blue-700 text-white py-3 px-6 rounded-full cursor-pointer ${otherClass}`}
       >
         {button}
-        <MdKeyboardArrowRight className="text-2xl max-sm:text-xl" />
+        <section className="flex items-center max-md:flex max-md:items-center ml-1">
+        <RiArrowRightSLine className="text-2xl max-sm:text-lg" />
+        </section>
+        
       </div>
     </div>
   );

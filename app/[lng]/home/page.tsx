@@ -106,7 +106,7 @@ const Home = async ({ lng }: { lng: string }) => {
           {counts.map((count, index) => (
             <div
               key={index}
-              className="text-center shadow-lg py-16 px-5 rounded-xl bg-white max-md:px-0"
+              className="text-center shadow-lg py-16 max-md:py-10 px-5 rounded-xl bg-white max-md:px-0"
             >
               <Title
                 title={count.title}
@@ -225,7 +225,7 @@ const Home = async ({ lng }: { lng: string }) => {
               description={t("trade-on-the-strength")}
               otherClass={"text-white px-40 my-2 max-md:px-10 max-xl:px-10"}
             />
-            <Button button={t("learn-more")} />
+            <Button button={t("learn-more")} otherClass="mt-5 max-md:mt-5" />
           </div>
           <div className="flex flex-col justify-center items-center">
             <Image
@@ -242,14 +242,14 @@ const Home = async ({ lng }: { lng: string }) => {
               description={t("spectate-on-the-price")}
               otherClass={"text-white px-40 my-2 max-md:px-10 max-xl:px-10"}
             />
-            <Button button={t("learn-more")} />
+            <Button button={t("learn-more")} otherClass="mt-5 max-md:mt-5" />
           </div>
         </div>
       </section>
 
       {/* Logo-Partner Section*/}
-      <section className="bg-gray-200">
-        <div className="grid grid-cols-6 gap-4 items-center justify-center max-md:grid-cols-1">
+      <section className="bg-gray-200 max-md:py-3">
+        <div className="grid grid-cols-6 gap-4 items-center justify-center max-md:grid-cols-3 max-md:gap-2">
           {[
             {
               src: "/assets/images/bussiness-insider-logo.png",
@@ -269,8 +269,8 @@ const Home = async ({ lng }: { lng: string }) => {
       </section>
 
       {/* News & Events Section*/}
-      <section className="px-36 pt-16 max-sm:p-16 max-md:px-10 max-xl:px-20">
-        <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 my-2">
+      <section className="px-36 pt-16 max-sm:pt-16 max-md:px-10 max-xl:px-10">
+        <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 my-2 max-md:pb-10">
           <div>
             <Title
               title={t("news") + " & " + t("events")}
@@ -283,13 +283,18 @@ const Home = async ({ lng }: { lng: string }) => {
               }
             />
           </div>
-          <div className="flex justify-end max-md:justify-center">
+          <div className="flex justify-end max-md:justify-center max-md:hidden">
             <Link href={`/posts-events`}>
               <Button button={t("view-all")} />
             </Link>
           </div>
         </div>
-        <NewAndEventSection />
+        <section className="max-md:flex-col-reverse">
+          <NewAndEventSection />{" "}
+          <Link href={`/posts-events`} className="2xl:hidden max-xl:hidden max-md:flex max-md:justify-center mt-7">
+            <Button button={t("view-all")} />
+          </Link>
+        </section>
       </section>
 
       {/* Awards Section*/}

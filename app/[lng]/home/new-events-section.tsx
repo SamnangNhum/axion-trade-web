@@ -18,7 +18,7 @@ export const NewAndEventSection = async () => {
   const latestPosts = items.slice(0, 3);
   return (
     <div>
-      <div className="grid grid-cols-3 gap-20 max-md:grid-cols-1 max-md:gap-5">
+      <div className="grid grid-cols-3 gap-20 max-md:grid-cols-1 max-md:gap-5 max-xl:gap-10">
         {latestPosts.map((item: any) => (
           <div key={item.id}>
             <Link href={`/posts-events/${item.Slug || item.id}`}>

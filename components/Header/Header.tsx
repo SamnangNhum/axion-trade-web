@@ -32,31 +32,32 @@ const Header = async ({ lng }: { lng: string }) => {
   const { t } = await useTranslation(lng);
 
   const componentAffiliates: { title: string; href: string }[] = [
-    { title: t("asset-manager"), href: "/asset-manager" },
-    { title: t("commodities"), href: "/commodities" },
+    { title: t("asset-manager"), href: `/${lng}/asset-manager` },
+    { title: t("commodities"), href: `/${lng}/commodities` },
   ];
 
   const componentCompany: { title: string; href: string }[] = [
-    { title: t("our-edge"), href: "/our-edger" },
+    { title: t("our-edge"), href: "/our-edge" },
     { title: t("about-us"), href: "/about-us" },
-    { title: t("posts-&-events"), href: "/posts&events" },
+    { title: t("posts-&-events"), href: "/posts-events" },
   ];
 
   const componentMarket: { title: string; href: string }[] = [
-    { title: t("forex"), href: "/forex" },
-    { title: t("commodities"), href: "/commodities" },
+    { title: t("forex"), href: `/${lng}/forex` },
+    { title: t("commodities"), href: `/${lng}/commodities` },
   ];
 
   const componentAccount: { title: string; href: string }[] = [
-    { title: t("stp"), href: "/stp-account" },
+    { title: t("stp"), href: `/${lng}/stp-account` },
   ];
 
   return (
-    <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2 max-xl:grid-cols-2">
+    <header className="absolute grid grid-cols-3 gap-4 items-center py-7 w-full max-md:grid-cols-2 max-xl:grid-cols-2 max-md:px-7">
       {/* Logo */}
-      <div className="flex justify-center">
+      <div className="flex justify-center max-md:justify-normal">
         <Link href={`/${lng}`}>
           <Image
+            className="max-md:w-32"
             src="/assets/images/logo-axion-trade.png"
             width={150}
             height={150}
@@ -121,7 +122,7 @@ const Header = async ({ lng }: { lng: string }) => {
       </NavigationMenu>
 
       {/* Other */}
-      <div className="flex justify-center items-center space-x-8">
+      <div className="flex justify-center max-xl:justify-start max-md:justify-end items-center space-x-8">
         <div className="flex space-x-2 cursor-pointer max-md:hidden">
           <FaUserCircle size={25} color="white" />
           <span className="text-white">{t("client-portal")}</span>
