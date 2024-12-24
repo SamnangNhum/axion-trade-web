@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/sites-available:/etc/nginx/sites-available
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - api
+      - ui
+
+  ui:
+    build:
+      context: ./ecom-wix  # Replace with the relative path to your Next.js app
+    environment:
+      NODE_ENV: production
+    command: "npm start"  # Starts the Next.js server in production mode
+    expose:
+      - "3000"  # Expose port 3000 to Nginx

@@ -1,17 +1,14 @@
-export const fallbackLng = "en"; // Default fallback language
-export const languages = [fallbackLng, "km", "zh"]; // Supported languages
-export const defaultNS = "translation"; // Default namespace
+export const fallbackLng = "en";
+export const languages = [fallbackLng, "km", "zh"];
+export const defaultNS = "translation";
 
-export function getOptions(
-  lng = fallbackLng,
-  ns: string | string[] = defaultNS
-) {
+export function getOptions(lng = fallbackLng, ns = defaultNS) {
   return {
     supportedLngs: languages,
     fallbackLng,
     lng,
-    defaultNS,
-    ns: Array.isArray(ns) ? ns : [ns], // Ensure `ns` is always an array
     fallbackNS: defaultNS,
+    defaultNS,
+    ns,
   };
 }

@@ -1,21 +1,35 @@
 "use client";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
-import dynamic from "next/dynamic";
+export default function TawkMessenger() {
+  const handleBeforeLoad = () => {};
 
-const TawkMessengerReact = dynamic(
-  () => import("@tawk.to/tawk-messenger-react"),
-  { ssr: false }
-);
+  const handleStatusChange = (status: any) => {};
 
-const TawkMessenger = () => {
+  const handleLoad = () => {};
+  const handleChatMaximized = () => {};
+  const handleChatMinimized = () => {};
+  const handleUnreadCountChanged = (unreadCount: any) => {};
+
+  const handleChatMessageVisitor = (message: any) => {};
+
+  const handleChatStarted = () => {};
+  const handleChatSystem = () => {};
   return (
-    <div>
+    <div className="App">
       <TawkMessengerReact
         propertyId="67691836af5bfec1dbe07c88"
         widgetId="1ifp8d5it"
+        onBeforeLoad={handleBeforeLoad}
+        onStatusChange={handleStatusChange}
+        onLoad={handleLoad}
+        onChatMaximized={handleChatMaximized} // Pass a valid function
+        onChatMinimized={handleChatMinimized}
+        onUnreadCountChanged={handleUnreadCountChanged}
+        onChatMessageVisitor={handleChatMessageVisitor}
+        onChatStarted={handleChatStarted}
+        onChatMessageSystem={handleChatSystem}
       />
     </div>
   );
-};
-
-export default TawkMessenger;
+}

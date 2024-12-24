@@ -3,7 +3,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { dir } from "i18next";
 import { siemreap, openSans, notoSans } from "@/assets/Fonts";
-import { languages } from "../i18n/settings";
+
 import TawkMessenger from "@/components/TawkMessenger/TawkMessenger";
 
 export const metadata = {

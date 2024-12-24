@@ -82,3 +82,6 @@ body {
     border-color: hsl(var(--border));
   }
 }
+.tawk-bubble-container .tawk-icon-right {
+  display: none !important;
+}

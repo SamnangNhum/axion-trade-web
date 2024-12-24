@@ -3,7 +3,7 @@ import resourcesToBackend from "i18next-resources-to-backend";
 import { initReactI18next } from "react-i18next/initReactI18next";
 import { defaultNS, getOptions } from "./settings";
 
-const initI18next = async (lng: string, ns: string | string[] = defaultNS) => {
+const initI18next = async (lng: string, ns: any = defaultNS) => {
     const i18nInstance = createInstance();
     await i18nInstance
         .use(initReactI18next)

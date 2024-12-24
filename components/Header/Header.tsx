@@ -44,7 +44,7 @@ const Header = async ({ lng }: { lng: string }) => {
     <header className="absolute grid grid-cols-3 gap-4 items-center py-4 w-full max-md:grid-cols-2 max-xl:grid-cols-2">
       {/* Logo */}
       <div className="flex justify-center">
-        <Link href="/">
+        <Link href={`/${lng}`}>
           <Image
             src="/assets/images/logo-axion-trade.png"
             width={150}
@@ -59,7 +59,7 @@ const Header = async ({ lng }: { lng: string }) => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/" className={navigationMenuTriggerStyle()}>
+              <Link href={`/${lng}`} className={navigationMenuTriggerStyle()}>
                 {t("home")}
               </Link>
             </NavigationMenuLink>
@@ -116,7 +116,7 @@ const Header = async ({ lng }: { lng: string }) => {
           <span className="text-white">{t("client_portal")}</span>
         </div>
         {/* Language Switcher */}
-        <GrLanguage size={25} color="white" className="cursor-pointer" />
+
         <LanguageSwitcher />
         {/* Mobile Menu */}
         <Sheet>
