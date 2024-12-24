@@ -286,12 +286,12 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
         <section className="pt-16">
           <SubTitle
             otherClass="pb-10 max-md:px-10 max-xl:px-10 max-md:text-center max-xl:text-center"
-            subTitle="Variable Spreads & ECN Spreads Comparison:"
+            subTitle={t('variable-spreads-&-ecn-spreads-comparison')}
           />
         </section>
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="Variable Spreads">Variable Spreads</TabsTrigger>
-          <TabsTrigger value="ECN Spreads">ECN Spreads</TabsTrigger>
+          <TabsTrigger value="Variable Spreads">{t('variable-spreads')}</TabsTrigger>
+          <TabsTrigger value="ECN Spreads">{t('ecn-spreads')}</TabsTrigger>
         </TabsList>
 
         {/* Variable Spreads */}
@@ -305,7 +305,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               >
                 <Description
                   otherClass="font-bold"
-                  description="Straight Through Processing (STP)"
+                  description={t('straight-through-processing')}
                 />
                 <Description
                   otherClass=""
@@ -319,7 +319,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
           <section>
             {Pricing.map((items) => (
               <div key={items.id} className="grid grid-cols-1 px-7 py-10">
-                <Description otherClass="font-bold" description="Pricing" />
+                <Description otherClass="font-bold" description={t('pricing')} />
                 <Description
                   otherClass=""
                   description={items.VariableSpreads}
@@ -335,7 +335,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 key={items.id}
                 className="grid grid-cols-1 px-7 py-10 bg-gray-100"
               >
-                <Description otherClass="font-bold" description="Commission" />
+                <Description otherClass="font-bold" description={t('commission')}/>
                 <Description
                   otherClass=""
                   description={items.VariableSpreads}
@@ -350,7 +350,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               <div key={items.id} className="grid grid-cols-1 px-7 py-10">
                 <Description
                   otherClass="font-bold"
-                  description="Brokerage Fee"
+                  description={t('brokerage-fee')}
                 />
                 <Description
                   otherClass=""
@@ -367,7 +367,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 key={items.id}
                 className="grid grid-cols-1 px-7 py-10 bg-gray-100"
               >
-                <Description otherClass="font-bold" description="Advantage" />
+                <Description otherClass="font-bold" description={t('advantage')} />
                 <Description
                   otherClass=""
                   description={items.VariableSpreads}
@@ -388,7 +388,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               >
                 <Description
                   otherClass="font-bold"
-                  description="Straight Through Processing (STP)"
+                  description={t('straight-through-processing')}
                 />
 
                 <Description otherClass="" description={items.ECNSpreads} />
@@ -400,7 +400,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
           <section>
             {Pricing.map((items) => (
               <div key={items.id} className="grid grid-cols-1 px-7 py-10">
-                <Description otherClass="font-bold" description="Pricing" />
+                <Description otherClass="font-bold" description={t('pricing')} />
 
                 <Description otherClass="" description={items.ECNSpreads} />
               </div>
@@ -414,7 +414,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 key={items.id}
                 className="grid grid-cols-1 px-7 py-10 bg-gray-100"
               >
-                <Description otherClass="font-bold" description="Commission" />
+                <Description otherClass="font-bold" description={t('commission')} />
 
                 <Description otherClass="" description={items.ECNSpreads} />
               </div>
@@ -427,7 +427,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
               <div key={items.id} className="grid grid-cols-1 px-7 py-10">
                 <Description
                   otherClass="font-bold"
-                  description="Brokerage Fee"
+                  description={t('brokerage-fee')}
                 />
 
                 <Description otherClass="" description={items.ECNSpreads} />
@@ -441,7 +441,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
                 key={items.id}
                 className="grid grid-cols-1 px-7 py-10 bg-gray-100"
               >
-                <Description otherClass="font-bold" description="Advantage" />
+                <Description otherClass="font-bold" description={t('advantage')} />
                 <Description otherClass="" description={items.ECNSpreads} />
               </div>
             ))}
