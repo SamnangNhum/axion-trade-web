@@ -8,6 +8,7 @@ import { useTranslation } from "@/app/i18n";
 const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
+  
   const Contract = [
     {
       id: 0,

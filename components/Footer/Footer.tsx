@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from "react";
 import Image from "next/image";
 import SubTitle from "@/app/shared/sub-title";
@@ -17,8 +17,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useTranslation } from "@/app/i18n";
 
-const Footer = () => {
+const Footer = async ({ lng }: { lng: string }) => {
+  const { t } = await useTranslation(lng);
+
   // SocialLink
   const SocialLink = [
     {
@@ -58,20 +61,20 @@ const Footer = () => {
       >
         <div className="py-28 max-xl:py-16 px-20 max-xl:px-10">
           <Title
-            title="Embrace a path to success with us"
+            title={t("embrace-a-path-to-success-with-us")}
             otherClass="pb-5 text-white"
           />
           <Description
-            description="Become a collaborator in Asia's economic future.Invest in the Axion Trade"
+            description={t('become-a-collaborator-in-asia-economic-future.Invest-in-the-Axion-Trade')}
             otherClass="text-white pb-8"
           />
           <div className="flex max-md:list-item">
             <Button
-              button="Call us now"
+              button={t('call-us-now')}
               otherClass="mr-3 max-sm:text-sm max-md:mb-3"
             />
             <Button
-              button="Let’s talk about everything"
+              button={t('Let’s-talk-about-everything')}
               otherClass="bg-transparent border-2 border-blue-600 max-sm:text-sm"
             />
           </div>
@@ -122,41 +125,41 @@ const Footer = () => {
         {/* Left Menu */}
         <div className="w-full pl-32 max-xl:pl-10 max-md:pl-0">
           <div className="mb-10 max-md:mt-10">
-            <SubTitle subTitle="MARKETS" otherClass="mb-5 text-xl text-white" />
+            <SubTitle subTitle={t('markets')} otherClass="mb-5 text-xl text-white" />
             <Link className="my-1 text-white list-item list-none" href="/forex">
               Forex
             </Link>
             <Link className=" text-white" href="/commodities">
-              Commodities
+              {t('commodities')}
             </Link>
           </div>
           <div>
             <SubTitle
-              subTitle="AFFILIATES"
+              subTitle={t('affiliates')}
               otherClass="mb-5 text-xl text-white"
             />
             <Link
               className="my-1 text-white list-item list-none"
               href="/asset-manager"
             >
-              Asset Manager
+              {t('asset-manager')}
             </Link>
             <Link className="text-white" href="/white-label-partnerships">
-              White Label Partnerships
+              t{t('white-label-partnerships')}
             </Link>
           </div>
         </div>
         {/* Right Menu */}
         <div className="w-full max-md:my-10">
-          <SubTitle subTitle="COMPANY" otherClass="mb-5 text-xl text-white" />
+          <SubTitle subTitle={t('company')} otherClass="mb-5 text-xl text-white" />
           <Link
             className="my-1 text-white list-item list-none"
             href="/our-edge"
           >
-            Our Edge
+            {t('our-edge')}
           </Link>
           <Link className=" text-white" href="/about-us">
-            About Us
+            {t('about-us')}
           </Link>
         </div>
         {/* End Menu */}
@@ -164,7 +167,7 @@ const Footer = () => {
         {/* Location and Contact */}
         <div className="w-full">
           <SubTitle
-            subTitle="GET IN TOUCH"
+            subTitle={t('get-in-touch')}
             otherClass="mb-5 text-xl text-white"
           />
           <Description
@@ -176,7 +179,7 @@ const Footer = () => {
             otherClass="my-1 text-white"
           />
           <Description
-            description="Monivong Blvd (93), Phnom Penh"
+            description={t('monivong-blvd-(93)-phnom-penh')}
             otherClass=" text-white"
           />
           <Description
@@ -193,19 +196,19 @@ const Footer = () => {
       <div className="flex bg-black pb-14 px-32 max-md:list-item flex-row-reverse max-xl:px-10 max-md:px-10 max-md:text-center">
         <div className="w-full pt-14 flex justify-end border-t-2 border-gray-600">
           <Link className=" text-white" href="/terms-of-use">
-            Terms of use
+            {t('terms-of-use')}
           </Link>
           <Link className="mx-5 text-white" href="/privacy-policy">
-            Privacy Policy
+            {t('privacy-policy')}
           </Link>
           <Link className="text-white" href="/cookies-policy">
-            Cookies Policy
+            {t('cookies-policy')}
           </Link>
         </div>
         <div className="w-full pt-14 border-t-2 border-gray-600 max-md:border-none">
           <Description
             otherClass="text-white"
-            description="Copyright © 2024 Axion Trade ALL RIGHTS RESERVED All rights reserved."
+            description={t('copyright-©-2024')}
           />
         </div>
       </div>

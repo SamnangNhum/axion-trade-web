@@ -31,7 +31,7 @@ export default async function RootLayout({ children, params }: RootLayoutProp) {
       >
         <Header lng={lng} />
         {children}
-        <Footer />
+        <Footer  lng={lng}  />
         <TawkMessenger />
       </body>
     </html>
