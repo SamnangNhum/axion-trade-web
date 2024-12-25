@@ -23,7 +23,7 @@ const InteractiveHoverButton = React.forwardRef<
       <span className="flex translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0 text-white">
         {text} <RiArrowRightSLine className="text-2xl max-sm:text-lg" />
       </span>
-      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-4 group-hover:opacity-100 text-blue-800">
+      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-4 group-hover:opacity-100 hover:text-blue-700">
         {text}
         <RiArrowRightSLine className="text-2xl max-sm:text-lg" />
       </div>
