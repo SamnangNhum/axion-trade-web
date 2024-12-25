@@ -18,8 +18,8 @@ export default function TawkMessenger() {
   return (
     <div className="App">
       <TawkMessengerReact
-        propertyId="67691836af5bfec1dbe07c88"
-        widgetId="1ifp8d5it"
+        propertyId="676b8431af5bfec1dbe18a61"
+        widgetId="1iftvoojk"
         onBeforeLoad={handleBeforeLoad}
         onStatusChange={handleStatusChange}
         onLoad={handleLoad}
