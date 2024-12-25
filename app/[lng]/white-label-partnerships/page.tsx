@@ -76,7 +76,7 @@ const WhiteLabelPartnerships = async ({
       <PageTitle
         title={t('white-label-partnerships')}
         description={
-          t('the-axionTrade-white-label-partnership-program')
+          t('the-axiontrade-white-label-partnership-program')
         }
       />
 
@@ -84,7 +84,7 @@ const WhiteLabelPartnerships = async ({
         <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
           <div className="">
             <SubTitle
-              subTitle={t('the-axionTrade-white-label-partnership-program')}
+              subTitle={t('the-axiontrade-white-label-partnership-program')}
               otherClass={"font-bold"}
             />
             <Description

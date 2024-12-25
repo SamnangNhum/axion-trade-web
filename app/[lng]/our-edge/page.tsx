@@ -4,15 +4,16 @@ import PageTitle from "../../shared/pages-title";
 import SubTitle from "../../shared/sub-title";
 import Title from "../../shared/title";
 import Image from "next/image";
+import NumberCounter from "@/app/shared/number-counter";
 
 const OurEdge = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
   const counts = [
-    { title: "10,000+", description: t('clients') },
-    { title: "10,000,000+", description: t('trade-executed') },
-    { title: "30+", description: t('country')},
-    { title: "100+", description: t('employees-globally') },
+    { number: 10000, description: t('clients') },
+    { number: 10000000,  description: t('trade-executed') },
+    { number: 30, description: t('country')},
+    { number: 100, description: t('employees-globally') },
   ];
 
   const layers = [
@@ -56,12 +57,13 @@ const OurEdge = async ({ params }: { params: Promise<{ lng: string }> }) => {
           {counts.map((count, index) => (
             <div
               key={index}
-              className="text-center shadow-lg py-16 px-5 rounded-xl bg-white max-md:px-0"
+              className="text-center shadow-lg py-16 px-5 rounded-xl bg-white max-md:px-0 max-md:py-10"
             >
-              <Title
+              {/* <Title
                 title={count.title}
                 otherClass={"font-bold max-xl:text-4xl"}
-              />
+              /> */}
+               <NumberCounter otherClass="text-white" number={count.number} />
               <Description
                 description={count.description}
                 otherClass={"text-gray-500"}
@@ -131,14 +133,15 @@ const OurEdge = async ({ params }: { params: Promise<{ lng: string }> }) => {
         <div className="grid grid-cols-2 gap-4 pb-10 max-md:grid-cols-1">
           <div className="max-md:order-1">
             <div className="flex mb-3">
-              <SubTitle
-                subTitle={t('execution')}
+            <SubTitle
+                subTitle={t('ultra-speed')}
                 otherClass={"max-md:text-2xl"}
               />
               <SubTitle
-                subTitle={t('ultra-speed')}
+                subTitle={t('execution')}
                 otherClass={"max-md:text-2xl text-blue-500 mx-1"}
               />
+
             </div>
 
             <Description
@@ -173,10 +176,10 @@ const OurEdge = async ({ params }: { params: Promise<{ lng: string }> }) => {
             />
           </div>
           <div className="max-md:order-1">
-            <div className="flex mb-3">
-              <SubTitle subTitle={t('dedicated-support')}otherClass={"max-md:text-2xl"} />
+            <div className="flex mb-3 max-md:list-item list-none">
+              <SubTitle subTitle={t('24-hour')}otherClass={"max-md:text-2xl"} />
               <SubTitle
-                subTitle={t('24-hour')}
+                subTitle={t('dedicated-support')}
                 otherClass={"max-md:text-2xl text-blue-500 mx-1"}
               />
             </div>
@@ -193,11 +196,11 @@ const OurEdge = async ({ params }: { params: Promise<{ lng: string }> }) => {
           <div className="max-md:order-1">
             <div className="flex mb-3">
               <SubTitle
-                subTitle={t('protection')}
+                subTitle={t('negative-balance')}
                 otherClass={"max-md:text-2xl"}
               />
               <SubTitle
-                subTitle={t('negative-balance')}
+                subTitle={t('protection')}
                 otherClass={"max-md:text-2xl text-blue-500 mx-1"}
               />
             </div>

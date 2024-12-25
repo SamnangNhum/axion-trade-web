@@ -43,14 +43,14 @@ const STP = async ({ params }: { params: Promise<{ lng: string }> }) => {
     {
       id: 5,
       title: t('slippage-insurance'),
-      amounts: "Guaranteed Price Requote",
+      amounts: t('guaranteed-price-requote'),
       description:
         t('axion-trade-guarantees'),
     },
     {
       id: 6,
       title: t('negative-balance-protection'),
-      amounts: "Yes",
+      amounts: t('yes'),
       description:
         t('trade-without-worry'),
     },

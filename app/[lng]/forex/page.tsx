@@ -5,6 +5,14 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTranslation } from "@/app/i18n";
 
+import type { Metadata } from 'next'
+import BlurIn from "@/components/ui/blur-in";
+
+export const metadata: Metadata = {
+  title: 'Forex',
+}
+ 
+
 const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
   const { lng } = await params;
   const { t } = await useTranslation(lng);
@@ -88,6 +96,7 @@ const Forex = async ({ params }: { params: Promise<{ lng: string }> }) => {
         title="Forex"
         description={t('trade-popular-forex-pairs-like-eur/usd-and-gbp/usd!')}
       />
+
       {/* End page-title */}
 
       {/* Forex Contract & Specifications */}

@@ -33,7 +33,7 @@ const Header = async ({ lng }: { lng: string }) => {
 
   const componentAffiliates: { title: string; href: string }[] = [
     { title: t("asset-manager"), href: `/${lng}/asset-manager` },
-    { title: t("commodities"), href: `/${lng}/commodities` },
+    { title: t("white-label-partnerships"), href: `/${lng}/white-label-partnerships` },
   ];
 
   const componentCompany: { title: string; href: string }[] = [
@@ -156,49 +156,49 @@ const Header = async ({ lng }: { lng: string }) => {
                 <span className="text-black">{t("client-portal")}</span>
               </div>
               <nav className="my-5">
-                <SubTitle subTitle={t("affiliates")} otherClass="my-2" />
+                <SubTitle subTitle={t("affiliates")} otherClass="my-3" />
                 {componentAffiliates.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-black hover:text-black flex"
+                    className="text-black hover:text-black flex my-1"
                   >
                     <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
                   </Link>
                 ))}
               </nav>
               <nav className="my-5">
-                <SubTitle subTitle={t("company")} otherClass="my-2" />
+                <SubTitle subTitle={t("company")} otherClass="my-3" />
                 {componentCompany.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-black hover:text-black flex"
+                    className="text-black hover:text-black flex my-1"
                   >
                     <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
                   </Link>
                 ))}
               </nav>
               <nav className="my-5 2xl:hidden">
-                <SubTitle subTitle={t("markets")} otherClass="my-2" />
+                <SubTitle subTitle={t("markets")} otherClass="my-3" />
                 {componentMarket.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-black hover:text-black flex"
+                    className="text-black hover:text-black flex my-1"
                   >
                     <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
                   </Link>
                 ))}
               </nav>
               <nav className="my-5 2xl:hidden">
-                <SubTitle subTitle={t("accounts")} otherClass="my-2" />
+                <SubTitle subTitle={t("accounts")} otherClass="my-3" />
                 <Description description={t("classic")} otherClass="text-md" />
                 {componentAccount.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-black hover:text-black"
+                    className="text-black hover:text-black my-1"
                   >
                     <SheetPrimitive.Close>{item.title}</SheetPrimitive.Close>
                   </Link>

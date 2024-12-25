@@ -6,6 +6,6 @@ export default function Title({
     otherClass?: string;
 }) {
     return (
-        <div className={`text-5xl font-bold text-black ${otherClass}`}>{title}</div>
+        <div className={`text-5xl max-md:text-3xl font-bold text-black ${otherClass}`}>{title}</div>
     );
 }

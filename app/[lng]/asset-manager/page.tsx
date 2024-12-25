@@ -52,7 +52,7 @@ const AssetManager = async ({
       {/* Page Title */}
       <PageTitle
         title={t('asset-manager')}
-        description="Trade and manage multiple accounts from a single MT4 interface."
+        description={t('trade-and-manage-multiple-accounts')}
       />
 
       {/* Manager Features Section */}

@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Home from "./home/page";
 import { useTranslation } from "../i18n";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Home',
+}
+ 
 
 export default async function Homepage({
   params,

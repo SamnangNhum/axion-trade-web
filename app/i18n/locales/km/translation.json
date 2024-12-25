@@ -111,8 +111,8 @@
   "slippage-insurance": "ការធានារ៉ាប់រងរអិល",
   "guaranteed-price-requote": "ធានាតម្លៃធូរថ្លៃ",
   "negative-balance-protection": "ការការពារ តុល្យភាពអវិជ្ជមាន",
-  "negative-balance": "តុល្យភាពអវិជ្ជមាន",
-  "protection": "ការការពារ ",
+  "negative-balance": "ការការពារ",
+  "protection": "តុល្យភាពអវិជ្ជមាន",
   "requirements": "តម្រូវការ",
   "strategics-partnerships": "ភាពជាដៃគូ យុទ្ធសាស្ត្រ",
   "embrace-a-path-to-success-with-us": "ចាប់យកផ្លូវទៅកាន់ភាពជោគជ័យជាមួយយើង",
@@ -138,13 +138,13 @@
   "the-third-layer": "ស្រទាប់ទីបី",
   "the-fourth-layer": "ស្រទាប់ទីបួន",
   "ultra-speed-execution": "ការប្រតិបត្តិ ល្បឿនលឿនបំផុត",
-  "ultra-speed": "ល្បឿនលឿនបំផុត",
-  "execution": "ការប្រតិបត្តិ",
+  "ultra-speed": "ការប្រតិបត្តិ",
+  "execution": "ល្បឿនលឿនបំផុត",
   "24-hour-dedicated-support": "ការគាំទ្រដោយយកចិត្តទុកដាក់ 24 ម៉ោង",
+  "24-hour": "ការគាំទ្រដោយយកចិត្តទុកដាក់",
+  "dedicated-support": "24 ម៉ោង",
   "trade-popular-commodities-from-around-the-world": "ធ្វើពាណិជ្ជកម្មទំនិញពេញនិយមពីជុំវិញពិភពលោកដូចជាមាស ប្រេង និងប្រាក់!",
   "trade-popular-forex-pairs-like-eur/usd-and-gbp/usd!": "ធ្វើពាណិជ្ជកម្មគូរូបិយប័ណ្ណ Forex ដែលពេញនិយមដូចជា EUR/USD និង GBP/USD! មកធ្វើពាណិជ្ជកម្មជាង 50+ គូ Forex ជាមួយ Axion Trade ។",
-  "24-hour": "24 ម៉ោង",
-  "dedicated-support": "ការគាំទ្រដោយយកចិត្តទុកដាក់",
   "the-axion-trade": "ពាណិជ្ជកម្ម Axion",
   "contact-us": "ទាក់ទងមកយើងខ្ញុំ",
   "why-axion-trade-should-be-your-preferred-brokerage": "ហេតុអ្វីបានជា Axion Trade គួរតែជាឈ្មួញកណ្តាលដែលអ្នកពេញចិត្ត",
@@ -238,5 +238,7 @@
   "swaps-are-waived-for-stp-accounts": "ការផ្លាស់ប្តូរត្រូវបានលើកលែងសម្រាប់ STP Accounts ។",
   "axion-trade-guarantees": "Axion Trade ធានាការសម្រង់តម្លៃប្រសើរជាងមុន ប្រសិនបើភាពរអិលដែលបានជួបប្រទះដោយសារការបញ្ជាទិញបញ្ឈប់ការខាតបង់ត្រូវបានវាយប្រហារគឺច្រើនជាង 2.0 pips ។",
   "trade-without-worry": "ធ្វើពាណិជ្ជកម្មដោយគ្មានការព្រួយបារម្ភអំពីការខាតបង់លើសពីប្រាក់បញ្ញើ ព្រោះសមតុល្យអវិជ្ជមានទាំងអស់ត្រូវបានគ្របដណ្តប់ដោយ Axion Trade ។",
-  "read-more":"អានបន្ថែម"
+  "read-more":"អានបន្ថែម",
+  "trade-and-manage-multiple-accounts":"ធ្វើពាណិជ្ជកម្ម និងគ្រប់គ្រងគណនីច្រើនពីចំណុចប្រទាក់ MT4 តែមួយ។"
+
 }
