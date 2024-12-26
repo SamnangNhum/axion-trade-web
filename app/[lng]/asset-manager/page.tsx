@@ -1,7 +1,5 @@
 import { TbPointFilled } from "react-icons/tb";
 import PageTitle from "../../shared/pages-title";
-import SubTitle from "../../shared/sub-title";
-import Description from "../../shared/description";
 import { useTranslation } from "@/app/i18n";
 import BlurFade from "@/components/ui/blur-fade";
 import BlurIn from "@/components/ui/blur-in";
@@ -79,10 +77,12 @@ const AssetManager = async ({
                   <span className="text-blue-500 text-2xl mr-4">
                     <TbPointFilled />
                   </span>
-                  <BlurIn
-                    word={feature}
-                    className="text-md text-start text-gray-500 my-2"
-                  />
+                  <BlurFade delay={0.25 * 0.05} inView>
+                    <BlurIn
+                      word={t(feature)}
+                      className="text-md text-start text-gray-500 my-2"
+                    />
+                  </BlurFade>
                 </li>
               ))}
             </ul>
@@ -127,10 +127,16 @@ const AssetManager = async ({
                 <span className="text-blue-500 text-2xl mr-4">
                   <TbPointFilled />
                 </span>
-                <BlurIn
+                <BlurFade delay={0.25 * 0.05} inView>
+                  <BlurIn
+                    word={t(benefit)}
+                    className="text-md text-start text-gray-500 my-2"
+                  />
+                </BlurFade>
+                {/* <BlurIn
                   word={benefit}
                   className="text-md text-start text-gray-500 my-2"
-                />
+                /> */}
               </li>
             ))}
           </ul>
@@ -152,10 +158,12 @@ const AssetManager = async ({
                 <span className="text-blue-500 text-2xl mr-4">
                   <TbPointFilled />
                 </span>
-                <BlurIn
-                  word={feature}
-                  className="text-md text-start text-gray-500 my-2"
-                />
+                <BlurFade delay={0.25 * 0.05} inView>
+                  <BlurIn
+                    word={t(feature)}
+                    className="text-md text-start text-gray-500 my-2"
+                  />
+                </BlurFade>
               </li>
             ))}
           </ul>
