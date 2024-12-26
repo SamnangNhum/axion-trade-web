@@ -78,18 +78,11 @@ const Footer = async ({ lng }: { lng: string }) => {
               otherClass="text-white pb-8"
             />
             <div className="flex max-md:list-item">
-              {/* <Button
-              button={t("call-us-now")}
-              otherClass="mr-3 max-sm:text-sm max-md:mb-3"
-            /> */}
-              <div className="relative justify-center mr-3 max-sm:text-sm max-md:mb-3">
+              <div className="relative justify-center mr-3 max-sm:text-xs max-md:mb-3">
                 <InteractiveHoverButton text={t("call-us-now")} />
               </div>
-              {/* <Button
-              button={t("Let’s-talk-about-everything")}
-              otherClass="bg-transparent border-2 border-blue-600 max-sm:text-sm max-md:px-5"
-            /> */}
-              <div className="relative justify-center mr-3 max-sm:text-sm max-md:mb-3">
+
+              <div className="relative justify-center mr-3 max-sm:text-xs max-md:mb-3">
                 <InteractiveHoverButton
                   text={t("Let’s-talk-about-everything")}
                 />

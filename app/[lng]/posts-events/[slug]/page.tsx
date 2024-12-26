@@ -43,7 +43,7 @@ const BlogPost = async ({ params }: { params: Promise<{ slug: string }> }) => {
           width={1000}
           height={700}
           alt={post.Cover?.name || "Blog Cover"}
-          className="object-cover w-full h-[700px] rounded-md mb-8"
+          className="object-cover w-full h-[700px] max-md:h-[200px] rounded-md mb-8"
         />
 
         {/* Published Date */}
