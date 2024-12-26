@@ -101,7 +101,7 @@ const Header = async ({ lng }: { lng: string }) => {
             <NavigationMenuContent>
               <Description
                 description={t("classic")}
-                otherClass="text-md px-6 pt-5"
+                otherClass="text-md px-6 pt-5 font-bold"
               />
               <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
                 {componentAccount.map((component) => (
@@ -212,7 +212,7 @@ const Header = async ({ lng }: { lng: string }) => {
               </nav>
               <nav className="my-5 2xl:hidden">
                 <SubTitle subTitle={t("accounts")} otherClass="my-3" />
-                <Description description={t("classic")} otherClass="text-md" />
+                <Description description={t("classic")} otherClass="text-md font-bold"/>
                 {componentAccount.map((item) => (
                   <Link
                     key={item.href}
