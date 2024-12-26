@@ -99,7 +99,7 @@ const STP = async ({ params }: { params: Promise<{ lng: string }> }) => {
                     <BlurFade delay={0.25 * 0.05} inView>
                       <BlurIn
                         word={t(items.title)}
-                        className="text-md text-start  text-gray-500 my-2"
+                        className="text-md text-start font-bold my-2"
                       />
                     </BlurFade>
 
