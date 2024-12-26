@@ -316,7 +316,9 @@ const Home = async ({ lng }: { lng: string }) => {
               />
             </BlurFade>
             <div className="relative justify-center mt-5 max-md:mt-5">
-              <InteractiveHoverButton text={t("learn-more")} />
+              <Link href={"/forex"}>
+                <InteractiveHoverButton text={t("learn-more")} />
+              </Link>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
@@ -348,7 +350,9 @@ const Home = async ({ lng }: { lng: string }) => {
               />
             </BlurFade>
             <div className="relative justify-center mt-5 max-md:mt-5">
-              <InteractiveHoverButton text={t("learn-more")} />
+            <Link href={"/commodities"}>
+                <InteractiveHoverButton text={t("learn-more")} />
+              </Link>
             </div>
           </div>
         </div>

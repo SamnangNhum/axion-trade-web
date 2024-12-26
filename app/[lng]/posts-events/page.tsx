@@ -50,7 +50,7 @@ const PostAndEvent = async ({
                   }
                   width={1000}
                   height={700}
-                  className=" h-96 w-full cursor-pointer"
+                  className=" h-96 w-full max-md:h-[200px] cursor-pointer"
                   alt={post.Cover?.name || "Post image"}
                 />
               </BlurFade>
@@ -101,7 +101,7 @@ const PostAndEvent = async ({
                   }
                   width={500}
                   height={500}
-                  className=" h-64 w-full cursor-pointerb"
+                  className=" h-64 w-full cursor-pointerb max-md:h-[200px]"
                   alt={post.Cover?.name || "Event image"}
                 />
               </BlurFade>

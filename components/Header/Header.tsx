@@ -166,23 +166,17 @@ const Header = ({ lng }: { lng: string }) => {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          {/* <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link href="/platforms" className={navigationMenuTriggerStyle()}>
-                {t("platforms")}
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
 
       {/* Other */}
       <div className="flex justify-center max-xl:justify-start max-md:justify-end items-center space-x-8">
-        <div className="flex space-x-2 cursor-pointer max-md:hidden">
-          <FaUserCircle size={25} color="white" />
-          <span className="text-white">{t("client-portal")}</span>
-        </div>
+        <Link href={"https://login.axiontrade.com.kh/auth/login"} target="_blank">
+          <div className="flex space-x-2 cursor-pointer max-md:hidden">
+            <FaUserCircle size={25} color="white" />
+            <span className="text-white">{t("client-portal")}</span>
+          </div>
+        </Link>
         {/* Language Switcher */}
 
         <LanguageSwitcher />

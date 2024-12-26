@@ -79,13 +79,17 @@ const Footer = async ({ lng }: { lng: string }) => {
             />
             <div className="flex max-md:list-item">
               <div className="relative justify-center mr-3 max-sm:text-xs max-md:mb-3">
-                <InteractiveHoverButton text={t("call-us-now")} />
+                <Link href={"tel:+855098750005"}>
+                  <InteractiveHoverButton text={t("call-us-now")} />
+                </Link>
               </div>
 
               <div className="relative justify-center mr-3 max-sm:text-xs max-md:mb-3">
-                <InteractiveHoverButton
-                  text={t("Let’s-talk-about-everything")}
-                />
+                <Link href={"mailto:accounts@axiontrade.com.kh"}>
+                  <InteractiveHoverButton
+                    text={t("Let’s-talk-about-everything")}
+                  />
+                </Link>
               </div>
             </div>
           </div>
