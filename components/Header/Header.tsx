@@ -91,7 +91,7 @@ const Header = ({ lng }: { lng: string }) => {
       className={`${
         isScrolled
           ? "fixed top-0 left-0 z-50 bg-black py-4 shadow-md transition-all"
-          : "absolute py-7 "
+          : "absolute py-5"
       } grid grid-cols-3 gap-4 items-center w-full max-md:grid-cols-2 max-xl:grid-cols-2 max-md:px-7`}
     >
       {/* Logo */}
