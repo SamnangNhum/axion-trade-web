@@ -37,7 +37,7 @@ const PostAndEvent = async ({
       />
 
       {/* Latest Posts Section */}
-      <section className="px-36 py-16 max-sm:px-16 max-sm:pb-0 max-md:px-10 max-xl:px-20">
+      <section className="px-36 py-16 max-sm:px-10 max-sm:pb-0 max-md:px-10 max-xl:px-20">
         <div className="grid grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-5">
           {latestPosts.map((post: any) => (
             <div key={post.id}>
@@ -88,7 +88,7 @@ const PostAndEvent = async ({
       </section>
 
       {/* Remaining Posts Section */}
-      <section className="px-36 pb-16 max-sm:p-16 max-md:px-10 max-xl:px-20">
+      <section className="px-36 pb-16 max-sm:px-10 max-sm:py-5 max-md:px-10 max-xl:px-20">
         <div className="grid grid-cols-3 gap-20 max-md:grid-cols-1 max-md:gap-5">
           {remainingPosts.map((post: any) => (
             <div key={post.id}>
@@ -101,7 +101,7 @@ const PostAndEvent = async ({
                   }
                   width={500}
                   height={500}
-                  className=" h-64 w-full cursor-pointerb max-md:h-[200px]"
+                  className=" h-64 w-full cursor-pointerb max-md:h-[200px] max-md:object-cover"
                   alt={post.Cover?.name || "Event image"}
                 />
               </BlurFade>
