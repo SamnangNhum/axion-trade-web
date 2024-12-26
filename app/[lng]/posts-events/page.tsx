@@ -37,8 +37,8 @@ const PostAndEvent = async ({
       />
 
       {/* Latest Posts Section */}
-      <section className="px-36 py-16 max-sm:px-10 max-sm:pb-0 max-md:px-10 max-xl:px-20">
-        <div className="grid grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-5">
+      <section className="px-36 py-16 max-sm:px-10 max-sm:pb-0 max-md:px-10 max-xl:px-10">
+        <div className="grid grid-cols-2 gap-10 max-md:grid-cols-1 max-md:gap-5 max-xl:gap-6">
           {latestPosts.map((post: any) => (
             <div key={post.id}>
               <BlurFade delay={0.25 * 0.05} inView>
@@ -50,7 +50,7 @@ const PostAndEvent = async ({
                   }
                   width={1000}
                   height={700}
-                  className=" h-96 w-full max-md:h-[200px] cursor-pointer"
+                  className=" h-96 w-full max-md:h-[200px] max-xl:h-[200px] object-cover cursor-pointer"
                   alt={post.Cover?.name || "Post image"}
                 />
               </BlurFade>
@@ -58,7 +58,7 @@ const PostAndEvent = async ({
                 <BlurFade delay={0.25 * 0.05} inView>
                   <BlurIn
                     word={new Date(post.PublishedDate).toLocaleDateString()}
-                    className="text-md text-start my-2"
+                    className="text-md text-start my-2 max-xl:text-md"
                   />
                 </BlurFade>
 
@@ -70,7 +70,7 @@ const PostAndEvent = async ({
                     >
                       <BlurIn
                         word={t("read-more")}
-                        className="text-md text-start my-2"
+                        className="text-md text-start my-2 max-xl:text-md"
                       />
                     </Link>
                   </BlurFade>
@@ -79,7 +79,7 @@ const PostAndEvent = async ({
               <BlurFade delay={0.25 * 0.05} inView>
                 <BlurIn
                   word={post.Title || ""}
-                  className="text-md text-start my-2"
+                  className="text-md text-start my-2 max-xl:text-md"
                 />
               </BlurFade>
             </div>
@@ -88,8 +88,8 @@ const PostAndEvent = async ({
       </section>
 
       {/* Remaining Posts Section */}
-      <section className="px-36 pb-16 max-sm:px-10 max-sm:py-5 max-md:px-10 max-xl:px-20">
-        <div className="grid grid-cols-3 gap-20 max-md:grid-cols-1 max-md:gap-5">
+      <section className="px-36 pb-16 max-sm:px-10 max-sm:py-5 max-md:px-10 max-xl:px-10">
+        <div className="grid grid-cols-3 gap-10 max-md:grid-cols-1 max-md:gap-5 max-xl:gap-6">
           {remainingPosts.map((post: any) => (
             <div key={post.id}>
               <BlurFade delay={0.25 * 0.05} inView>
@@ -101,7 +101,7 @@ const PostAndEvent = async ({
                   }
                   width={500}
                   height={500}
-                  className=" h-64 w-full cursor-pointerb max-md:h-[200px] max-md:object-cover"
+                  className=" h-64 w-full cursor-pointerb max-md:h-[200px] max-xl:h-[200px] object-cover"
                   alt={post.Cover?.name || "Event image"}
                 />
               </BlurFade>
@@ -111,7 +111,7 @@ const PostAndEvent = async ({
                   word={new Date(
                     post.PublishedDate
                   ).toLocaleDateString()}
-                  className="text-md text-start my-2 line-clamp-3"
+                  className="text-md text-start my-2 line-clamp-3 max-xl:text-md"
                 />
               </BlurFade>
                  
@@ -123,7 +123,7 @@ const PostAndEvent = async ({
                     >
                       <BlurIn
                         word={t("read-more")}
-                        className="text-md text-start my-2"
+                        className="text-md text-start my-2 max-xl:text-md"
                       />
                     </Link>
                   </BlurFade>
@@ -133,7 +133,7 @@ const PostAndEvent = async ({
                  <BlurFade delay={0.25 * 0.05} inView>
                 <BlurIn
                   word={post.Description[0]?.children[0]?.text || ""}
-                  className="text-md text-start my-2 line-clamp-3"
+                  className="text-md text-start my-2 line-clamp-3 max-xl:text-md"
                 />
               </BlurFade>
                  
