@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
-import { GrLanguage } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
 import {
   Sheet,
@@ -28,12 +29,42 @@ import Description from "@/app/shared/description";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslation } from "@/app/i18n";
 
-const Header = async ({ lng }: { lng: string }) => {
-  const { t } = await useTranslation(lng);
+const Header = ({ lng }: { lng: string }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [translations, setTranslations] = useState<any>(null);
+
+  // Handle sticky behavior on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Fetch translations
+  useEffect(() => {
+    const fetchTranslations = async () => {
+      const { t } = await useTranslation(lng);
+      setTranslations(() => t);
+    };
+
+    fetchTranslations();
+  }, [lng]);
+
+  if (!translations) return null; // Render nothing while loading translations
+
+  const t = translations;
 
   const componentAffiliates: { title: string; href: string }[] = [
     { title: t("asset-manager"), href: `/${lng}/asset-manager` },
-    { title: t("white-label-partnerships"), href: `/${lng}/white-label-partnerships` },
+    {
+      title: t("white-label-partnerships"),
+      href: `/${lng}/white-label-partnerships`,
+    },
   ];
 
   const componentCompany: { title: string; href: string }[] = [
@@ -52,11 +83,17 @@ const Header = async ({ lng }: { lng: string }) => {
   ];
 
   const componentPlatforms: { title: string; href: string }[] = [
-    { title: t("metatrader-5"), href: `/${lng}/metatrader5`},
+    { title: t("metatrader-5"), href: `/${lng}/metatrader5` },
   ];
 
   return (
-    <header className="absolute grid grid-cols-3 gap-4 items-center py-7 w-full max-md:grid-cols-2 max-xl:grid-cols-2 max-md:px-7">
+    <header
+      className={`${
+        isScrolled
+          ? "fixed top-0 left-0 z-50 bg-black py-4 shadow-md transition-all"
+          : "absolute py-7 "
+      } grid grid-cols-3 gap-4 items-center w-full max-md:grid-cols-2 max-xl:grid-cols-2 max-md:px-7`}
+    >
       {/* Logo */}
       <div className="flex justify-center max-md:justify-normal">
         <Link href={`/${lng}`}>
@@ -212,7 +249,10 @@ const Header = async ({ lng }: { lng: string }) => {
               </nav>
               <nav className="my-5 2xl:hidden">
                 <SubTitle subTitle={t("accounts")} otherClass="my-3" />
-                <Description description={t("classic")} otherClass="text-md font-bold"/>
+                <Description
+                  description={t("classic")}
+                  otherClass="text-md font-bold"
+                />
                 {componentAccount.map((item) => (
                   <Link
                     key={item.href}
