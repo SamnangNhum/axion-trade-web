@@ -75,10 +75,11 @@ const STP = async ({ params }: { params: Promise<{ lng: string }> }) => {
           />
         </BlurFade>
         <section className="flex justify-center">
-          {/* <Button otherClass="" button={t("register-now")} /> */}
           <div className="relative justify-start mt-5 max-md:mt-5">
+            <BlurFade delay={0.25 * 0.05} inView>
               <InteractiveHoverButton text={t("register-now")} />
-            </div>
+            </BlurFade>
+          </div>
         </section>
       </section>
 
@@ -90,48 +91,44 @@ const STP = async ({ params }: { params: Promise<{ lng: string }> }) => {
           />
         </BlurFade>
         <BlurFade delay={0.25 * 0.05} inView>
-        <section className="grid grid-cols-1 gap-5 list-none max-md:list-item">
-           
-          {AccountSettings.map((items) => (
-            <div key={items.id} className="max-md:pb-10">
-            
-              <section className="bg-gray-100 py-5 px-5 border-l-8 border-blue-700">
-                <section className="flex mb-2">
-                  <BlurFade delay={0.25 * 0.05} inView>
-                    <BlurIn
-                      word={t(items.title)}
-                      className="text-md text-start  text-gray-500 my-2"
-                    />
-                  </BlurFade>
-
-                  <section className="flex items-center mx-2">
+          <section className="grid grid-cols-1 gap-5 list-none max-md:list-item">
+            {AccountSettings.map((items) => (
+              <div key={items.id} className="max-md:pb-10">
+                <section className="bg-gray-100 py-5 px-5 border-l-8 border-blue-700">
+                  <section className="flex mb-2">
                     <BlurFade delay={0.25 * 0.05} inView>
-                      <MdArrowForwardIos />
+                      <BlurIn
+                        word={t(items.title)}
+                        className="text-md text-start  text-gray-500 my-2"
+                      />
+                    </BlurFade>
+
+                    <section className="flex items-center mx-2">
+                      <BlurFade delay={0.25 * 0.05} inView>
+                        <MdArrowForwardIos />
+                      </BlurFade>
+                    </section>
+                    <BlurFade delay={0.25 * 0.05} inView>
+                      <BlurIn
+                        word={t(items.amounts)}
+                        className="text-md text-start font-bold  text-blue-700  my-2"
+                      />
                     </BlurFade>
                   </section>
-                  <BlurFade delay={0.25 * 0.05} inView>
-                    <BlurIn
-                      word={t(items.amounts)}
-                      className="text-md text-start font-bold  text-blue-700  my-2"
-                    />
-                  </BlurFade>
+                  <section className="">
+                    <BlurFade delay={0.25 * 0.05} inView>
+                      <BlurIn
+                        word={t(items.description)}
+                        className="text-md text-start  text-gray-500 my-2"
+                      />
+                    </BlurFade>
+                  </section>
                 </section>
-                <section className="">
-                  <BlurFade delay={0.25 * 0.05} inView>
-                    <BlurIn
-                      word={t(items.description)}
-                      className="text-md text-start  text-gray-500 my-2"
-                    />
-                  </BlurFade>
-                </section>
-              </section>
-              
-            </div>
-          ))}
-        </section>
+              </div>
+            ))}
+          </section>
         </BlurFade>
       </section>
-      
     </div>
   );
 };

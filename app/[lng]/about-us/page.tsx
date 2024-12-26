@@ -33,7 +33,9 @@ const AboutUs = async ({ params }: { params: Promise<{ lng: string }> }) => {
               />
             </BlurFade>
             <div className="relative justify-start mt-5 max-md:mt-5">
-              <InteractiveHoverButton text={t("learn-more")} />
+              <BlurFade delay={0.25 * 0.05} inView>
+                <InteractiveHoverButton text={t("learn-more")} />
+              </BlurFade>
             </div>
             {/* <Button button={t("contact-us")} /> */}
           </div>
