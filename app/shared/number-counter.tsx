@@ -8,8 +8,8 @@ export default function NumberCounter({
   otherClass?: string;
 }) {
   return (
-    <div className={`text-4xl font-bold text-black ${otherClass}`}>
-      <NumberTicker value={number} /> <span className="-ml-1 text-4xl font-bold text-black">+</span> 
+    <div className={`text-3xl font-bold text-black ${otherClass}`}>
+      <NumberTicker value={number} /> <span className="-ml-1 text-3xl font-bold text-black">+</span> 
     </div>
   );
 }

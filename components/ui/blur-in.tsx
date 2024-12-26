@@ -27,7 +27,7 @@ const BlurIn = ({ word, className, variant, duration = 1 }: BlurInProps) => {
       transition={{ duration }}
       variants={combinedVariants}
       className={cn(
-        "font-display text-center tracking-[-0.02em] drop-shadow-sm ",
+        "font-display text-center tracking-[-0.02em] drop-shadow-sm max-xl:text-xl",
         className,
       )}
     >

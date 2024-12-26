@@ -14,7 +14,7 @@ export default function Button({
       >
         {button}
         <section className="flex items-center max-md:flex max-md:items-center ml-1">
-        <RiArrowRightSLine className="text-2xl max-sm:text-lg" />
+        <RiArrowRightSLine className="text-2xl max-sm:text-2xl" />
         </section>
         
       </div>

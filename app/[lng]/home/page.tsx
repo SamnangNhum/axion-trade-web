@@ -29,7 +29,7 @@ const Home = async ({ lng }: { lng: string }) => {
       linkText: t("press-release"),
       imageSrc: "/assets/images/nothing-image.jpg",
       despcription:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed ",
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed",
     },
     {
       date: "September 27, 2024",
@@ -108,19 +108,26 @@ const Home = async ({ lng }: { lng: string }) => {
   return (
     <div>
       {/* Page title */}
+
       <section
         className="text-center bg-[url('/assets/images/bg-axion-trade.png')]
  bg-cover bg-center w-full p-80 max-sm:p-16 max-md:p-32 max-xl:p-48"
       >
-        <BlurIn
-          word={`${t("simple")}. ${t("reliable")}. ${t("innovative")}.`}
-          className="text-white  max-md:mt-20 font-display text-center text-4xl font-bold tracking-normal  dark:text-white md:text-5xl md:leading-[4rem]"
-        />
+        <BlurFade
+          key="/assets/images/client-focused.png"
+          delay={0.25 * 0.05}
+          inView
+        >
+          <BlurIn
+            word={`${t("simple")}. ${t("reliable")}. ${t("innovative")}.`}
+            className="text-white  max-md:mt-20 font-display text-center text-5xl font-bold tracking-normal dark:text-white max-xl:text-4xl max-md:text-4xl md:leading-[4rem]"
+          />
 
-        <BlurIn
-          word={t("get-access-to")}
-          className="-mt-1 p-3 text-md text-white "
-        />
+          <BlurIn
+            word={t("get-access-to")}
+            className="-mt-1 p-3 text-md text-white"
+          />
+        </BlurFade>
       </section>
 
       <section className="px-36 max-sm:px-10 max-md:px-10 max-xl:px-20 -translate-y-28 max-md:-translate-y-12">
@@ -146,18 +153,24 @@ const Home = async ({ lng }: { lng: string }) => {
 "
       >
         <div className="pb-16">
-          <BlurIn
-            word={t("why-axion-trade")}
-            className="font-bold text-3xl max-md:text-lg text-blue-700 "
-          />
-          <BlurIn
-            word={t("should-be-your-preferred-brokerage")}
-            className="font-bold text-5xl max-md:text-3xl"
-          />
+          <BlurFade
+            key="/assets/images/client-focused.png"
+            delay={0.25 * 0.05}
+            inView
+          >
+            <BlurIn
+              word={t("why-axion-trade")}
+              className="font-bold text-2xl max-md:text-lg text-blue-700"
+            />
+            <BlurIn
+              word={t("should-be-your-preferred-brokerage")}
+              className="font-bold text-4xl max-md:text-2xl max-xl:text-3xl"
+            />
+          </BlurFade>
         </div>
 
         <div className="grid grid-cols-2 gap-4 pb-10 items-center justify-center max-md:grid-cols-1">
-          <div className="flex justify-center items-center   max-md:order-1">
+          <div className="flex justify-center items-center max-md:order-1">
             <BlurFade
               key="/assets/images/client-focused.png"
               delay={0.25 * 0.05}
@@ -172,29 +185,41 @@ const Home = async ({ lng }: { lng: string }) => {
             </BlurFade>
           </div>
           <div className="max-md:order-2">
-            <BlurIn
-              word={t("client-focused")}
-              className="font-bold text-3xl max-md:text-lg"
-            />
+            <BlurFade
+              key="/assets/images/client-focused.png"
+              delay={0.25 * 0.05}
+              inView
+            >
+              <BlurIn
+                word={t("client-focused")}
+                className="font-bold text-2xl max-md:text-lg"
+              />
 
-            <BlurIn
-              word={t("enjoy-a-comprehensive")}
-              className="text-md text-gray-500"
-            />
+              <BlurIn
+                word={t("enjoy-a-comprehensive")}
+                className="text-md text-gray-500 max-xl:text-md"
+              />
+            </BlurFade>
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4 pb-10 items-center justify-center max-md:grid-cols-1">
           <div className=" max-md:order-2">
-            <BlurIn
-              word={t("superior-trading-experience")}
-              className="font-bold text-3xl max-md:text-lg"
-            />
+            <BlurFade
+              key="/assets/images/client-focused.png"
+              delay={0.25 * 0.05}
+              inView
+            >
+              <BlurIn
+                word={t("superior-trading-experience")}
+                className="font-bold text-2xl max-md:text-lg"
+              />
 
-            <BlurIn
-              word={t("quality-trade-execution")}
-              className="text-md text-gray-500"
-            />
+              <BlurIn
+                word={t("quality-trade-execution")}
+                className="text-md text-gray-500 max-xl:text-md"
+              />
+            </BlurFade>
           </div>
           <div className="flex justify-center items-center max-md:order-1">
             <BlurFade
@@ -229,26 +254,37 @@ const Home = async ({ lng }: { lng: string }) => {
           </div>
 
           <div className="max-md:order-2">
-            <BlurIn
-              word={t("convenient-withdrawals")}
-              className="font-bold text-3xl max-md:text-lg"
-            />
+            <BlurFade
+              key="/assets/images/client-focused.png"
+              delay={0.25 * 0.05}
+              inView
+            >
+              <BlurIn
+                word={t("convenient-withdrawals")}
+                className="font-bold text-2xl max-md:text-lg"
+              />
 
-            <BlurIn
-              word={t("fast-and-easy")}
-              className="text-md text-gray-500"
-            />
+              <BlurIn
+                word={t("fast-and-easy")}
+                className="text-md text-gray-500 max-xl:text-md"
+              />
+            </BlurFade>
           </div>
         </div>
       </section>
 
       {/* Trade Instruments Section*/}
       <section className="text-center bg-[url('/assets/images/bg-axion-trade.png')] bg-cover bg-center w-full p-28 max-md:p-10 max-xl:p-20">
-        <BlurIn
-          word={t("trade-your-favourite-instruments-from-around-the-world")}
-          className="text-5xl font-bold text-white max-md:text-3xl px-96 max-md:px-0 max-xl:px-0"
-        />
-
+        <BlurFade
+          key="/assets/images/forex-pairs.png"
+          delay={0.25 * 0.05}
+          inView
+        >
+          <BlurIn
+            word={t("trade-your-favourite-instruments-from-around-the-world")}
+            className="text-4xl font-bold text-white max-md:text-2xl max-xl:text-3xl max-2xl:text-4xl px-96 max-md:px-0 max-xl:px-0"
+          />
+        </BlurFade>
         <div className="grid grid-cols-2 gap-4 items-center justify-center max-md:grid-cols-1">
           <div className="flex flex-col justify-center items-center">
             <BlurFade
@@ -264,16 +300,21 @@ const Home = async ({ lng }: { lng: string }) => {
               />
             </BlurFade>
 
-            <BlurIn
-              word={t("forex-pairs")}
-              className="text-white font-bold text-3xl max-md:text-lg"
-            />
+            <BlurFade
+              key="/assets/images/client-focused.png"
+              delay={0.25 * 0.05}
+              inView
+            >
+              <BlurIn
+                word={t("forex-pairs")}
+                className="text-white font-bold text-2xl max-md:text-xl"
+              />
 
-            <BlurIn
-              word={t("trade-on-the-strength")}
-              className="text-md text-white px-40 my-2 max-md:px-10 max-xl:px-10"
-            />
-
+              <BlurIn
+                word={t("trade-on-the-strength")}
+                className="text-white px-40 my-2 max-md:px-10 max-xl:px-10 text-md max-xl:text-md"
+              />
+            </BlurFade>
             <div className="relative justify-center mt-5 max-md:mt-5">
               <InteractiveHoverButton text={t("learn-more")} />
             </div>
@@ -292,14 +333,20 @@ const Home = async ({ lng }: { lng: string }) => {
               />
             </BlurFade>
 
-            <BlurIn
-              word={t("commodities")}
-              className="text-3xl text-white font-bold  max-md:text-lg"
-            />
-            <BlurIn
-              word={t("spectate-on-the-price")}
-              className="text-md text-white px-40 my-2 max-md:px-10 max-xl:px-10"
-            />
+            <BlurFade
+              key="/assets/images/client-focused.png"
+              delay={0.25 * 0.05}
+              inView
+            >
+              <BlurIn
+                word={t("commodities")}
+                className="text-2xl text-white font-bold max-md:text-lg"
+              />
+              <BlurIn
+                word={t("spectate-on-the-price")}
+                className=" text-white px-40 my-2 max-md:px-10 max-xl:px-10 max-md:text-[16px] max-xl:text-md"
+              />
+            </BlurFade>
             <div className="relative justify-center mt-5 max-md:mt-5">
               <InteractiveHoverButton text={t("learn-more")} />
             </div>
@@ -322,65 +369,107 @@ const Home = async ({ lng }: { lng: string }) => {
 
       {/* News & Events Section*/}
       <section className="px-36 pt-16 max-sm:pt-16 max-md:px-10 max-xl:px-10">
-        <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 my-2 max-md:pb-10">
-          <div>
-            <Title
-              title={t("news") + " & " + t("events")}
-              otherClass={"max-md:text-3xl max-md:text-center"}
-            />
-            <Description
-              description={t("get-updated-to")}
-              otherClass={
-                "text-gray-500 my-2 max-md:px-0 max-md:text-center max-xl:px-0"
-              }
-            />
+        <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1 my-2 max-md:pb-3">
+          <div className="mb-3">
+            <BlurFade
+              key="/assets/images/client-focused.png"
+              delay={0.25 * 0.05}
+              inView
+            >
+              <BlurIn
+                word={t("news") + " & " + t("events")}
+                className="text-5xl text-start max-md:text-center font-bold max-md:text-2xl max-xl:text-3xl px-0 2xl:text-start max-md:px-0 max-xl:px-0"
+              />
+              <BlurIn
+                word={t("get-updated-to")}
+                className="text-lg text-start max-md:text-center px-0 2xl:text-start my-2 max-md:px-10 max-xl:text-md max-md:p-0"
+              />
+            </BlurFade>
           </div>
           <div className="flex justify-end max-md:justify-center max-md:hidden">
             <Link href={`/posts-events`}>
-            <div className="relative justify-center mt-5 max-md:mt-5">
-              <InteractiveHoverButton text={t("view-all")} />
-            </div>
+              <div className="relative justify-center mt-5 max-md:mt-5">
+                <BlurFade
+                  key="/assets/images/client-focused.png"
+                  delay={0.25 * 0.05}
+                  inView
+                >
+                  <InteractiveHoverButton text={t("view-all")} />
+                </BlurFade>
+              </div>
               {/* <Button button={t("view-all")} /> */}
             </Link>
           </div>
         </div>
         <section className="max-md:flex-col-reverse">
-          <NewAndEventSection />{" "}
+          <BlurFade
+            key="/assets/images/client-focused.png"
+            delay={0.25 * 0.05}
+            inView
+          >
+            <NewAndEventSection />{" "}
+          </BlurFade>
           <Link
             href={`/posts-events`}
             className="2xl:hidden max-xl:hidden max-md:flex max-md:justify-center mt-7"
           >
-            <Button button={t("view-all")} />
+            {/* <Button button={t("view-all")} /> */}
+            <div className="relative justify-center mt-5 max-md:mt-5 max-2xl:hidden max-md:contents">
+              <BlurFade
+                key="/assets/images/client-focused.png"
+                delay={0.25 * 0.05}
+                inView
+              >
+                <InteractiveHoverButton text={t("view-all")} />
+              </BlurFade>
+            </div>
           </Link>
         </section>
       </section>
 
       {/* Awards Section*/}
       <section className="text-center py-16 px-36 max-md:px-10 max-xl:px-20">
-        <Title title={t("our-awards")} otherClass={"max-md:text-3xl"} />
-        <Description
-          description={t("the-achivements-we-earnt")}
-          otherClass={"text-gray-500 my-2 max-md:px-0 max-xl:px-10"}
-        />
+        <BlurFade
+          key="/assets/images/client-focused.png"
+          delay={0.25 * 0.05}
+          inView
+        >
+          <BlurIn
+            word={t("our-awards")}
+            className="text-5xl font-bold max-md:text-2xl max-xl:text-3xl px-96 max-md:px-0 max-xl:px-0"
+          />
+
+          {/* <Title title={t("our-awards")} otherClass={"max-md:text-3xl"} /> */}
+          <Description
+            description={t("the-achivements-we-earnt")}
+            otherClass={"text-gray-500 my-2 max-md:px-0 max-xl:px-10"}
+          />
+        </BlurFade>
         <Carousel opts={{ align: "start" }} className="w-full mt-10">
-          <CarouselContent>
-            {awards.map((award, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center">
-                      <Image
-                        src={award.image}
-                        width={600}
-                        height={600}
-                        alt={`Award ${index + 1}`}
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+          <BlurFade
+            key="/assets/images/client-focused.png"
+            delay={0.25 * 0.05}
+            inView
+          >
+            <CarouselContent>
+              {awards.map((award, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center">
+                        <Image
+                          src={award.image}
+                          width={600}
+                          height={600}
+                          alt={`Award ${index + 1}`}
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </BlurFade>
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>

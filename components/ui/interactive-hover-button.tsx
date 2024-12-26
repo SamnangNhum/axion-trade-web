@@ -15,17 +15,20 @@ const InteractiveHoverButton = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-        "group relative  cursor-pointer overflow-hidden rounded-full border-0 bg-background text-center py-3 px-6 w-full bg-blue-700",
+        "group relative cursor-pointer overflow-hidden rounded-full border-0 bg-background text-center py-3 px-6 bg-blue-700 hover:bg-white",
         className
       )}
       {...props}
     >
-      <span className="flex translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0 text-white">
+      <span className="flex items-center translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0 text-white">
         {text} <RiArrowRightSLine className="text-2xl max-sm:text-lg" />
       </span>
-      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-4 group-hover:opacity-100 hover:text-blue-700">
+      {/* Hover */}
+      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-4 group-hover:opacity-100  hover:text-blue-700">
         {text}
-        <RiArrowRightSLine className="text-2xl max-sm:text-lg" />
+        <section className="flex items-center">
+          <RiArrowRightSLine className="text-2xl max-sm:text-lg" />
+        </section>
       </div>
       <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-white"></div>
     </button>

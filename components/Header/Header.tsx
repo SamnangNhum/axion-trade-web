@@ -51,6 +51,10 @@ const Header = async ({ lng }: { lng: string }) => {
     { title: t("stp"), href: `/${lng}/stp-account` },
   ];
 
+  const componentPlatforms: { title: string; href: string }[] = [
+    { title: t("metatrader-5"), href: `/${lng}/metatrader5`},
+  ];
+
   return (
     <header className="absolute grid grid-cols-3 gap-4 items-center py-7 w-full max-md:grid-cols-2 max-xl:grid-cols-2 max-md:px-7">
       {/* Logo */}
@@ -112,12 +116,27 @@ const Header = async ({ lng }: { lng: string }) => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
+            <NavigationMenuTrigger>{t("platforms")}</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[230px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]">
+                {componentPlatforms.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  />
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          {/* <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href="/platforms" className={navigationMenuTriggerStyle()}>
                 {t("platforms")}
               </Link>
             </NavigationMenuLink>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
 

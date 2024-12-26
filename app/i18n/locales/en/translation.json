@@ -239,5 +239,8 @@
   "axion-trade-guarantees": "Axion Trade guarantees a better price requote if the slippage experienced due to a stop-loss order being hit is more than 2.0 pips.",
   "trade-without-worry": "Trade without worry about losses exceeding deposits as all negative balances are covered by Axion Trade.",
   "read-more":"Read More",
-  "trade-and-manage-multiple-accounts":"Trade and manage multiple accounts from a single MT4 interface."
+  "trade-and-manage-multiple-accounts":"Trade and manage multiple accounts from a single MT4 interface.",
+  "metatrader-5":"MetaTrader 5",
+  "coming-soon":"Coming Soon",
+  "in-the-meantime-start-your-trading":"In the meantime, start your trading with Axion Trade to create opportunity toward success"
 }

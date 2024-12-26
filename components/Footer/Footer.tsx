@@ -18,6 +18,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useTranslation } from "@/app/i18n";
+import InteractiveHoverButton from "../ui/interactive-hover-button";
+import BlurFade from "../ui/blur-fade";
 
 const Footer = async ({ lng }: { lng: string }) => {
   const { t } = await useTranslation(lng);
@@ -59,28 +61,42 @@ const Footer = async ({ lng }: { lng: string }) => {
         className="mx-36 mb-20 max-xl:mx-10 max-xl:mb-16 max-md:mx-5 max-md:mb-16 bg-center bg-cover rounded-3xl"
         style={{ backgroundImage: "url('/assets/images/footer-bg.png')" }}
       >
-        <div className="py-24 max-xl:py-16 px-20 max-xl:px-10">
-          <Title
-            title={t("embrace-a-path-to-success-with-us")}
-            otherClass="pb-5 text-white"
-          />
-          <Description
-            description={t(
-              "become-a-collaborator-in-asia-economic-future.Invest-in-the-Axion-Trade"
-            )}
-            otherClass="text-white pb-8"
-          />
-          <div className="flex max-md:list-item">
-            <Button
+        <BlurFade
+          key="/assets/images/client-focused.png"
+          delay={0.25 * 0.05}
+          inView
+        >
+          <div className="py-24 max-xl:py-16 px-20 max-xl:px-10">
+            <Title
+              title={t("embrace-a-path-to-success-with-us")}
+              otherClass="pb-5 text-white text-5xl md:text-2xl xl:text-3xl 2xl:text-4xl"
+            />
+            <Description
+              description={t(
+                "become-a-collaborator-in-asia-economic-future.Invest-in-the-Axion-Trade"
+              )}
+              otherClass="text-white pb-8"
+            />
+            <div className="flex max-md:list-item">
+              {/* <Button
               button={t("call-us-now")}
               otherClass="mr-3 max-sm:text-sm max-md:mb-3"
-            />
-            <Button
+            /> */}
+              <div className="relative justify-center mr-3 max-sm:text-sm max-md:mb-3">
+                <InteractiveHoverButton text={t("call-us-now")} />
+              </div>
+              {/* <Button
               button={t("Let’s-talk-about-everything")}
               otherClass="bg-transparent border-2 border-blue-600 max-sm:text-sm max-md:px-5"
-            />
+            /> */}
+              <div className="relative justify-center mr-3 max-sm:text-sm max-md:mb-3">
+                <InteractiveHoverButton
+                  text={t("Let’s-talk-about-everything")}
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        </BlurFade>
       </div>
       {/* End Banner */}
 
@@ -213,7 +229,10 @@ const Footer = async ({ lng }: { lng: string }) => {
             <Link className="text-white" href={`/${lng}/terms-of-use`}>
               {t("terms-of-use")}
             </Link>
-            <Link className="mx-5 max-md:mx-0 text-white" href={`/${lng}/privacy-policy`}>
+            <Link
+              className="mx-5 max-md:mx-0 text-white"
+              href={`/${lng}/privacy-policy`}
+            >
               {t("privacy-policy")}
             </Link>
             <Link className="text-white" href={`/${lng}/cookies-policy`}>

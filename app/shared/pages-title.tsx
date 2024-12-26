@@ -16,7 +16,7 @@ export default function PageTitle({
       {/* <section className="text-white text-5xl font-bold mb-3">{title}</section> */}
       <BlurIn
           word={title}
-          className="text-white  max-md:mt-20 font-display text-center text-4xl font-bold tracking-normal  dark:text-white md:text-5xl md:leading-[4rem]"
+          className="text-white max-md:mt-20 font-display text-center text-5xl font-bold tracking-normal dark:text-white max-md:text-4xl max-xl:text-4xl md:leading-[4rem]"
         />
         <BlurIn
           word={description}

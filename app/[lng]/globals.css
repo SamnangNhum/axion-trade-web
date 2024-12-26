@@ -85,3 +85,9 @@ body {
 .tawk-bubble-container .tawk-icon-right {
   display: none !important;
 }
+
+@media not all and (min-width: 768px) {
+    h1 .max-xl\:text-xl {
+        font-size: 16px !important;
+    }
+}
