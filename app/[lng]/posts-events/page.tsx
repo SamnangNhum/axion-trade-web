@@ -3,6 +3,8 @@ import Image from "next/image";
 import Description from "../../shared/description";
 import PageTitle from "../../shared/pages-title";
 import { useTranslation } from "@/app/i18n";
+import BlurFade from "@/components/ui/blur-fade";
+import BlurIn from "@/components/ui/blur-in";
 
 const getNewEvent = async () => {
   const response = await fetch(
@@ -39,37 +41,47 @@ const PostAndEvent = async ({
         <div className="grid grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-5">
           {latestPosts.map((post: any) => (
             <div key={post.id}>
-              <Image
-                src={
-                  post.Cover?.formats?.large?.url
-                    ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.large.url}`
-                    : "/assets/images/nothing-image.jpg"
-                }
-                width={1000}
-                height={700}
-                className="object-cover h-96 w-full cursor-pointer"
-                alt={post.Cover?.name || "Post image"}
-              />
-              <div className="grid grid-cols-2 gap-4 my-2">
-                <Description
-                  description={new Date(
-                    post.PublishedDate
-                  ).toLocaleDateString()}
-                  otherClass={"line-clamp-3"}
+              <BlurFade delay={0.25 * 0.05} inView>
+                <Image
+                  src={
+                    post.Cover?.formats?.large?.url
+                      ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.large.url}`
+                      : "/assets/images/nothing-image.jpg"
+                  }
+                  width={1000}
+                  height={700}
+                  className=" h-96 w-full cursor-pointer"
+                  alt={post.Cover?.name || "Post image"}
                 />
+              </BlurFade>
+              <div className="grid grid-cols-2 gap-4 my-2">
+                <BlurFade delay={0.25 * 0.05} inView>
+                  <BlurIn
+                    word={new Date(post.PublishedDate).toLocaleDateString()}
+                    className="text-md text-start my-2"
+                  />
+                </BlurFade>
+
                 <div className="flex justify-end">
-                  <Link
-                    className="text-blue-500"
-                    href={`/posts-events/${post.Slug || post.id}`}
-                  >
-                    {t("read-more")}
-                  </Link>
+                  <BlurFade delay={0.25 * 0.05} inView>
+                    <Link
+                      className="text-blue-500"
+                      href={`/posts-events/${post.Slug || post.id}`}
+                    >
+                      <BlurIn
+                        word={t("read-more")}
+                        className="text-md text-start my-2"
+                      />
+                    </Link>
+                  </BlurFade>
                 </div>
               </div>
-              <Description
-                description={post.Title || ""}
-                otherClass={"line-clamp-3"}
-              />
+              <BlurFade delay={0.25 * 0.05} inView>
+                <BlurIn
+                  word={post.Title || ""}
+                  className="text-md text-start my-2"
+                />
+              </BlurFade>
             </div>
           ))}
         </div>
@@ -80,37 +92,51 @@ const PostAndEvent = async ({
         <div className="grid grid-cols-3 gap-20 max-md:grid-cols-1 max-md:gap-5">
           {remainingPosts.map((post: any) => (
             <div key={post.id}>
-              <Image
-                src={
-                  post.Cover?.formats?.small?.url
-                    ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.small.url}`
-                    : "/assets/images/nothing-image.jpg"
-                }
-                width={500}
-                height={500}
-                className="object-cover h-64 w-full cursor-pointer"
-                alt={post.Cover?.name || "Event image"}
-              />
+              <BlurFade delay={0.25 * 0.05} inView>
+                <Image
+                  src={
+                    post.Cover?.formats?.small?.url
+                      ? `${process.env.NEXT_APP_API_URL}${post.Cover.formats.small.url}`
+                      : "/assets/images/nothing-image.jpg"
+                  }
+                  width={500}
+                  height={500}
+                  className=" h-64 w-full cursor-pointerb"
+                  alt={post.Cover?.name || "Event image"}
+                />
+              </BlurFade>
               <div className="grid grid-cols-2 gap-4 my-2">
-                <Description
-                  description={new Date(
+                   <BlurFade delay={0.25 * 0.05} inView>
+                <BlurIn
+                  word={new Date(
                     post.PublishedDate
                   ).toLocaleDateString()}
-                  otherClass={"line-clamp-3"}
+                  className="text-md text-start my-2 line-clamp-3"
                 />
+              </BlurFade>
+                 
                 <div className="flex justify-end">
-                  <Link
-                    className="text-blue-500"
-                    href={`/posts-events/${post.Slug || post.id}`}
-                  >
-                    {t("read-more")}
-                  </Link>
+                  <BlurFade delay={0.25 * 0.05} inView>
+                    <Link
+                      className="text-blue-500"
+                      href={`/posts-events/${post.Slug || post.id}`}
+                    >
+                      <BlurIn
+                        word={t("read-more")}
+                        className="text-md text-start my-2"
+                      />
+                    </Link>
+                  </BlurFade>
                 </div>
               </div>
-              <Description
-                description={post.Description[0]?.children[0]?.text || ""}
-                otherClass={"line-clamp-3"}
-              />
+         
+                 <BlurFade delay={0.25 * 0.05} inView>
+                <BlurIn
+                  word={post.Description[0]?.children[0]?.text || ""}
+                  className="text-md text-start my-2 line-clamp-3"
+                />
+              </BlurFade>
+                 
             </div>
           ))}
         </div>
