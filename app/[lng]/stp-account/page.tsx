@@ -18,7 +18,7 @@ const STP = async ({ params }: { params: Promise<{ lng: string }> }) => {
     },
     {
       id: 1,
-      title: t("commissions"),
+      title: t("commission"),
       amounts: t("none"),
       description: t(
         "commission-free-trading-applies-for-all-forex-and-commodity"

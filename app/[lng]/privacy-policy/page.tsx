@@ -7,7 +7,7 @@ const privacyNotices = [
   "Provided during the account application process (e.g., your name, e-mail address, telephone number, birth date, social security number, investment object.",
   "Acquired as a result of the transactions you conduct through the trading system.",
   "Received from consumer-reporting agencies.",
-  "Collected through Internet “cookies.",
+  "Collected through Internet “cookies.”",
 ];
 
 const clientConfidentialities = [
@@ -17,7 +17,7 @@ const clientConfidentialities = [
   "We take substantial precautions to safeguard your personal, non-public information. For example, the Company’s system can only be accessed by authorised personnel via valid usernames and passwords. In addition, our Internet-based systems include security measures such as encryption and firewalls.",
 ];
 
-export default function PrivacyProlicy() {
+export default function PrivacyProlicy(){
   return (
     <div>
       {/* Page Title */}
