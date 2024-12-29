@@ -2,6 +2,8 @@ import { useTranslation } from "@/app/i18n";
 import Description from "@/app/shared/description";
 import PageTitle from "@/app/shared/pages-title";
 import SubTitle from "@/app/shared/sub-title";
+import BlurFade from "@/components/ui/blur-fade";
+import BlurIn from "@/components/ui/blur-in";
 import { title } from "process";
 
 export default async function TermOfUse({
@@ -105,11 +107,12 @@ export default async function TermOfUse({
 
       <section className="px-36 pt-16 max-sm:p-16 max-md:px-10 max-xl:px-20">
         {descriptions.map((desc, index) => (
-          <Description
-            key={index}
-            description={desc.text}
-            otherClass={desc.className}
-          />
+          <BlurFade delay={0.25 * 0.05} inView>
+            <BlurIn
+              word={desc.text}
+              className="text-md text-start text-gray-500 my-4"
+            />
+          </BlurFade>
         ))}
       </section>
 
@@ -120,13 +123,19 @@ export default async function TermOfUse({
             key={index}
             className="px-36 pt-8 max-sm:p-16 max-md:px-10 max-xl:px-20"
           >
-            <SubTitle subTitle={section.title} otherClass="font-bold" />
-            {section.content.map((item, idx) => (
-              <Description
-                key={idx}
-                description={item}
-                otherClass="text-gray-500 my-2"
+            <BlurFade delay={0.25 * 0.05} inView>
+              <BlurIn
+                word={section.title}
+                className="text-2xl font-bold text-start max-md:text-lg"
               />
+            </BlurFade>
+            {section.content.map((item, idx) => (
+              <BlurFade delay={0.25 * 0.05} inView>
+                <BlurIn
+                  word={item}
+                  className="text-md text-start text-gray-500 my-4"
+                />
+              </BlurFade>
             ))}
           </section>
         ))}
