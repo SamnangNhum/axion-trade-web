@@ -10,6 +10,21 @@ const flags: any = {
   en: "/assets/images/en.png",
   km: "/assets/images/km.png",
   zh: "/assets/images/zh.png",
+  ja: "/assets/images/ja.png",
+  ko: "/assets/images/ko.png",
+  ms: "/assets/images/ms.png",
+  id: "/assets/images/id.png",
+  tl: "/assets/images/tl.png",
+  th: "/assets/images/th.png",
+  vi: "/assets/images/vi.png",
+  hi: "/assets/images/hi.png",
+  fr: "/assets/images/fr.png",
+  de: "/assets/images/de.png",
+  it: "/assets/images/it.png",
+  pt: "/assets/images/pt.png",
+  es: "/assets/images/es.png",
+  tr: "/assets/images/tr.png",
+  ru: "/assets/images/ru.png",
   // Add more flags here
 };
 
@@ -17,6 +32,21 @@ const languageNames: any = {
   en: "English",
   km: "ខ្មែរ",
   zh: "简体中文",
+  ja: "Japan",
+  ko: "Korean",
+  ms: "Malaysian",
+  id: "Indonesian",
+  tl: "Tagalog",
+  th: "Thai",
+  vi: "Vietnamese",
+  hi: "Indian",
+  fr: "French",
+  de: "German",
+  it: "Italian",
+  pt: "Portuguese",
+  es: "Spanish",
+  tr: "Turkish",
+  ru: "Russian",
   // Add more language names here
 };
 

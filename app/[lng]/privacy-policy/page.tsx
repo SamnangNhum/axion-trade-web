@@ -34,8 +34,8 @@ export default async function PrivacyProlicy({
     <div>
       {/* Page Title */}
       <PageTitle
-        title="Privacy Policy"
-        description="Please read the Privacy Policy of Axion Trade before you use our services."
+        title={t('privacy-policy')}
+        description={t('please-read-the-privacy-policy')}
       />
 
       {/* Gerneral Statement */}
