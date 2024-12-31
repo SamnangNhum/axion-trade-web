@@ -5,11 +5,13 @@ import { languages } from "@/app/i18n/settings";
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import { GrLanguage } from "react-icons/gr";
+import { ScrollArea } from "../ui/scroll-area";
 
 const flags: any = {
   en: "/assets/images/en.png",
   km: "/assets/images/km.png",
   zh: "/assets/images/zh.png",
+  tw: "/assets/images/tw.png",
   ja: "/assets/images/ja.png",
   ko: "/assets/images/ko.png",
   ms: "/assets/images/ms.png",
@@ -32,6 +34,7 @@ const languageNames: any = {
   en: "English",
   km: "ខ្មែរ",
   zh: "简体中文",
+  tw: "Taiwan",
   ja: "Japan",
   ko: "Korean",
   ms: "Malaysian",
@@ -67,6 +70,10 @@ const LanguageSwitcher = () => {
     setIsOpen((prev) => !prev); // Toggle dropdown visibility
   };
 
+  const tags = Array.from({ length: 50 }).map(
+    (_, i, a) => `v1.2.0-beta.${a.length - i}`
+  );
+
   return (
     <div className="relative inline-block text-left">
       {/* Trigger Dropdown */}
@@ -83,24 +90,26 @@ const LanguageSwitcher = () => {
       {/* Dropdown Menu */}
       {isOpen && (
         <div className="absolute mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-          <div className="py-1">
-            {languages.map((lang) => (
-              <button
-                key={lang}
-                onClick={() => handleLanguageChange(lang)}
-                className="flex items-center px-4 py-2 w-full text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              >
-                <Image
-                  src={flags[lang]}
-                  alt={`${lang} flag`}
-                  width={20}
-                  height={15}
-                  className="mr-2"
-                />
-                {languageNames[lang] || lang}
-              </button>
-            ))}
-          </div>
+          <ScrollArea className="h-72 w-48 rounded-md border">
+            <div className="py-1 bg-white">
+              {languages.map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => handleLanguageChange(lang)}
+                  className="flex items-center px-4 py-2 w-full text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                >
+                  <Image
+                    src={flags[lang]}
+                    alt={`${lang} flag`}
+                    width={20}
+                    height={15}
+                    className="mr-2"
+                  />
+                  {languageNames[lang] || lang}
+                </button>
+              ))}
+            </div>
+          </ScrollArea>
         </div>
       )}
     </div>
