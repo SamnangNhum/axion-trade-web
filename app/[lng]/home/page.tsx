@@ -19,6 +19,23 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "@/app/i18n";
 import { NewAndEventSection } from "./new-events-section";
 
+export const metadata = {
+  title: "Axion Trade",
+  description: "Simple. Reliable. Innovative.",
+  openGraph: {
+    title: "Axion Trade",
+    description: "Simple. Reliable. Innovative.",
+    url: "https://www.axiontrade.net",
+    images: [
+      {
+        url: "/assets/images/og-img.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Axion Trade - Simple. Reliable. Innovative.",
+      },
+    ],
+  },
+};
 const Home = async ({ lng }: { lng: string }) => {
   const { t } = await useTranslation(lng);
 
@@ -350,7 +367,7 @@ const Home = async ({ lng }: { lng: string }) => {
               />
             </BlurFade>
             <div className="relative justify-center mt-5 max-md:mt-5">
-            <Link href={"/commodities"}>
+              <Link href={"/commodities"}>
                 <InteractiveHoverButton text={t("learn-more")} />
               </Link>
             </div>

@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     title: "Axion Trade",
     description: "Simple. Reliable. Innovative.",
-    url: "https://www.axiontrade.com",
+    url: "https://www.axiontrade.net",
     images: [
       {
         url: "/assets/images/og-img.jpg",
