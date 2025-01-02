@@ -5,8 +5,9 @@ import { dir } from "i18next";
 import { siemreap, notoSans, KumbhSans } from "@/assets/Fonts";
 
 import TawkMessenger from "@/components/TawkMessenger/TawkMessenger";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Axion Trade",
   description: "Simple. Reliable. Innovative.",
   openGraph: {
@@ -15,9 +16,7 @@ export const metadata = {
     url: "https://www.axiontrade.net",
     images: [
       {
-        url: "/assets/images/og-img.jpg",
-        width: 1200,
-        height: 630,
+        url: "https://axiontrade.konexdigital.com/assets/images/opengraph-image.jpg",
         alt: "Axion Trade - Simple. Reliable. Innovative.",
       },
     ],
