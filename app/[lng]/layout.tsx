@@ -9,6 +9,19 @@ import TawkMessenger from "@/components/TawkMessenger/TawkMessenger";
 export const metadata = {
   title: "Axion Trade",
   description: "Simple. Reliable. Innovative.",
+  openGraph: {
+    title: "Axion Trade",
+    description: "Simple. Reliable. Innovative.",
+    url: "https://www.axiontrade.com",
+    images: [
+      {
+        url: "/assets/images/og-img.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Axion Trade - Simple. Reliable. Innovative.",
+      },
+    ],
+  },
 };
 interface RootLayoutProp {
   children: React.ReactNode;
